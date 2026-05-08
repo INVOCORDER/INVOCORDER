@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { randomUUID } from "node:crypto";
+import { readRecorderVersion } from "../version.js";
 
 export type ActionSession = {
   object_type: "INVOCORDER_ACTION_SESSION";
@@ -29,7 +30,7 @@ export function startSession(root = ".invocorder/sessions"): { session: ActionSe
     closed_at: null,
     recorder: {
       name: "invocorder",
-      version: "0.1.0"
+      version: readRecorderVersion()
     }
   };
 

@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { sha256 } from "../hash/hash-record.js";
+import { readRecorderVersion } from "../version.js";
 
 function artifact(sessionDir: string, path: string): { path: string; sha256: string; size_bytes: number } {
   const full = join(sessionDir, path);
@@ -20,13 +21,13 @@ export function compileReplayBundle(sessionDir: string, sessionId: string): unkn
 
   const bundle = {
     object_type: "INVOCORDER_MACHINE_ACTION_EVIDENCE_BUNDLE",
-    schema_version: "0.1.0",
-    capture_contract_version: "0.1.0",
+    schema_version: readRecorderVersion(),
+    capture_contract_version: readRecorderVersion(),
     session_id: sessionId,
     created_at: new Date().toISOString(),
     recorder: {
       name: "invocorder",
-      version: "0.1.0",
+      version: readRecorderVersion(),
       build_sha256: "unknown"
     },
     hash_chain: {
