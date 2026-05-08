@@ -2,6 +2,7 @@
 
 import { runCommand } from "../process/run-command.js";
 import { recordMcpStdioFile } from "../mcp/record-mcp-stdio-file.js";
+import { verifyBundleFile } from "../bundle/verify-bundle-file.js";
 
 const args = process.argv.slice(2);
 
@@ -18,9 +19,16 @@ async function main(): Promise<void> {
     return;
   }
 
+  if (args[0] === "verify-bundle" && args[1]) {
+    const result = verifyBundleFile(args[1]);
+    console.log(JSON.stringify(result, null, 2));
+    process.exit(result.valid ? 0 : 1);
+  }
+
   console.error("Usage:");
   console.error("  invocorder run -- <command> [args...]");
   console.error("  invocorder mcp-stdio-file <jsonl-file>");
+  console.error("  invocorder verify-bundle <replay-bundle.json>");
   process.exit(2);
 }
 
