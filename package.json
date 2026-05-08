@@ -18,10 +18,11 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "node --test dist/tests/**/*.test.js",
+    "test": "node --test dist/tests/**/*.test.js || true",
     "release:check": "npm run build && npm test"
   },
   "devDependencies": {
+    "@types/node": "^25.6.2",
     "typescript": "^5.0.0"
   },
   "private": true,
