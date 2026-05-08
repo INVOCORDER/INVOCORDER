@@ -1,5 +1,10 @@
-# MCP Adapter Tests
+# MCP Runtime Test Surface
 
-v0.2 target surface.
+v0.2 runtime proof requires:
 
-Tests must prove MCP request/response capture, omission declaration, hash-chain continuity, and no policy verdicts.
+- MCP request frames become MachineActionRecord request records
+- MCP response frames become MachineActionRecord response records
+- malformed frames become OmissionRecord-linked omission records
+- ReplayBundle compiles
+- BundleIntegrityResult validates
+- no truth, safety, authorization, or admissibility claim is emitted
