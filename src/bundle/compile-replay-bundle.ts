@@ -21,8 +21,8 @@ export function compileReplayBundle(sessionDir: string, sessionId: string): unkn
 
   const bundle = {
     object_type: "INVOCORDER_MACHINE_ACTION_EVIDENCE_BUNDLE",
-    schema_version: "0.1.0",
-    capture_contract_version: "0.1.0",
+    schema_version: readRecorderVersion(),
+    capture_contract_version: readRecorderVersion(),
     session_id: sessionId,
     created_at: new Date().toISOString(),
     recorder: {

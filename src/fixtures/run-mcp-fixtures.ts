@@ -4,6 +4,13 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, wri
 import { join } from "node:path";
 import { recordMcpStdioFile } from "../mcp/record-mcp-stdio-file.js";
 
+type FixtureRunResult = {
+  fixture: string;
+  session: string;
+  integrity_valid: boolean;
+  errors: string[];
+};
+
 function findLatestSession(): string {
   const root = ".invocorder/sessions";
   if (!existsSync(root)) {
@@ -24,6 +31,7 @@ function findLatestSession(): string {
 
 function assertNoOverclaim(bundlePath: string): void {
   const bundle = JSON.parse(readFileSync(bundlePath, "utf8"));
+
   if (bundle.claims?.proves_truth !== false) throw new Error("bundle overclaims truth");
   if (bundle.claims?.proves_safety !== false) throw new Error("bundle overclaims safety");
   if (bundle.claims?.proves_authorization !== false) throw new Error("bundle overclaims authorization");
@@ -37,13 +45,13 @@ async function main(): Promise<void> {
     throw new Error(`fixture root not found: ${fixtureRoot}`);
   }
 
-  const index = JSON.parse(readFileSync(join(fixtureRoot, "INDEX.json"), "utf8"));
-  const results: unknown[] = [];
+  const index = JSON.parse(readFileSync(join(fixtureRoot, "INDEX.json"), "utf8")) as { fixtures: string[] };
+  const results: FixtureRunResult[] = [];
 
   rmSync(".invocorder/fixture-runs", { recursive: true, force: true });
   mkdirSync(".invocorder/fixture-runs", { recursive: true });
 
-  for (const slug of index.fixtures as string[]) {
+  for (const slug of index.fixtures) {
     const input = join(fixtureRoot, slug, "input/mcp-session.jsonl");
 
     await recordMcpStdioFile(input);
@@ -52,7 +60,7 @@ async function main(): Promise<void> {
     const integrityPath = join(sessionDir, "bundle-integrity-result.json");
     const bundlePath = join(sessionDir, "replay-bundle.json");
 
-    const integrity = JSON.parse(readFileSync(integrityPath, "utf8"));
+    const integrity = JSON.parse(readFileSync(integrityPath, "utf8")) as { valid: boolean; errors: string[] };
     assertNoOverclaim(bundlePath);
 
     results.push({

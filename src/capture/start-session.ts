@@ -5,8 +5,8 @@ import { readRecorderVersion } from "../version.js";
 
 export type ActionSession = {
   object_type: "INVOCORDER_ACTION_SESSION";
-  schema_version: readRecorderVersion();
-  capture_contract_version: readRecorderVersion();
+  schema_version: "0.1.0";
+  capture_contract_version: "0.1.0";
   session_id: string;
   started_at: string;
   closed_at: string | null;
@@ -23,8 +23,8 @@ export function startSession(root = ".invocorder/sessions"): { session: ActionSe
 
   const session: ActionSession = {
     object_type: "INVOCORDER_ACTION_SESSION",
-    schema_version: readRecorderVersion(),
-    capture_contract_version: readRecorderVersion(),
+    schema_version: "0.1.0",
+    capture_contract_version: "0.1.0",
     session_id: sessionId,
     started_at: new Date().toISOString(),
     closed_at: null,
