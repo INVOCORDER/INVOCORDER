@@ -23,5 +23,9 @@
   },
   "devDependencies": {
     "typescript": "^5.0.0"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "restricted"
   }
 }
