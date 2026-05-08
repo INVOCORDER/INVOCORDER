@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { sha256 } from "../hash/hash-record.js";
+import { readRecorderVersion } from "../version.js";
 
 function artifact(sessionDir: string, path: string): { path: string; sha256: string; size_bytes: number } {
   const full = join(sessionDir, path);
@@ -26,7 +27,7 @@ export function compileReplayBundle(sessionDir: string, sessionId: string): unkn
     created_at: new Date().toISOString(),
     recorder: {
       name: "invocorder",
-      version: "0.1.0",
+      version: readRecorderVersion(),
       build_sha256: "unknown"
     },
     hash_chain: {
