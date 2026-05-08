@@ -5,7 +5,7 @@ import { verifyHashChain } from "../hash/verify-hash-chain.js";
 export function verifyReplayBundle(sessionDir: string, sessionId: string): { object_type: string; schema_version: string; session_id: string; valid: boolean; errors: string[] } {
   const recordsPath = join(sessionDir, "records.jsonl");
   const records = existsSync(recordsPath)
-    ? readFileSync(recordsPath, "utf8").trim().split("\n").filter(Boolean).map((line) => JSON.parse(line))
+    ? readFileSync(recordsPath, "utf8").trim().split("\n").filter(Boolean).map((line: string) => JSON.parse(line))
     : [];
 
   const result = verifyHashChain(records);

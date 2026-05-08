@@ -14,7 +14,7 @@ export function compileReplayBundle(sessionDir: string, sessionId: string): unkn
     ? readFileSync(recordsPath, "utf8").trim().split("\n").filter(Boolean)
     : [];
 
-  const records = lines.map((line) => JSON.parse(line));
+  const records = lines.map((line: string) => JSON.parse(line));
   const first = records[0]?.record_hash ?? null;
   const last = records.at(-1)?.record_hash ?? null;
 
