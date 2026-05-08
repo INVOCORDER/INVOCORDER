@@ -1,0 +1,20 @@
+INVOCORDER Dual License
+
+This repository is licensed under:
+
+1. GNU Affero General Public License v3.0 only
+
+   You may use, copy, modify, and distribute this software under the terms
+   of the GNU Affero General Public License version 3 only.
+
+2. Commercial License
+
+   Commercial, proprietary, SaaS, embedded, hosted, or enterprise use that
+   cannot comply with AGPL-3.0 requires a separate commercial license from
+   INVOCORDER.
+
+Unless you have executed a separate commercial agreement, your use is under
+AGPL-3.0-only.
+
+SPDX-License-Identifier: AGPL-3.0-only
+Commercial terms: contact@invocorder.dev

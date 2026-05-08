@@ -1,0 +1,27 @@
+{
+  "name": "@invocorder/recorder",
+  "version": "0.0.1",
+  "description": "Machine-action evidence substrate: hash-chained boundary records and replayable evidence bundles.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "bin": {
+    "invocorder": "./dist/cli/invocorder.js"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "COMMERCIAL-LICENSE.md",
+    "VERSION"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/**/*.test.js",
+    "release:check": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
