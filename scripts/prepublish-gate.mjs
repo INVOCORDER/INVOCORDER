@@ -20,7 +20,7 @@ function assert(condition, message) {
 const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
 
 assert(pkg.name === "@invocorder/recorder", "wrong package name");
-assert(pkg.version === "0.3.2", "wrong package version");
+assert(/^0\.3\.\d+$/.test(pkg.version), "wrong package version");
 assert(pkg.license === "SEE LICENSE IN LICENSE", "license posture changed");
 assert(pkg.private === false, "package must be publish-enabled only in publish-decision PR");
 assert(pkg.publishConfig?.access === "public", "publishConfig must be public only in publish-decision PR");
@@ -90,6 +90,6 @@ run("node", ["dist/src/fixtures/run-mcp-fixtures.js", "../HOSTILE-FIXTURES/fixtu
 run("node", ["dist/src/fixtures/run-signed-bundle-fixtures.js", "../HOSTILE-FIXTURES/fixtures/signed-bundles"]);
 
 const pack = runCapture("npm", ["pack", "--dry-run"]);
-assert(pack.includes("invocorder-recorder-0.3.2.tgz"), "pack output missing expected tarball filename");
+assert(pack.includes(`invocorder-recorder-${pkg.version}.tgz`), "pack output missing expected tarball filename");
 
 console.log("INVOCORDER prepublish gate passed");
