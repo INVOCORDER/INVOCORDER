@@ -90,6 +90,6 @@ run("node", ["dist/src/fixtures/run-mcp-fixtures.js", "../HOSTILE-FIXTURES/fixtu
 run("node", ["dist/src/fixtures/run-signed-bundle-fixtures.js", "../HOSTILE-FIXTURES/fixtures/signed-bundles"]);
 
 const pack = runCapture("npm", ["pack", "--dry-run"]);
-assert(pack.includes("@invocorder/recorder@0.3.2"), "pack output missing expected package identity");
+assert(pack.includes("invocorder-recorder-0.3.2.tgz"), "pack output missing expected tarball filename");
 
 console.log("INVOCORDER prepublish gate passed");
