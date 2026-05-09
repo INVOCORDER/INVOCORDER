@@ -79,3 +79,15 @@ v0.3.4 requires:
 - exact bin path: `./dist/src/cli/invocorder.js`
 - npm publish dry-run with no auto-correction
 - npm publish dry-run with no bin removal
+
+## v0.3.4 npm CLI shim correction
+
+npm dry-run rejected direct compiled dist bin metadata.
+
+v0.3.4 uses:
+
+- `bin.invocorder = ./bin/invocorder.js`
+- root executable shim with shebang
+- shim imports `../dist/src/cli/invocorder.js`
+- compiled CLI retains shebang
+- publish dry-run must not auto-correct metadata

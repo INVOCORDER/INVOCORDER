@@ -24,7 +24,7 @@ assert(/^0\.3\.\d+$/.test(pkg.version), "wrong package version");
 assert(pkg.license === "SEE LICENSE IN LICENSE", "license posture changed");
 assert(pkg.private === false, "package must be publish-enabled only in publish-decision PR");
 assert(pkg.publishConfig?.access === "public", "publishConfig must be public only in publish-decision PR");
-assert(pkg.bin?.invocorder === "./dist/src/cli/invocorder.js", "unexpected bin path");
+assert(pkg.bin?.invocorder === "bin/invocorder.js", "unexpected bin path");
 
 for (const required of [
   "README.md",
@@ -39,12 +39,13 @@ for (const required of [
 
 run("npm", ["run", "build"]);
 
-const cli = fs.existsSync("dist/src/cli/invocorder.js")
-  ? "dist/src/cli/invocorder.js"
-  : "dist/cli/invocorder.js";
+const cli = "bin/invocorder.js";
+const compiledCli = "dist/src/cli/invocorder.js";
 
-assert(fs.existsSync(cli), "compiled CLI missing");
-assert(fs.readFileSync(cli, "utf8").startsWith("#!/usr/bin/env node"), "compiled CLI missing shebang");
+assert(fs.existsSync(cli), "bin shim missing");
+assert(fs.existsSync(compiledCli), "compiled CLI missing");
+assert(fs.readFileSync(cli, "utf8").startsWith("#!/usr/bin/env node"), "bin shim missing shebang");
+assert(fs.readFileSync(compiledCli, "utf8").startsWith("#!/usr/bin/env node"), "compiled CLI missing shebang");
 
 run("node", [cli, "mcp-stdio-file", "examples/mcp-stdio/session.jsonl"]);
 
