@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { basename, dirname, join } from "node:path";
 import { createHash, generateKeyPairSync, sign, verify } from "node:crypto";
 import { loadSigningKeyFile } from "./keys/key-store.js";
 
@@ -40,7 +40,7 @@ export function signBundleFile(bundlePath: string): SignedBundleEnvelope {
   return writeEnvelope(bundlePath, {
     object_type: "INVOCORDER_SIGNED_BUNDLE_ENVELOPE",
     schema_version: "0.3.1",
-    bundle_path: bundlePath,
+    bundle_path: basename(bundlePath),
     bundle_sha256: createHash("sha256").update(bundleBytes).digest("hex"),
     signature_algorithm: "ed25519",
     public_key_pem: publicKeyPem,
@@ -64,7 +64,7 @@ export function signBundleFileWithKey(bundlePath: string, privateKeyPath: string
   return writeEnvelope(bundlePath, {
     object_type: "INVOCORDER_SIGNED_BUNDLE_ENVELOPE",
     schema_version: "0.3.1",
-    bundle_path: bundlePath,
+    bundle_path: basename(bundlePath),
     bundle_sha256: createHash("sha256").update(bundleBytes).digest("hex"),
     signature_algorithm: "ed25519",
     public_key_pem: key.publicKeyPem,
