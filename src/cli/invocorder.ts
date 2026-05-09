@@ -3,7 +3,8 @@
 import { runCommand } from "../process/run-command.js";
 import { recordMcpStdioFile } from "../mcp/record-mcp-stdio-file.js";
 import { verifyBundleFile } from "../bundle/verify-bundle-file.js";
-import { signBundleFile, verifySignedBundleEnvelope } from "../signing/sign-bundle-file.js";
+import { signBundleFile, signBundleFileWithKey, verifySignedBundleEnvelope } from "../signing/sign-bundle-file.js";
+import { createSigningKeyFile } from "../signing/keys/key-store.js";
 
 const args = process.argv.slice(2);
 
@@ -26,8 +27,17 @@ async function main(): Promise<void> {
     process.exit(result.valid ? 0 : 1);
   }
 
+  if (args[0] === "generate-signing-key" && args[1]) {
+    const key = createSigningKeyFile(args[1]);
+    console.log(JSON.stringify(key, null, 2));
+    return;
+  }
+
   if (args[0] === "sign-bundle" && args[1]) {
-    const envelope = signBundleFile(args[1]);
+    const keyIndex = args.indexOf("--key");
+    const envelope = keyIndex >= 0 && args[keyIndex + 1]
+      ? signBundleFileWithKey(args[1], args[keyIndex + 1])
+      : signBundleFile(args[1]);
     console.log(JSON.stringify(envelope, null, 2));
     return;
   }
@@ -42,7 +52,8 @@ async function main(): Promise<void> {
   console.error("  invocorder run -- <command> [args...]");
   console.error("  invocorder mcp-stdio-file <jsonl-file>");
   console.error("  invocorder verify-bundle <replay-bundle.json>");
-  console.error("  invocorder sign-bundle <replay-bundle.json>");
+  console.error("  invocorder generate-signing-key <private-key.pem>");
+  console.error("  invocorder sign-bundle <replay-bundle.json> [--key <private-key.pem>]");
   console.error("  invocorder verify-signed-bundle <signed-bundle-envelope.json>");
   process.exit(2);
 }
