@@ -83,7 +83,10 @@ export function signBundleFileWithKey(bundlePath: string, privateKeyPath: string
 export function verifySignedBundleEnvelope(envelopePath: string): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
   const envelope = JSON.parse(readFileSync(envelopePath, "utf8")) as SignedBundleEnvelope;
-  const bundleBytes = readFileSync(envelope.bundle_path);
+  const resolvedBundlePath = envelope.bundle_path.startsWith("/")
+    ? envelope.bundle_path
+    : join(dirname(envelopePath), envelope.bundle_path);
+  const bundleBytes = readFileSync(resolvedBundlePath);
 
   const actualBundleSha = createHash("sha256").update(bundleBytes).digest("hex");
   if (actualBundleSha !== envelope.bundle_sha256) {
