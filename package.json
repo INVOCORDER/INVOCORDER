@@ -1,11 +1,11 @@
 {
   "name": "@invocorder/recorder",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Machine-action evidence substrate: hash-chained boundary records and replayable evidence bundles.",
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "bin": {
-    "invocorder": "./dist/src/cli/invocorder.js"
+    "invocorder": "bin/invocorder.js"
   },
   "files": [
     "dist",
@@ -14,7 +14,10 @@
     "README.md",
     "LICENSE",
     "COMMERCIAL-LICENSE.md",
-    "VERSION"
+    "VERSION",
+    "bin",
+    "SECURITY.md",
+    "PUBLISH_DECISION.md"
   ],
   "scripts": {
     "build": "tsc",

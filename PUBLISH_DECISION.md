@@ -1,4 +1,4 @@
-# Publish Decision: @invocorder/recorder v0.3.3
+# Publish Decision: @invocorder/recorder v0.3.4
 
 Decision status: candidate.
 
@@ -68,3 +68,26 @@ The package may be published only if this PR passes:
 - signed bundle tamper-failure smoke
 - signed fixture runner
 - no-overclaim checks
+
+## v0.3.4 npm CLI correction
+
+v0.3.2 and v0.3.3 exposed npm publication metadata failure: npm removed `bin.invocorder`.
+
+v0.3.4 requires:
+
+- compiled CLI shebang
+- exact bin path: `./dist/src/cli/invocorder.js`
+- npm publish dry-run with no auto-correction
+- npm publish dry-run with no bin removal
+
+## v0.3.4 npm CLI shim correction
+
+npm dry-run rejected direct compiled dist bin metadata.
+
+v0.3.4 uses:
+
+- `bin.invocorder = ./bin/invocorder.js`
+- root executable shim with shebang
+- shim imports `../dist/src/cli/invocorder.js`
+- compiled CLI retains shebang
+- publish dry-run must not auto-correct metadata
