@@ -1,4 +1,4 @@
-# Publish Decision: @invocorder/recorder v0.3.2
+# Publish Decision: @invocorder/recorder v0.3.3
 
 Decision status: candidate.
 
