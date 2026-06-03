@@ -1,0 +1,36 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_STANDARD",
+  "schema_version": "0.5.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/HOSTILE-FIXTURES",
+  "required_source_files": [
+    "VERSION",
+    "README.md",
+    "fixtures/mcp/INDEX.json",
+    "fixtures/signed-bundles/INDEX.json"
+  ],
+  "required_fixture_roots": [
+    "fixtures/mcp",
+    "fixtures/signed-bundles"
+  ],
+  "required_fixture_families": [
+    "mcp",
+    "signed-bundles"
+  ],
+  "required_boundary": {
+    "consume_from_public_github": true,
+    "pin_consumed_files_by_git_blob_sha": true,
+    "pin_consumed_files_by_sha256": true,
+    "local_sibling_repository_required": false,
+    "private_source_required": false,
+    "network_required_to_acquire_public_fixtures": true,
+    "network_runtime_required_after_asset_acquisition": false
+  },
+  "non_claims": {
+    "proves_truth": false,
+    "proves_authorization": false,
+    "proves_safety": false,
+    "proves_admissibility": false,
+    "proves_external_reality": false
+  }
+}

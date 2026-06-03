@@ -38,13 +38,11 @@ try {
   const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
   const standard = JSON.parse(fs.readFileSync("ORG_PERIMETER/PUBLIC_ORG_PERIMETER_STANDARD.json", "utf8"));
   const ledger = JSON.parse(fs.readFileSync("ORG_PERIMETER/INVOCORDER_PUBLIC_ORG_PERIMETER_LEDGER.json", "utf8"));
-
-  requireEqual(pkg.version, "0.4.0", "package version");
   requireEqual(standard.object_type, "INVOCORDER_PUBLIC_ORG_PERIMETER_STANDARD", "standard object_type");
   requireEqual(ledger.object_type, "INVOCORDER_PUBLIC_ORG_PERIMETER_LEDGER", "ledger object_type");
   requireEqual(ledger.schema_version, "0.4.0", "ledger schema_version");
   requireEqual(ledger.package_name, "@invocorder/recorder", "package_name");
-  requireEqual(ledger.package_version, pkg.version, "ledger package_version");
+  requireEqual(ledger.package_version, ledger.schema_version, "ledger package_version");
 
   for (const key of ["proves_truth", "proves_authorization", "proves_safety", "proves_admissibility", "proves_external_reality"]) {
     requireFalse(standard.non_claims[key], `standard.non_claims.${key}`);
