@@ -1,0 +1,197 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_EXECUTION_RECEIPT",
+  "schema_version": "0.6.0",
+  "jurisdiction": "INVOCORDER",
+  "valid": true,
+  "errors": [],
+  "standard_path": "FIXTURE_EXECUTION/PUBLIC_HOSTILE_FIXTURE_EXECUTION_STANDARD.json",
+  "standard_sha256_canonical_json": "242eabe58d0747714a571e1c4e2576cfe05935c45193ce47bf525de460df6c28",
+  "source_consumption_receipt_path": "FIXTURE_CONSUMPTION/INVOCORDER_PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_RECEIPT.json",
+  "source_consumption_receipt_sha256_canonical_json": "24119fc1790b386b5ec39bb1a8256133005fb6a6f18d1fca94402fa551448605",
+  "source_repository": "INVOCORDER/HOSTILE-FIXTURES",
+  "source_default_branch_head_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+  "public_fixture_checkout_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+  "mcp_fixture_case_count": 10,
+  "signed_bundle_fixture_case_count": 4,
+  "mcp_results": [
+    {
+      "fixture": "malformed-request",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_61e8d478-aa48-43d1-9d81-90cfeb6bf862",
+      "passed": true
+    },
+    {
+      "fixture": "malformed-response",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_9be822a6-d883-483a-a1a0-398ec1d03f56",
+      "passed": true
+    },
+    {
+      "fixture": "secret-like-tool-result",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_d1749c0c-b51c-4386-9390-65c00930892c",
+      "passed": true
+    },
+    {
+      "fixture": "truncated-stdio-stream",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_abddf254-1c2b-4354-9e0f-1fcea96500e1",
+      "passed": true
+    },
+    {
+      "fixture": "server-crash-mid-call",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_8ac950b2-3114-4374-869c-88bdb3336f89",
+      "passed": true
+    },
+    {
+      "fixture": "client-disconnect",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_356153f6-c08f-48df-ac03-a8f5c83f0fe1",
+      "passed": true
+    },
+    {
+      "fixture": "nested-tool-call",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_b7d64b76-4e4c-4af9-bea0-f0884eb2f678",
+      "passed": true
+    },
+    {
+      "fixture": "reordered-response",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_1168f73d-cd9b-4f0e-9be0-c1dee3e4aaac",
+      "passed": true
+    },
+    {
+      "fixture": "missing-tool-result",
+      "execution_mode": "clean_public_input_execution",
+      "expected_valid": true,
+      "actual_valid": true,
+      "clean_input_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "session": ".invocorder/sessions/act_1361a4ca-82ed-478f-a161-bc60b813bd9b",
+      "passed": true
+    },
+    {
+      "fixture": "replay-bundle-tamper",
+      "execution_mode": "hostile_expected_bundle_external_verification",
+      "expected_valid": false,
+      "actual_valid": false,
+      "clean_input_valid": true,
+      "expected_errors": [
+        "expected hash-chain tamper detected"
+      ],
+      "actual_errors": [
+        "bundle hash mismatch",
+        "record hash mismatch at sequence 1",
+        "previous hash mismatch at sequence 2",
+        "record hash mismatch at sequence 2"
+      ],
+      "session": ".invocorder/sessions/act_270a63c2-7888-478d-ab26-43713c349847",
+      "passed": true
+    }
+  ],
+  "signed_bundle_results": [
+    {
+      "fixture": "valid-persistent-signed-bundle",
+      "expected_valid": true,
+      "actual_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "passed": true
+    },
+    {
+      "fixture": "tampered-signed-bundle",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "bundle sha256 mismatch",
+        "signature verification failed"
+      ],
+      "actual_errors": [
+        "bundle sha256 mismatch",
+        "signature verification failed"
+      ],
+      "passed": true
+    },
+    {
+      "fixture": "fingerprint-mismatch",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "public key fingerprint mismatch"
+      ],
+      "actual_errors": [
+        "public key fingerprint mismatch"
+      ],
+      "passed": true
+    },
+    {
+      "fixture": "truth-overclaim",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "signature envelope overclaims truth"
+      ],
+      "actual_errors": [
+        "signature envelope overclaims truth"
+      ],
+      "passed": true
+    }
+  ],
+  "local_sibling_fixture_repo_required": false,
+  "private_source_required": false,
+  "proves_public_hostile_fixture_execution": true,
+  "proves_public_mcp_fixtures_execute": true,
+  "proves_public_signed_bundle_fixtures_execute": true,
+  "proves_fixture_expected_outputs_match": true,
+  "proves_local_sibling_fixture_repo_not_required": true,
+  "proves_private_source_not_required": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}

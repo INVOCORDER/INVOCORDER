@@ -37,3 +37,16 @@ INVOCORDER v0.5.0 adds a public hostile-fixture consumption receipt.
 This moves beyond repository perimeter inventory. The verifier consumes `INVOCORDER/HOSTILE-FIXTURES` from public GitHub, pins the consumed fixture files by Git blob SHA and SHA-256, parses the public fixture indexes, and verifies that hostile fixture consumption does not depend on a local sibling checkout or private source.
 
 The receipt proves public fixture consumption and hash verification only. It does not prove truth, authorization, safety, admissibility, or external reality.
+
+## v0.6.0 — Public hostile fixture execution receipt
+
+INVOCORDER v0.6.0 adds a public hostile fixture execution receipt.
+
+This is stronger than public fixture consumption. The verifier clones `INVOCORDER/HOSTILE-FIXTURES` from public GitHub at the SHA named by the v0.5 receipt, then executes the local INVOCORDER fixture runners against that temporary public clone:
+
+- MCP hostile fixtures execute from the public fixture repository.
+- Signed-bundle hostile fixtures execute from the public fixture repository.
+- Expected fixture outputs are compared.
+- No local sibling `HOSTILE-FIXTURES` checkout is required.
+- Private source is not required.
+- Truth, authorization, safety, admissibility, and external reality are not claimed.
