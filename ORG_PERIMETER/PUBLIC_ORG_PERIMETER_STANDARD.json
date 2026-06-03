@@ -1,0 +1,30 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_ORG_PERIMETER_STANDARD",
+  "schema_version": "0.4.0",
+  "jurisdiction": "INVOCORDER",
+  "definition": "A public org perimeter ledger identifies the public repositories, roles, required files, and non-claim boundaries that constitute the INVOCORDER public evidence substrate at a release point.",
+  "required_repositories": [
+    "INVOCORDER/INVOCORDER",
+    "INVOCORDER/CAPTURE-CONTRACT",
+    "INVOCORDER/EVIDENCE-SCHEMAS",
+    "INVOCORDER/HOSTILE-FIXTURES",
+    "INVOCORDER/INTEGRATIONS",
+    "INVOCORDER/.github"
+  ],
+  "must_verify": [
+    "repository exists",
+    "repository is public",
+    "repository is not archived",
+    "default branch is main",
+    "required files exist",
+    "component role is machine-readable",
+    "non-claim boundary is preserved"
+  ],
+  "non_claims": {
+    "proves_truth": false,
+    "proves_authorization": false,
+    "proves_safety": false,
+    "proves_admissibility": false,
+    "proves_external_reality": false
+  }
+}

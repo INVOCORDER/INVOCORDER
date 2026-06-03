@@ -1,0 +1,259 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_ORG_PERIMETER_LEDGER",
+  "schema_version": "0.4.0",
+  "jurisdiction": "INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "package_version": "0.4.0",
+  "generated_from_public_github": true,
+  "generated_at_utc": "2026-06-03T20:23:53.409Z",
+  "components": [
+    {
+      "repository_full_name": "INVOCORDER/INVOCORDER",
+      "role": "core_recorder",
+      "visibility": "public",
+      "archived": false,
+      "default_branch": "main",
+      "default_branch_head_sha": "20aae00245e434a1301f3cca73862a3441322600",
+      "html_url": "https://github.com/INVOCORDER/INVOCORDER",
+      "required_paths": [
+        {
+          "path": "README.md",
+          "exists": true
+        },
+        {
+          "path": "LICENSE",
+          "exists": true
+        },
+        {
+          "path": "VERSION",
+          "exists": true
+        },
+        {
+          "path": "package.json",
+          "exists": true
+        },
+        {
+          "path": "THREAT_MODEL.md",
+          "exists": true
+        },
+        {
+          "path": "SECURITY.md",
+          "exists": true
+        },
+        {
+          "path": "NON_GOALS.md",
+          "exists": true
+        },
+        {
+          "path": "docs/NO_TRUTH_CLAIMS.md",
+          "exists": true
+        },
+        {
+          "path": "docs/REPLAY_BUNDLE.md",
+          "exists": true
+        },
+        {
+          "path": "scripts/prepublish-gate.mjs",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "repository_full_name": "INVOCORDER/CAPTURE-CONTRACT",
+      "role": "capture_contract",
+      "visibility": "public",
+      "archived": false,
+      "default_branch": "main",
+      "default_branch_head_sha": "55b7388bed6db530522faf9b91ef4fdeb7ef2b8b",
+      "html_url": "https://github.com/INVOCORDER/CAPTURE-CONTRACT",
+      "required_paths": [
+        {
+          "path": "README.md",
+          "exists": true
+        },
+        {
+          "path": "VERSION",
+          "exists": true
+        },
+        {
+          "path": "LICENSE",
+          "exists": true
+        },
+        {
+          "path": "CAPTURE_CONTRACT.md",
+          "exists": true
+        },
+        {
+          "path": "BOUNDARY_FACTS.md",
+          "exists": true
+        },
+        {
+          "path": "NON_CLAIMS.md",
+          "exists": true
+        },
+        {
+          "path": "OMISSION_DOCTRINE.md",
+          "exists": true
+        },
+        {
+          "path": "REPLAY_BUNDLE_REQUIREMENTS.md",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "repository_full_name": "INVOCORDER/EVIDENCE-SCHEMAS",
+      "role": "canonical_schema_set",
+      "visibility": "public",
+      "archived": false,
+      "default_branch": "main",
+      "default_branch_head_sha": "66faa11f779007723880540f57ce2f49a0cc6809",
+      "html_url": "https://github.com/INVOCORDER/EVIDENCE-SCHEMAS",
+      "required_paths": [
+        {
+          "path": "README.md",
+          "exists": true
+        },
+        {
+          "path": "VERSION",
+          "exists": true
+        },
+        {
+          "path": "LICENSE",
+          "exists": true
+        },
+        {
+          "path": "schemas/action-session.schema.json",
+          "exists": true
+        },
+        {
+          "path": "schemas/machine-action-record.schema.json",
+          "exists": true
+        },
+        {
+          "path": "schemas/replay-bundle.schema.json",
+          "exists": true
+        },
+        {
+          "path": "schemas/omission-record.schema.json",
+          "exists": true
+        },
+        {
+          "path": "schemas/redaction-record.schema.json",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "repository_full_name": "INVOCORDER/HOSTILE-FIXTURES",
+      "role": "adversarial_fixture_corpus",
+      "visibility": "public",
+      "archived": false,
+      "default_branch": "main",
+      "default_branch_head_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+      "html_url": "https://github.com/INVOCORDER/HOSTILE-FIXTURES",
+      "required_paths": [
+        {
+          "path": "README.md",
+          "exists": true
+        },
+        {
+          "path": "VERSION",
+          "exists": true
+        },
+        {
+          "path": "LICENSE",
+          "exists": true
+        },
+        {
+          "path": "fixtures/mcp/INDEX.json",
+          "exists": true
+        },
+        {
+          "path": "fixtures/signed-bundles/INDEX.json",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "repository_full_name": "INVOCORDER/INTEGRATIONS",
+      "role": "boundary_adapter_catalog",
+      "visibility": "public",
+      "archived": false,
+      "default_branch": "main",
+      "default_branch_head_sha": "c992e6bf58251269c10ec5e22d06820d6fa6681d",
+      "html_url": "https://github.com/INVOCORDER/INTEGRATIONS",
+      "required_paths": [
+        {
+          "path": "README.md",
+          "exists": true
+        },
+        {
+          "path": "VERSION",
+          "exists": true
+        },
+        {
+          "path": "LICENSE",
+          "exists": true
+        },
+        {
+          "path": "mcp-stdio/README.md",
+          "exists": true
+        },
+        {
+          "path": "mcp-streamable-http/README.md",
+          "exists": true
+        },
+        {
+          "path": "local-command/README.md",
+          "exists": true
+        },
+        {
+          "path": "ci-runner/README.md",
+          "exists": true
+        },
+        {
+          "path": "browser-agent/README.md",
+          "exists": true
+        },
+        {
+          "path": "ide-wrapper/README.md",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "repository_full_name": "INVOCORDER/.github",
+      "role": "public_org_profile",
+      "visibility": "public",
+      "archived": false,
+      "default_branch": "main",
+      "default_branch_head_sha": "b181a396046f91cc53da1107aefc35b6f8045831",
+      "html_url": "https://github.com/INVOCORDER/.github",
+      "required_paths": [
+        {
+          "path": "profile/README.md",
+          "exists": true
+        }
+      ]
+    }
+  ],
+  "non_claims": {
+    "proves_truth": false,
+    "proves_authorization": false,
+    "proves_safety": false,
+    "proves_admissibility": false,
+    "proves_external_reality": false
+  },
+  "proves_public_org_perimeter": true,
+  "proves_component_repos_public": true,
+  "proves_component_roles_machine_readable": true,
+  "proves_required_component_files_exist": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false,
+  "ledger_sha256_canonical_json": "fac5275fe63ad919ae2a419540c645cff1ca108785613bd11de9fa797e47b0fd"
+}
