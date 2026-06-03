@@ -29,3 +29,11 @@ The ledger binds the public component repositories that constitute the INVOCORDE
 The verifier checks that each component repository exists publicly, is not archived, uses `main`, exposes required files, and preserves the non-claim boundary.
 
 This proves the public org perimeter and component availability. It does not prove truth, authorization, safety, admissibility, or external reality.
+
+## v0.5.0 — Public hostile fixture consumption receipt
+
+INVOCORDER v0.5.0 adds a public hostile-fixture consumption receipt.
+
+This moves beyond repository perimeter inventory. The verifier consumes `INVOCORDER/HOSTILE-FIXTURES` from public GitHub, pins the consumed fixture files by Git blob SHA and SHA-256, parses the public fixture indexes, and verifies that hostile fixture consumption does not depend on a local sibling checkout or private source.
+
+The receipt proves public fixture consumption and hash verification only. It does not prove truth, authorization, safety, admissibility, or external reality.

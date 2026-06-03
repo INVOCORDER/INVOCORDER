@@ -1,0 +1,691 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_RECEIPT",
+  "schema_version": "0.5.0",
+  "jurisdiction": "INVOCORDER",
+  "valid": true,
+  "errors": [],
+  "generated_from": "live_public_github_api",
+  "source_repository": "INVOCORDER/HOSTILE-FIXTURES",
+  "source_repository_private": false,
+  "source_default_branch": "main",
+  "source_default_branch_head_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+  "source_commit_url": "https://github.com/INVOCORDER/HOSTILE-FIXTURES/commit/b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+  "standard_path": "FIXTURE_CONSUMPTION/PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_STANDARD.json",
+  "standard_sha256_canonical_json": "89aefb2bf4b0d2f5088a58461defa2a425f3881ce653cc69be4ed7a57da0c622",
+  "consumed_file_count": 90,
+  "consumed_public_files": [
+    {
+      "path": "fixtures/mcp/client-disconnect/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "8e8604ee70c3dad5361aa1677519e5a2683cdd66",
+      "size_bytes": 169,
+      "sha256": "4873e9f0eca95143498c96cb285374dd3b2e8915c63d4de01bcbd89d3d077f96"
+    },
+    {
+      "path": "fixtures/mcp/client-disconnect/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "e1d083ce8d36ce638ca56ddb3cfc8303ec8d4795",
+      "size_bytes": 1956,
+      "sha256": "dd8f68f9e193aaeba2396db1f10a9dce385cacc5f5fad2abd8a2325cc45a273e"
+    },
+    {
+      "path": "fixtures/mcp/client-disconnect/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "58f6c95a564894b04c70b11a1f91e6d94d659317",
+      "size_bytes": 290,
+      "sha256": "ff7f3d104e32f0b20ce52bb510087eeb3e25f7fe2c54e437c4244d9c24c3d844"
+    },
+    {
+      "path": "fixtures/mcp/client-disconnect/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "878431902f62757a9e74e8752663077483c2cae5",
+      "size_bytes": 1252,
+      "sha256": "231dbb5893a80eb8c329e6dee478a6561596fc2edc4a1a69cf0479eee25ae3f2"
+    },
+    {
+      "path": "fixtures/mcp/client-disconnect/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "66c55705ce4a8d080be6b8b5bd67c459b7382627",
+      "size_bytes": 110,
+      "sha256": "99bad2c100119806457df95bb5728c7be86125c6de64bf30311c9bab1e0354c9"
+    },
+    {
+      "path": "fixtures/mcp/client-disconnect/README.md",
+      "family": "mcp",
+      "git_blob_sha": "8548d228f182b36bea6d35333864005d51a0870b",
+      "size_bytes": 341,
+      "sha256": "76e1a29681f5c70f9dc703b57c619c626bf36ae5b735fd18aef56c154d55876f"
+    },
+    {
+      "path": "fixtures/mcp/INDEX.json",
+      "family": "mcp",
+      "git_blob_sha": "f427864ec992e1b9ad4779822078110a6c0e57b2",
+      "size_bytes": 726,
+      "sha256": "73600937f2e7a7fce9c8bb633c75aef5996aa4bf05ef9e5bbdffd3b6c8cbb835"
+    },
+    {
+      "path": "fixtures/mcp/malformed-request/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "42c61c735ec98e40d038750fcfc5d6df36d1031b",
+      "size_bytes": 169,
+      "sha256": "e22029ad9955ddc0722cd73552506d0f247468841862d3377f1227d1da6a1ff9"
+    },
+    {
+      "path": "fixtures/mcp/malformed-request/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "5a579546237db37df64af6b5354d05dc93adc1be",
+      "size_bytes": 1972,
+      "sha256": "d2a69f7a79aa65a340cbe13e746c782d0d5af93fd17cdfa8f52c0ebf320191c5"
+    },
+    {
+      "path": "fixtures/mcp/malformed-request/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "4dbcce125720b53c1734f94e230db76912cefb39",
+      "size_bytes": 307,
+      "sha256": "75ac9c2ab788f7f85aba5b24d81ce7f4a5bb90291c702433f5c081d3e82bfcce"
+    },
+    {
+      "path": "fixtures/mcp/malformed-request/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "73dc4e9c0e073a2a7e1a0114a211c59c8c2b0248",
+      "size_bytes": 1252,
+      "sha256": "4b27e27354e14c33abc2bb61d4ee3386b4aa14d279453f8a449eb9fb229a170d"
+    },
+    {
+      "path": "fixtures/mcp/malformed-request/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "28f78f52f49d9786471f32604a32bf928caf8bec",
+      "size_bytes": 49,
+      "sha256": "990b1fd511db0639f8e88bfd0c39a38f1a584369e09de7aea1d03ca4a8174687"
+    },
+    {
+      "path": "fixtures/mcp/malformed-request/README.md",
+      "family": "mcp",
+      "git_blob_sha": "d5f5c8496dab92209a4712ebf67a0ed5142671bd",
+      "size_bytes": 351,
+      "sha256": "e7804e53f8b768c8e0019b72d83408ef6c1fc9402450279eb515f40289803332"
+    },
+    {
+      "path": "fixtures/mcp/malformed-response/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "12b8e13c4e8fc1228eb1be55b4e5f84f2872c400",
+      "size_bytes": 170,
+      "sha256": "eb39476cb4149e5d36215239f0e1a569b8ec9f2b3bc5f4971329e0f35f8ab404"
+    },
+    {
+      "path": "fixtures/mcp/malformed-response/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "04c2d580d91636a0a60aa752c7c32ddbb93f3133",
+      "size_bytes": 1976,
+      "sha256": "4b47aea5689c53d3bac4dbe1860fd2c5eb1e4c20d93deebb533a080fc93de77c"
+    },
+    {
+      "path": "fixtures/mcp/malformed-response/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "f13f3da229a236c3a1d2bd8e44562b87032dc2d2",
+      "size_bytes": 309,
+      "sha256": "d173c70aa7e47db261e1561a83d747195c6202061ebfe9c6740c24319f1b0670"
+    },
+    {
+      "path": "fixtures/mcp/malformed-response/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "f108493c8f3f4faf983469ef2288c1e689d2a61c",
+      "size_bytes": 1253,
+      "sha256": "e024b9f885bef197a7e881511c5b3e45778bdc952b538b4552dc2815082f770b"
+    },
+    {
+      "path": "fixtures/mcp/malformed-response/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "922a8426c2ea0cee302cb17316a11e894ed061f1",
+      "size_bytes": 34,
+      "sha256": "aa79e0431122e5b9e1d442db295cedf2401ba9e9517bd016914991139be07f17"
+    },
+    {
+      "path": "fixtures/mcp/malformed-response/README.md",
+      "family": "mcp",
+      "git_blob_sha": "18a7880967c394ba6a6e61d803bab8b1d41f6fd8",
+      "size_bytes": 356,
+      "sha256": "0289ac527c122ba48745529942bc4f6c58faa6dc5784d0c9ac51f870d5050250"
+    },
+    {
+      "path": "fixtures/mcp/missing-tool-result/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "f166be6e086fbf0d4e922f256c213ddc316deb87",
+      "size_bytes": 171,
+      "sha256": "63429b644bf8a1581f2186448191757afb704ea8979829becb765c2085385148"
+    },
+    {
+      "path": "fixtures/mcp/missing-tool-result/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "31baea51f75fcf33eec599641bd9728286ad1442",
+      "size_bytes": 1967,
+      "sha256": "9892aa9cd976408a8c624573572a5ea76430277977ee59d1acab32441ba3245b"
+    },
+    {
+      "path": "fixtures/mcp/missing-tool-result/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "bb7935752ca5034cbf5a0b7b1673e45f7b4a5bb5",
+      "size_bytes": 298,
+      "sha256": "ed297b19331854e6175528b187dd8645266402105b704672a005c734db8be9b5"
+    },
+    {
+      "path": "fixtures/mcp/missing-tool-result/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "e7bae69e61627a4d8209961949e8128c7cadcea5",
+      "size_bytes": 1254,
+      "sha256": "19eb1871fb6572aefb8689051d15ee295093b34a8e5148056e74205048c58370"
+    },
+    {
+      "path": "fixtures/mcp/missing-tool-result/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "39fe89b2ff5a1c674d5adbd26c64deba4929d7b5",
+      "size_bytes": 97,
+      "sha256": "818838db7eaaa947d0978fafe2553719813706a40df9ee30b7b06d98f7284734"
+    },
+    {
+      "path": "fixtures/mcp/missing-tool-result/README.md",
+      "family": "mcp",
+      "git_blob_sha": "82c20b5d7a36e2f0c327ecfad93ebdf9a2a7b624",
+      "size_bytes": 351,
+      "sha256": "a734421abdcd4142209bf70c53a15fbcba2f05678444f240adfbfeb56ec3ff93"
+    },
+    {
+      "path": "fixtures/mcp/nested-tool-call/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "dd39be3c067816f703e4ea355a1a643e57967f6a",
+      "size_bytes": 168,
+      "sha256": "ba0cdef1f98a0c05942e6b4fc8de7bca62b89002adc5d172bb57f97565983b7f"
+    },
+    {
+      "path": "fixtures/mcp/nested-tool-call/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "fcc8c396b5667bc587b00e3ee0bc72baec3b9900",
+      "size_bytes": 1970,
+      "sha256": "d91b789e5c3bc2d36f51fb07b666a10ab6d454ffaebe0976f97513409e928e89"
+    },
+    {
+      "path": "fixtures/mcp/nested-tool-call/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "58f10686c2b3e660b312bc685459480f546c7fde",
+      "size_bytes": 306,
+      "sha256": "63691ca426d07d7e0d1a9d873a1ce77c4833bf3132516e447cefad297be0274d"
+    },
+    {
+      "path": "fixtures/mcp/nested-tool-call/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "9c22c646ed74a612add7763419499ab8051084af",
+      "size_bytes": 1251,
+      "sha256": "51088468b57de50482205b26af146490cd59bba23cf495c0996dc8583a25b95e"
+    },
+    {
+      "path": "fixtures/mcp/nested-tool-call/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "23fc9cb239035b3932bc3f483895cd92f0e9c100",
+      "size_bytes": 117,
+      "sha256": "4bfb336543357e3fa9e66583da2943d5ada2647bb9a6a041bf14d3ebf9595df3"
+    },
+    {
+      "path": "fixtures/mcp/nested-tool-call/README.md",
+      "family": "mcp",
+      "git_blob_sha": "fac4fefbc8b9853927aa64b8c999038fac5aaee7",
+      "size_bytes": 347,
+      "sha256": "7d80c27bff16ec626138f81f7e03bb38dac1a39c61c7e13392540e5f491110e4"
+    },
+    {
+      "path": "fixtures/mcp/README.md",
+      "family": "mcp",
+      "git_blob_sha": "5e79d8ee9da4b5d4119202a7b7cbd7e9bd8da0dd",
+      "size_bytes": 642,
+      "sha256": "813a426e93a09a25df7c4f46441cd82fce6dd13284e3cf2ed25c4ab90eb484a6"
+    },
+    {
+      "path": "fixtures/mcp/reordered-response/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "71f185883fc74d11f649b092b2fd93c83867995f",
+      "size_bytes": 170,
+      "sha256": "dd2961f48ead4e21e40ffdc573d57f159ca858d04a008817ad0abbbfd4282530"
+    },
+    {
+      "path": "fixtures/mcp/reordered-response/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "dc803b8241c97a37df7093c0008fbf44acc03f6e",
+      "size_bytes": 1978,
+      "sha256": "455f47ad9ff5559f779998567f8597f17eb9599721156259c4d809fdd0581528"
+    },
+    {
+      "path": "fixtures/mcp/reordered-response/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "fe6e355501b13575b0305e7eca3401275d7b09dd",
+      "size_bytes": 311,
+      "sha256": "118c4f15818d05609206147e51e29d1c66e413735ef71c16fd1baac3c78f175d"
+    },
+    {
+      "path": "fixtures/mcp/reordered-response/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "e5f8f0be5717feba3a15401eaaee93872c90f9c8",
+      "size_bytes": 1253,
+      "sha256": "78078f69fabb220870a30516360cfa7159f0d9a3f3a97ee085af3da2aae3ccd4"
+    },
+    {
+      "path": "fixtures/mcp/reordered-response/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "d88c9778a0ba420faf0ec4671730df7cb1d93516",
+      "size_bytes": 94,
+      "sha256": "56210dacf1fc4faaebd0db4dbc634169eaeeff6bf65214a56eb928ea2b983980"
+    },
+    {
+      "path": "fixtures/mcp/reordered-response/README.md",
+      "family": "mcp",
+      "git_blob_sha": "6e64bbf3e34235f701ba01659a51ea20c6c47896",
+      "size_bytes": 328,
+      "sha256": "1b4138b2bbc492c481eb94054aa174a803cf0e8d7095f88be9b990e52e9c6d25"
+    },
+    {
+      "path": "fixtures/mcp/replay-bundle-tamper/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "f341ca3020ee36ae6d6c742279486ce5fac82b7a",
+      "size_bytes": 218,
+      "sha256": "2c0cd53c5549aee8b11ed6a52429a73b205d46e4ffb549da76495994e0a6b28a"
+    },
+    {
+      "path": "fixtures/mcp/replay-bundle-tamper/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "15d5b6603a5ea15ca40d4cfd09e9a5f15bce395c",
+      "size_bytes": 1932,
+      "sha256": "c0df62af4f82dd49a92d2ca862f69151e01b7af3378c4ff49f8139f2d0f6cad1"
+    },
+    {
+      "path": "fixtures/mcp/replay-bundle-tamper/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "03ebdac6d1fd7710770abd3ccdbdbac8e100a9e5",
+      "size_bytes": 303,
+      "sha256": "796bf53734594b3d1efad77d2620ea049ae44e291e83a5e574085830f13c0e8f"
+    },
+    {
+      "path": "fixtures/mcp/replay-bundle-tamper/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "73ed81d7ef3a2b2fabaca0b04a88d7ed40bb1a61",
+      "size_bytes": 1255,
+      "sha256": "b0dc5a263c7714c59189b73a3047f0190fc94df943464b7761cb24417f376d99"
+    },
+    {
+      "path": "fixtures/mcp/replay-bundle-tamper/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "fdd6172d6ecbe79072e9ae5a340d08d2508c3854",
+      "size_bytes": 97,
+      "sha256": "0d635499dfee242f5e7a8dfb041ce7c1d8e1f909915dc3b684eb0c0ca3ed075f"
+    },
+    {
+      "path": "fixtures/mcp/replay-bundle-tamper/README.md",
+      "family": "mcp",
+      "git_blob_sha": "c10dc078aad151da527431cebfa02a8886f3c5f9",
+      "size_bytes": 378,
+      "sha256": "b16aa76b8dac18034c35382dc86d5519c6b2e9db110310244fe1600f548cebd6"
+    },
+    {
+      "path": "fixtures/mcp/secret-like-tool-result/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "2d37f49313c386fbf9f6e2b539ca027e42963e5e",
+      "size_bytes": 175,
+      "sha256": "26cd51292b6f012a05da3faa52b872162cc959fad8da696652c45c3edcdc4758"
+    },
+    {
+      "path": "fixtures/mcp/secret-like-tool-result/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "5955730a673482126c98af60d685d94a578f9b84",
+      "size_bytes": 1985,
+      "sha256": "2343d05a4b8bccf18379b2679d3839b27c6e50e2289cfdd716295d62fc951c2d"
+    },
+    {
+      "path": "fixtures/mcp/secret-like-tool-result/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "52b056a0c65499dac00bbf275e0f4ac792225f5e",
+      "size_bytes": 309,
+      "sha256": "d15a88305942e292416225c72aa9291499be515643ddc8c0ea2aa8052a5d1dfa"
+    },
+    {
+      "path": "fixtures/mcp/secret-like-tool-result/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "2d8d9c2574d48a602106616588f4e77f39af62da",
+      "size_bytes": 1267,
+      "sha256": "7d1d986177989bb472871d5be827e4590e312af6c4246c2f17fb8c8f2c9a378f"
+    },
+    {
+      "path": "fixtures/mcp/secret-like-tool-result/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "5df0adaebeb3c6c2caab57c3e281c1fa07d20c5d",
+      "size_bytes": 98,
+      "sha256": "d8c107833f8c989af0cf441d2e25d99bd60000a7f30f56823d2a6a1932fb902f"
+    },
+    {
+      "path": "fixtures/mcp/secret-like-tool-result/README.md",
+      "family": "mcp",
+      "git_blob_sha": "1290a407a5881a95c023ab0f635c3a02ae8d0d1d",
+      "size_bytes": 404,
+      "sha256": "6705202d3d78a780f019eafbba01b8df48e70b4478935cdeb05895a4237badfd"
+    },
+    {
+      "path": "fixtures/mcp/server-crash-mid-call/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "10e4495a2827138c21ec569ae9ca90766f0bb147",
+      "size_bytes": 173,
+      "sha256": "3082f1392ae73d117df6297839516c1b7142eb805617b00570a09dc2a1e4ae53"
+    },
+    {
+      "path": "fixtures/mcp/server-crash-mid-call/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "da9053d1ab32adbc4df4385f43eedf476ad23420",
+      "size_bytes": 1972,
+      "sha256": "ae90d4da09c4366c38aecc36122a12b5356631039a4afb719a9ca50e46b8a01b"
+    },
+    {
+      "path": "fixtures/mcp/server-crash-mid-call/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "6e300cb053e25345b009fe601eca312a3597bd67",
+      "size_bytes": 298,
+      "sha256": "294412ec360ca8d5acd70ef190519dfd2f11222ae510414264976acd4b2130cc"
+    },
+    {
+      "path": "fixtures/mcp/server-crash-mid-call/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "5d9a520b28bde9fa3c8cd5539f8b963cb0422fa6",
+      "size_bytes": 1256,
+      "sha256": "a5b239b6c65d7c80809adccf732e09f1e65e36c402f510ebffa86329e51ad535"
+    },
+    {
+      "path": "fixtures/mcp/server-crash-mid-call/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "77f36454c65ff40850bfdf616a18f2c4da1af3f4",
+      "size_bytes": 109,
+      "sha256": "5b977ebb583f84c864078408e11ab87661124256b3a3875f780bdee74915c9d5"
+    },
+    {
+      "path": "fixtures/mcp/server-crash-mid-call/README.md",
+      "family": "mcp",
+      "git_blob_sha": "db60a7e9a2809773d50355d4799ea1f6e325d75f",
+      "size_bytes": 338,
+      "sha256": "0fb2b2dacab330fb4924df2b42a41aa533b806cd10cbb82103ebbb3e0fe49388"
+    },
+    {
+      "path": "fixtures/mcp/truncated-stdio-stream/expected/bundle-integrity-result.json",
+      "family": "mcp",
+      "git_blob_sha": "55db9eae56c2e3c6c4dd467b9106dbcf5c14ee8b",
+      "size_bytes": 174,
+      "sha256": "1b3222429b39f107a7be872c2bea6f1775030d4c219a3ae46473c11cc04ed929"
+    },
+    {
+      "path": "fixtures/mcp/truncated-stdio-stream/expected/machine-action-records.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "9a185c9bdffdd6d5b0c405046a7d6ae9a86bbd2f",
+      "size_bytes": 1966,
+      "sha256": "12f0449dfbf8580b3a8e1da30583194a611fe2b339dc9ed9c034cf8c404b6f0b"
+    },
+    {
+      "path": "fixtures/mcp/truncated-stdio-stream/expected/omissions.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "04545fcc6bf3d7ae5ed17f120e17bd161de6560f",
+      "size_bytes": 291,
+      "sha256": "17cb87e85be6e8ffce954c3745be76cfeb0b17f585d6aba88addea9f5c96ae2a"
+    },
+    {
+      "path": "fixtures/mcp/truncated-stdio-stream/expected/replay-bundle.json",
+      "family": "mcp",
+      "git_blob_sha": "2b71dfcf91101bfe145ce8867169ffe75a64e339",
+      "size_bytes": 1257,
+      "sha256": "f266e8b854b5947aa6f2e82a1eebac2a55e2c638a70501f257919a7aa5fc5d25"
+    },
+    {
+      "path": "fixtures/mcp/truncated-stdio-stream/input/mcp-session.jsonl",
+      "family": "mcp",
+      "git_blob_sha": "c3949797e852734ae41f00ab0f498bef10e82e8d",
+      "size_bytes": 46,
+      "sha256": "324b3016f6e0a16a1b2ebb9bc44ef73ea8fa245ee111cf6c49e1591e060d4eaf"
+    },
+    {
+      "path": "fixtures/mcp/truncated-stdio-stream/README.md",
+      "family": "mcp",
+      "git_blob_sha": "101f0084e5b8b3d48e56e9652adcb45ba42187f8",
+      "size_bytes": 332,
+      "sha256": "43cba09ba5790879bd3e4796da791a373a44857bf2b6f999068de1b144ece4cb"
+    },
+    {
+      "path": "fixtures/signed-bundles/fingerprint-mismatch/expected/signed-bundle-verification-result.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "9cd495c13a349214e782005ce82be7214efb4e54",
+      "size_bytes": 177,
+      "sha256": "cc8b6820cb978733fdd3060cc55241cf41d6d66715ae25aab536f354609f0500"
+    },
+    {
+      "path": "fixtures/signed-bundles/fingerprint-mismatch/input/omissions.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/signed-bundles/fingerprint-mismatch/input/records.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "9b9858a149f14f47d4aeb70b0066175995d28f0e",
+      "size_bytes": 752,
+      "sha256": "a8aab995f4c90224466c81c163df33cc90596739c32945498ee9f2d6b8c4318f"
+    },
+    {
+      "path": "fixtures/signed-bundles/fingerprint-mismatch/input/replay-bundle.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "c6598c2aa92dc45effd22ecbf8153b2927f295aa",
+      "size_bytes": 1149,
+      "sha256": "f236691a233b706820d5ceec6fee5e5cb1987ca659a6030c409c9dc4ae61ef59"
+    },
+    {
+      "path": "fixtures/signed-bundles/fingerprint-mismatch/input/signed-bundle-envelope.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "5e3659390698dda2e45b2e7cbd15fade5af5b9bb",
+      "size_bytes": 774,
+      "sha256": "d4dcecd71c3f026617f02a550e1f9e7296732448f69fb8c2cf42dd9479c4a3e3"
+    },
+    {
+      "path": "fixtures/signed-bundles/fingerprint-mismatch/README.md",
+      "family": "signed-bundles",
+      "git_blob_sha": "11cf7dcc35865d2145d9aabc4594bf3bef0dd183",
+      "size_bytes": 300,
+      "sha256": "2543ab64ae4a95471f1417a0fbb5052bfdb36597f9e5429ccc52fa97b7218acb"
+    },
+    {
+      "path": "fixtures/signed-bundles/INDEX.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "e4d0bfea5f0f02b8c6bf0480eed50d783584a9d7",
+      "size_bytes": 565,
+      "sha256": "5219b2ae9a7a298c9e61e94ecf6a9074e5a1ddfe5675c1e78d294eb725c5e36f"
+    },
+    {
+      "path": "fixtures/signed-bundles/README.md",
+      "family": "signed-bundles",
+      "git_blob_sha": "9a3554250b59c72f987664d3b6b7fe2e085663f3",
+      "size_bytes": 527,
+      "sha256": "c080bf05a56a3b0d22f1f612998504995ff8615d2027433b819aa13b939e04fa"
+    },
+    {
+      "path": "fixtures/signed-bundles/tampered-signed-bundle/expected/signed-bundle-verification-result.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "6db5cf99b615a3aff5cf90e297abb18024897380",
+      "size_bytes": 205,
+      "sha256": "65498a41b7728f32a190ba824e6d176f0d167e616dfc2553292c3e210a4684a5"
+    },
+    {
+      "path": "fixtures/signed-bundles/tampered-signed-bundle/input/omissions.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/signed-bundles/tampered-signed-bundle/input/records.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "5b71a334691cd769e02e23128f0b087b3c502298",
+      "size_bytes": 754,
+      "sha256": "476f3e93ceb9b0bddcbba3b7ec1142b013fe5f7b7d345710ca72a918b38fa98b"
+    },
+    {
+      "path": "fixtures/signed-bundles/tampered-signed-bundle/input/replay-bundle.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "a3a386959ef861dfba9f92b10fd3d54310c390ec",
+      "size_bytes": 1173,
+      "sha256": "5e79d8e91da23df1637e6ac90a065b38f33ca31c000ff392953520502c7c914e"
+    },
+    {
+      "path": "fixtures/signed-bundles/tampered-signed-bundle/input/signed-bundle-envelope.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "7b10792a03b127e975c809ce5373f14dff8be22f",
+      "size_bytes": 774,
+      "sha256": "719e5e429ccd76eff5c1158d20a856643cdbfbea736bd168a35f966a32682dcb"
+    },
+    {
+      "path": "fixtures/signed-bundles/tampered-signed-bundle/README.md",
+      "family": "signed-bundles",
+      "git_blob_sha": "40c99520840bcbe394c7840da9a939ac106f2763",
+      "size_bytes": 301,
+      "sha256": "7ca1caf9bd29d899f5c7ae376b1c23abc7d96567a750914af17af970bb415e80"
+    },
+    {
+      "path": "fixtures/signed-bundles/truth-overclaim/expected/signed-bundle-verification-result.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "e248a441509f6abbb0f1bf629ed1d8065fb40fc7",
+      "size_bytes": 181,
+      "sha256": "e6436f0fc196f9364c164c69f74a8e8341a8490b8ba08e0318b0d2fb95f9855f"
+    },
+    {
+      "path": "fixtures/signed-bundles/truth-overclaim/input/omissions.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/signed-bundles/truth-overclaim/input/records.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "8712238cbfdeadc8bb446e22a7d684dcaa293301",
+      "size_bytes": 747,
+      "sha256": "69187a247d5f770fe740f4233485c4867b7896d2b0a4c03ef809f931e7d87ed6"
+    },
+    {
+      "path": "fixtures/signed-bundles/truth-overclaim/input/replay-bundle.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "d48263ff31f033c8f66b7757db873b79749b276f",
+      "size_bytes": 1144,
+      "sha256": "09354720c09927dc8ef2b943d03f7d10c7b73234895880ddfb890b8f8e7564f4"
+    },
+    {
+      "path": "fixtures/signed-bundles/truth-overclaim/input/signed-bundle-envelope.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "114404de58fecbaf66538eb642fff369be531da5",
+      "size_bytes": 773,
+      "sha256": "46c2782f97b1602db5f333cccf3ae9d387ce3372dcc38c689487ce2632ace7f4"
+    },
+    {
+      "path": "fixtures/signed-bundles/truth-overclaim/README.md",
+      "family": "signed-bundles",
+      "git_blob_sha": "85b14f92d3a35c9255d442cc83ec4300f8359edb",
+      "size_bytes": 283,
+      "sha256": "147129befd25aa926bba060f9a43d09bbcb838349ed283709ca9f3c3b0894663"
+    },
+    {
+      "path": "fixtures/signed-bundles/valid-persistent-signed-bundle/expected/signed-bundle-verification-result.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "1cacc70bdb8a5a4fc2b55c2bf28904ca00a7768f",
+      "size_bytes": 135,
+      "sha256": "877bb622465e86e1fe6a030daaf0cf1ce08b760731dd0eadfce4e26430837dfa"
+    },
+    {
+      "path": "fixtures/signed-bundles/valid-persistent-signed-bundle/input/omissions.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/signed-bundles/valid-persistent-signed-bundle/input/records.jsonl",
+      "family": "signed-bundles",
+      "git_blob_sha": "b82f14c84d41bd3c6535616189e86f0071100b0e",
+      "size_bytes": 762,
+      "sha256": "4ab2ae81e381ff32d1e98d4e1dcb7fa9cff74b925a8cb78683bb75be74907aae"
+    },
+    {
+      "path": "fixtures/signed-bundles/valid-persistent-signed-bundle/input/replay-bundle.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "1763e5192e628707e410f60c366778781d4b067e",
+      "size_bytes": 1159,
+      "sha256": "05b7243cf9557eeca03f31fc8725a3654a7e1e16286f38f2655fb95af0ebd864"
+    },
+    {
+      "path": "fixtures/signed-bundles/valid-persistent-signed-bundle/input/signed-bundle-envelope.json",
+      "family": "signed-bundles",
+      "git_blob_sha": "b16a6378304d8cfa98036fa710eb15d82f648bc3",
+      "size_bytes": 774,
+      "sha256": "31594aef338c089a7c15620e3175ff17e8d5a848e2c5c7673b1df4c51362612e"
+    },
+    {
+      "path": "fixtures/signed-bundles/valid-persistent-signed-bundle/README.md",
+      "family": "signed-bundles",
+      "git_blob_sha": "07aa744c53158f21e62ea21e25df8c3a2497b8bd",
+      "size_bytes": 267,
+      "sha256": "0e574837d2a5052f11c70df890b657ad09920bcccfc6fefb8a49b4f0e6afc964"
+    },
+    {
+      "path": "README.md",
+      "family": "source",
+      "git_blob_sha": "b1b3b949798b3f450fcfb14d8c7f9b0c89fd81f4",
+      "size_bytes": 243,
+      "sha256": "8977beb039b3ae7e9730de8db034c30ae5968d1b84f36eb6e7b4dd876d6f05a3"
+    },
+    {
+      "path": "VERSION",
+      "family": "source",
+      "git_blob_sha": "e6837e2d20bb8049dbc9a4a0e2d3e95397dcfa68",
+      "size_bytes": 35,
+      "sha256": "37f2548f61073f73a31693a93e18e90a9d4cf26f4fc0f38d47357f1fe1a257f9"
+    }
+  ],
+  "consumed_fixture_families": [
+    "mcp",
+    "signed-bundles"
+  ],
+  "mcp_fixture_case_count": 10,
+  "signed_bundle_fixture_case_count": 4,
+  "mcp_fixture_cases": [
+    "client-disconnect",
+    "malformed-request",
+    "malformed-response",
+    "missing-tool-result",
+    "nested-tool-call",
+    "reordered-response",
+    "replay-bundle-tamper",
+    "secret-like-tool-result",
+    "server-crash-mid-call",
+    "truncated-stdio-stream"
+  ],
+  "signed_bundle_fixture_cases": [
+    "fingerprint-mismatch",
+    "tampered-signed-bundle",
+    "truth-overclaim",
+    "valid-persistent-signed-bundle"
+  ],
+  "public_index_files_parsed": [
+    "fixtures/mcp/INDEX.json",
+    "fixtures/signed-bundles/INDEX.json"
+  ],
+  "local_sibling_repository_required": false,
+  "private_source_required": false,
+  "network_required_to_acquire_public_fixtures": true,
+  "network_runtime_required_after_asset_acquisition": false,
+  "proves_public_hostile_fixtures_consumed": true,
+  "proves_public_fixture_files_hash_verified": true,
+  "proves_fixture_indices_parse": true,
+  "proves_local_sibling_fixture_repo_not_required": true,
+  "proves_private_source_not_required": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}
