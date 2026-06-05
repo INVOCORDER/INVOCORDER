@@ -189,11 +189,9 @@ async function main() {
   const errors = [];
 
   try {
-    const pkg = readJson("package.json");
     const standard = readJson(STANDARD_PATH);
     const sourceReceipt = readJson(SOURCE_RECEIPT_PATH);
 
-    requireEqual(pkg.version, "0.6.0", "package version", errors);
     requireEqual(standard.object_type, "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_EXECUTION_STANDARD", "standard object_type", errors);
     requireEqual(standard.schema_version, "0.6.0", "standard schema_version", errors);
     requireEqual(sourceReceipt.object_type, "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_RECEIPT", "source receipt object_type", errors);

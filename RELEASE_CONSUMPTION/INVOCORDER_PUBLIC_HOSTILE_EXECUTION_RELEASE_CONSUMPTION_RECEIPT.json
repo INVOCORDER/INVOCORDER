@@ -1,0 +1,50 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_RECEIPT",
+  "schema_version": "0.7.0",
+  "jurisdiction": "INVOCORDER",
+  "valid": true,
+  "errors": [],
+  "source_release_tag": "v0.6.0-public-hostile-fixture-execution-receipt",
+  "source_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v0.6.0-public-hostile-fixture-execution-receipt",
+  "source_release_target_commitish": "main",
+  "source_tag_ref_object_type": "tag",
+  "source_tag_ref_sha": "eb299b2fb46684a6ec06dacac11c37f8f704ce62",
+  "consumed_public_release_assets": [
+    {
+      "name": "PUBLIC_HOSTILE_FIXTURE_EXECUTION_STANDARD.json",
+      "size_bytes": 910,
+      "sha256": "dd7db7178452615e5f8f097d8c895688579ec83df6fd06a4836609db4a7b0b9d",
+      "sha256_canonical_json": "afdb2ef8ffdcdfc4fd03440f88f82b50932b5ef7911e5adb841974178219e954",
+      "browser_download_url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v0.6.0-public-hostile-fixture-execution-receipt/PUBLIC_HOSTILE_FIXTURE_EXECUTION_STANDARD.json"
+    },
+    {
+      "name": "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_EXECUTION_RECEIPT.json",
+      "size_bytes": 6507,
+      "sha256": "83652f753d23f98afe006e7cc51e543981d5cc2acd10f63f935238a47da4fedb",
+      "sha256_canonical_json": "60b56142fc96620130fb86b3b330768d336805fef4d799bcc5a40a3df25fcf6f",
+      "browser_download_url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v0.6.0-public-hostile-fixture-execution-receipt/INVOCORDER_PUBLIC_HOSTILE_FIXTURE_EXECUTION_RECEIPT.json"
+    }
+  ],
+  "downloaded_receipt_object_type": "INVOCORDER_PUBLIC_HOSTILE_FIXTURE_EXECUTION_RECEIPT",
+  "downloaded_receipt_schema_version": "0.6.0",
+  "downloaded_receipt_valid": true,
+  "mcp_fixture_case_count": 10,
+  "signed_bundle_fixture_case_count": 4,
+  "mcp_passed_count": 10,
+  "signed_bundle_passed_count": 4,
+  "public_release_asset_download_required": true,
+  "local_working_tree_required_for_source_receipt": false,
+  "local_sibling_fixture_repo_required": false,
+  "private_source_required": false,
+  "proves_public_hostile_execution_release_consumed": true,
+  "proves_public_release_assets_exist": true,
+  "proves_public_release_assets_parse": true,
+  "proves_public_execution_receipt_valid": true,
+  "proves_fixture_expected_outputs_preserved": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}

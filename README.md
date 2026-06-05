@@ -50,3 +50,11 @@ This is stronger than public fixture consumption. The verifier clones `INVOCORDE
 - No local sibling `HOSTILE-FIXTURES` checkout is required.
 - Private source is not required.
 - Truth, authorization, safety, admissibility, and external reality are not claimed.
+
+## v0.7.0 — Public Hostile Execution Release Consumption
+
+INVOCORDER v0.7.0 adds a public release-consumption receipt for the v0.6 public hostile fixture execution release.
+
+It verifies that the v0.6 execution receipt and standard are present as public GitHub release assets, downloads them through the public release surface, parses them, checks the receipt validity, preserves the fixture execution result counts, and confirms that the non-claim boundary remains intact.
+
+This proves public release asset consumption and receipt continuity. It does not prove truth, authorization, safety, admissibility, or external reality.

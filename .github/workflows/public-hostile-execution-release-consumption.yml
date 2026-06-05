@@ -1,0 +1,30 @@
+name: public-hostile-execution-release-consumption
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-hostile-execution-release-consumption:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: node scripts/verify-public-org-perimeter-ledger.mjs
+      - run: node scripts/verify-public-hostile-fixture-consumption-receipt.mjs
+      - run: node scripts/verify-public-hostile-fixture-execution-receipt.mjs
+      - run: node scripts/verify-public-hostile-execution-release-consumption.mjs
