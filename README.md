@@ -91,3 +91,29 @@ The verifier binds the public chain from:
 The v1.0 closure verifies public repository contents for v0.4/v0.5, public release assets for v0.6–v0.9, JSON object types, schema versions, SHA-256 / canonical JSON SHA-256 bindings, non-claim boundaries, and clean temporary execution of the v0.8 public auditor runner.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+
+<!-- INVOCORDER_V1_1_CAPABILITY_SUPERVISION_START -->
+## INVOCORDER v1.1.0 — Capability Supervision Plane
+
+INVOCORDER v1.1.0 adds a machine-readable capability supervision plane.
+
+It binds:
+
+- the past public audit chain from v0.4 through v1.0,
+- the present first-party executable surface: CLI, source modules, compiled runtime surface, verifiers, workflows, docs, receipts, release-consumption layers, and audit assets,
+- the future extension boundary for plugins, add-ons, external tool runners, policy engines, schema expansion, hostile fixture expansion, and public release auditors.
+
+The v1.1 ledger does not claim truth, authorization, safety, admissibility, external reality, or unimplemented future capabilities. It proves only that the current public capability surface and declared future extension slots are bounded, hash-verifiable, and non-overclaiming.
+
+Verifier:
+
+```bash
+node scripts/verify-capability-supervision-ledger.mjs
+```
+
+Primary artifacts:
+
+- `CAPABILITY_SUPERVISION/INVOCORDER_CAPABILITY_SUPERVISION_STANDARD.json`
+- `CAPABILITY_SUPERVISION/INVOCORDER_CAPABILITY_SUPERVISION_LEDGER.json`
+<!-- INVOCORDER_V1_1_CAPABILITY_SUPERVISION_END -->
