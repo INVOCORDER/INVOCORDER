@@ -1,0 +1,32 @@
+name: public-audit-chain-closure
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-audit-chain-closure:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: node scripts/verify-public-audit-chain-closure.mjs
+
+# INVOCORDER_V1_0_GITHUB_TOKEN_ENV
+env:
+  GH_TOKEN: ${{ github.token }}
+  GITHUB_TOKEN: ${{ github.token }}
