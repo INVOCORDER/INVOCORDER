@@ -1,0 +1,34 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_STANDARD",
+  "schema_version": "0.8.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "source_release_tag": "v0.7.0-public-hostile-execution-release-consumption",
+  "source_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v0.7.0-public-hostile-execution-release-consumption",
+  "required_public_release_assets": [
+    {
+      "name": "PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_STANDARD.json",
+      "expected_sha256": "64602b2e6ae6754a80180aee109f646bb047ba62e43f912df9aa097f9d496816",
+      "expected_sha256_canonical_json": "286896fc757dafbc5b64c2e24ab65b5203152da421e4e2d5775fa45e7c3fc359"
+    },
+    {
+      "name": "INVOCORDER_PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_RECEIPT.json",
+      "expected_sha256": "085ef6de6bbfb9d336986caa344341ab961717d6e8954c98754c39ac2b596c74",
+      "expected_sha256_canonical_json": "31b3b10a9d6f4bbcef177e83b8350f9aaf42655b9520370e49d65af06c2baa90"
+    }
+  ],
+  "expected_receipt_object_type": "INVOCORDER_PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_RECEIPT",
+  "expected_receipt_schema_version": "0.7.0",
+  "expected_mcp_fixture_case_count": 10,
+  "expected_signed_bundle_fixture_case_count": 4,
+  "expected_mcp_passed_count": 10,
+  "expected_signed_bundle_passed_count": 4,
+  "local_working_tree_required_for_auditor": false,
+  "local_sibling_fixture_repo_required": false,
+  "private_source_required": false,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}
