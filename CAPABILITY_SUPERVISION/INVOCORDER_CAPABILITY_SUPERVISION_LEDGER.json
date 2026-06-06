@@ -1,0 +1,984 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_SUPERVISION_LEDGER",
+  "schema_version": "1.1.0",
+  "jurisdiction": "INVOCORDER",
+  "valid": true,
+  "errors": [],
+  "standard_path": "CAPABILITY_SUPERVISION/INVOCORDER_CAPABILITY_SUPERVISION_STANDARD.json",
+  "standard_sha256_canonical_json": "916d2b80d469966bd8ac46e40809751ac9e4d166d6e4fa605b2938cce940b037",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "package_version": "1.1.0",
+  "source_chain_receipt_path": "AUDIT/INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT.json",
+  "source_chain_receipt_sha256_canonical_json": "e445104697c0343156378ffb14b17e0c7b9c4ad5e9c522fd5332e341aa512ae9",
+  "audited_past_chain_nodes": [
+    "v0.4.0-public-org-perimeter-ledger",
+    "v0.5.0-public-hostile-fixture-consumption-receipt",
+    "v0.6.0-public-hostile-fixture-execution-receipt",
+    "v0.7.0-public-hostile-execution-release-consumption",
+    "v0.8.0-public-release-auditor-runner",
+    "v0.9.0-public-auditor-runner-consumption-receipt",
+    "v1.0.0-public-audit-chain-closure"
+  ],
+  "source_chain_audited_public_artifact_count": 13,
+  "source_v1_0_release_tag": "v1.0.0-public-audit-chain-closure",
+  "source_v1_0_release_assets": [
+    {
+      "name": "INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT.json",
+      "size_bytes": 17031,
+      "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.0.0-public-audit-chain-closure/INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT.json"
+    },
+    {
+      "name": "PUBLIC_AUDIT_CHAIN_CLOSURE_STANDARD.json",
+      "size_bytes": 10077,
+      "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.0.0-public-audit-chain-closure/PUBLIC_AUDIT_CHAIN_CLOSURE_STANDARD.json"
+    }
+  ],
+  "downloaded_v1_0_release_assets": [
+    {
+      "name": "PUBLIC_AUDIT_CHAIN_CLOSURE_STANDARD.json",
+      "size_bytes": 10077,
+      "sha256": "013229c2db29197857f898d738e64cf2cc9747541216a099412ba618fec75ace",
+      "sha256_canonical_json": "4e8b5639433ec7a6ec0469da8cd660bd3ee3e0075087720a0b03e8008d2775ff",
+      "object_type": "INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_STANDARD",
+      "schema_version": "1.0.0",
+      "valid": null
+    },
+    {
+      "name": "INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT.json",
+      "size_bytes": 17031,
+      "sha256": "3ca1b16cf40e8a231205c702478c32bc38f419930541a6026c79e56d6492caa2",
+      "sha256_canonical_json": "e445104697c0343156378ffb14b17e0c7b9c4ad5e9c522fd5332e341aa512ae9",
+      "object_type": "INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT",
+      "schema_version": "1.0.0",
+      "valid": true
+    }
+  ],
+  "present_surface_root_coverage": {
+    "bin": 1,
+    "src": 25,
+    "dist/src": 24,
+    "docs": 16,
+    "scripts": 9,
+    ".github/workflows": 10,
+    "AUDIT": 7,
+    "ORG_PERIMETER": 2,
+    "FIXTURE_CONSUMPTION": 2,
+    "FIXTURE_EXECUTION": 2,
+    "RELEASE_CONSUMPTION": 2,
+    "CAPABILITY_SUPERVISION": 1
+  },
+  "present_first_party_file_count": 113,
+  "capability_family_counts": {
+    "bundle_replay": 3,
+    "capture": 4,
+    "cli": 1,
+    "core": 39,
+    "documentation": 17,
+    "effects": 2,
+    "fixture_execution": 6,
+    "hash_chain": 2,
+    "integration_boundary": 2,
+    "mcp_boundary": 2,
+    "omission": 1,
+    "process": 3,
+    "redaction": 2,
+    "release_auditing": 16,
+    "signing": 2,
+    "supervision_boundary": 1,
+    "workflow_ci": 10
+  },
+  "package_bin": {
+    "invocorder": "bin/invocorder.js"
+  },
+  "package_scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/**/*.test.js || true",
+    "release:check": "npm run build && npm test",
+    "prepublish:gate": "node scripts/prepublish-gate.mjs"
+  },
+  "dependency_names": [],
+  "dev_dependency_names": [
+    "@types/node",
+    "typescript"
+  ],
+  "source_module_roots": [
+    "bundle",
+    "capture",
+    "cli",
+    "effects",
+    "fixtures",
+    "hash",
+    "mcp",
+    "omission",
+    "process",
+    "redaction",
+    "signing"
+  ],
+  "workflow_count": 10,
+  "workflows": [
+    ".github/workflows/capability-supervision-plane.yml",
+    ".github/workflows/public-audit-chain-closure.yml",
+    ".github/workflows/public-hostile-execution-release-consumption.yml",
+    ".github/workflows/public-hostile-fixture-consumption.yml",
+    ".github/workflows/public-hostile-fixture-execution.yml",
+    ".github/workflows/public-org-perimeter.yml",
+    ".github/workflows/public-release-auditor-runner-consumption.yml",
+    ".github/workflows/public-release-auditor-runner.yml",
+    ".github/workflows/release-check.yml",
+    ".github/workflows/test.yml"
+  ],
+  "verifier_script_count": 8,
+  "verifier_scripts": [
+    "scripts/verify-capability-supervision-ledger.mjs",
+    "scripts/verify-public-audit-chain-closure.mjs",
+    "scripts/verify-public-hostile-execution-release-consumption.mjs",
+    "scripts/verify-public-hostile-fixture-consumption-receipt.mjs",
+    "scripts/verify-public-hostile-fixture-execution-receipt.mjs",
+    "scripts/verify-public-org-perimeter-ledger.mjs",
+    "scripts/verify-public-release-auditor-runner-consumption.mjs",
+    "scripts/verify-public-release-auditor-runner.mjs"
+  ],
+  "first_party_files": [
+    {
+      "path": ".github/workflows/capability-supervision-plane.yml",
+      "family": "workflow_ci",
+      "size_bytes": 572,
+      "executable": false,
+      "sha256": "1018f96a75af032bf5ee5da69b4fe520f3db837be23eec808e9320c779bcfd63"
+    },
+    {
+      "path": ".github/workflows/public-audit-chain-closure.yml",
+      "family": "workflow_ci",
+      "size_bytes": 628,
+      "executable": false,
+      "sha256": "f18f40dda52637ae3c7ca61f05ef900b968cdcff9c8ab5cf4aab785d6253ab13"
+    },
+    {
+      "path": ".github/workflows/public-hostile-execution-release-consumption.yml",
+      "family": "workflow_ci",
+      "size_bytes": 796,
+      "executable": false,
+      "sha256": "145cdeef66aacdf65f4a9e7bab7b57d44adfde82a40674554d31899071b56e5b"
+    },
+    {
+      "path": ".github/workflows/public-hostile-fixture-consumption.yml",
+      "family": "workflow_ci",
+      "size_bytes": 567,
+      "executable": false,
+      "sha256": "d365a7aacf309760cea6ef2786867566e4c042715656ced0fe707e74d974cda7"
+    },
+    {
+      "path": ".github/workflows/public-hostile-fixture-execution.yml",
+      "family": "workflow_ci",
+      "size_bytes": 697,
+      "executable": false,
+      "sha256": "f74cc53b6ba7796c0f6951066a10a52a56793d28eff2ba72159c898f6b376c6b"
+    },
+    {
+      "path": ".github/workflows/public-org-perimeter.yml",
+      "family": "workflow_ci",
+      "size_bytes": 446,
+      "executable": false,
+      "sha256": "1bdb854cf81321594bcfc644c572aeaf15cdf5397426ac551b9b8d8c2212cf66"
+    },
+    {
+      "path": ".github/workflows/public-release-auditor-runner-consumption.yml",
+      "family": "workflow_ci",
+      "size_bytes": 565,
+      "executable": false,
+      "sha256": "a241979c413fa7a8a4dbe3affe375633ac3477331d35759db2c9058559709e8a"
+    },
+    {
+      "path": ".github/workflows/public-release-auditor-runner.yml",
+      "family": "workflow_ci",
+      "size_bytes": 489,
+      "executable": false,
+      "sha256": "075cc82f85f2e3c40fa47ae5677f9f9f5b2adf19869ed6ab39897d7f68abd372"
+    },
+    {
+      "path": ".github/workflows/release-check.yml",
+      "family": "workflow_ci",
+      "size_bytes": 310,
+      "executable": false,
+      "sha256": "aac7ce381291f6782e661ccf94a5f6d19b664a9f3f434687f2a1e930c760a8dd"
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "family": "workflow_ci",
+      "size_bytes": 256,
+      "executable": false,
+      "sha256": "a261760af9967dc085a164c00429f075ed1cd848f576969a70214a8ec68bc76a"
+    },
+    {
+      "path": "AUDIT/INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT.json",
+      "family": "release_auditing",
+      "size_bytes": 17031,
+      "executable": false,
+      "sha256": "3ca1b16cf40e8a231205c702478c32bc38f419930541a6026c79e56d6492caa2"
+    },
+    {
+      "path": "AUDIT/INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER.mjs",
+      "family": "release_auditing",
+      "size_bytes": 9694,
+      "executable": true,
+      "sha256": "584b111deb0d3a32313e4e7da1fa1e72ee23ba665bed51e5bdff464d2d94b7dd"
+    },
+    {
+      "path": "AUDIT/INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_CONSUMPTION_RECEIPT.json",
+      "family": "release_auditing",
+      "size_bytes": 3865,
+      "executable": false,
+      "sha256": "e69652ae42b0c4b3dc23aeb52761260213ac1601e5fdc009112c8c1bab6aa802"
+    },
+    {
+      "path": "AUDIT/INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_RECEIPT.json",
+      "family": "release_auditing",
+      "size_bytes": 3003,
+      "executable": false,
+      "sha256": "8089e295bddfe824630b76a0ec4f5444e169cdc780da44cefb8066c5d0804751"
+    },
+    {
+      "path": "AUDIT/PUBLIC_AUDIT_CHAIN_CLOSURE_STANDARD.json",
+      "family": "release_auditing",
+      "size_bytes": 10077,
+      "executable": false,
+      "sha256": "013229c2db29197857f898d738e64cf2cc9747541216a099412ba618fec75ace"
+    },
+    {
+      "path": "AUDIT/PUBLIC_RELEASE_AUDITOR_RUNNER_CONSUMPTION_STANDARD.json",
+      "family": "release_auditing",
+      "size_bytes": 1629,
+      "executable": false,
+      "sha256": "c89174a76b8c7a16823e184b5a34b093bff256791e05346f0f0b519fcac81ac6"
+    },
+    {
+      "path": "AUDIT/PUBLIC_RELEASE_AUDITOR_RUNNER_STANDARD.json",
+      "family": "release_auditing",
+      "size_bytes": 1630,
+      "executable": false,
+      "sha256": "b0b968eeb003b42bb6a47d6e877912e640a88e5df814bcbc3d18001514db4c39"
+    },
+    {
+      "path": "CAPABILITY_SUPERVISION/INVOCORDER_CAPABILITY_SUPERVISION_STANDARD.json",
+      "family": "supervision_boundary",
+      "size_bytes": 3649,
+      "executable": false,
+      "sha256": "14ad6d3b7890e83d5fe614e2c464d25a70dcbf5845f1f32bf64cbf7faca456d5"
+    },
+    {
+      "path": "COMMERCIAL-LICENSE.md",
+      "family": "core",
+      "size_bytes": 211,
+      "executable": false,
+      "sha256": "0463940aeacf9099dc3eb493e55128d1826a2746c1bb9d5076097ba4f5e1e761"
+    },
+    {
+      "path": "COPYING-AGPL-3.0.md",
+      "family": "core",
+      "size_bytes": 34020,
+      "executable": false,
+      "sha256": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee"
+    },
+    {
+      "path": "FIXTURE_CONSUMPTION/INVOCORDER_PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_RECEIPT.json",
+      "family": "fixture_execution",
+      "size_bytes": 28397,
+      "executable": false,
+      "sha256": "6ef953cbbee74a93562ae3774b034272370e3b0237c00feb1129397c82ba21ab"
+    },
+    {
+      "path": "FIXTURE_CONSUMPTION/PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_STANDARD.json",
+      "family": "fixture_execution",
+      "size_bytes": 1036,
+      "executable": false,
+      "sha256": "c2d7e280091fd33762872586ecc3c7894488e7ff53f973b375fbead038d97a2d"
+    },
+    {
+      "path": "FIXTURE_EXECUTION/INVOCORDER_PUBLIC_HOSTILE_FIXTURE_EXECUTION_RECEIPT.json",
+      "family": "fixture_execution",
+      "size_bytes": 6507,
+      "executable": false,
+      "sha256": "83652f753d23f98afe006e7cc51e543981d5cc2acd10f63f935238a47da4fedb"
+    },
+    {
+      "path": "FIXTURE_EXECUTION/PUBLIC_HOSTILE_FIXTURE_EXECUTION_STANDARD.json",
+      "family": "fixture_execution",
+      "size_bytes": 910,
+      "executable": false,
+      "sha256": "dd7db7178452615e5f8f097d8c895688579ec83df6fd06a4836609db4a7b0b9d"
+    },
+    {
+      "path": "LICENSE",
+      "family": "core",
+      "size_bytes": 606,
+      "executable": false,
+      "sha256": "e9dac97defd6c12e0fe111be917a19186ac4e03b9e946fc08f0db8bc32f28385"
+    },
+    {
+      "path": "NON_GOALS.md",
+      "family": "core",
+      "size_bytes": 401,
+      "executable": false,
+      "sha256": "97b4b2026664822921cb5743b52bd2566b59c0fc963a5cba164ec0045791ebdf"
+    },
+    {
+      "path": "ORG_PERIMETER/INVOCORDER_PUBLIC_ORG_PERIMETER_LEDGER.json",
+      "family": "integration_boundary",
+      "size_bytes": 6704,
+      "executable": false,
+      "sha256": "009e0f824c77ee57a93c90e64e6c5a45a7f503f631ce79c2564f406f585ac806"
+    },
+    {
+      "path": "ORG_PERIMETER/PUBLIC_ORG_PERIMETER_STANDARD.json",
+      "family": "integration_boundary",
+      "size_bytes": 993,
+      "executable": false,
+      "sha256": "0340c0ab74a562d143ef608641c17fe1e6c9c471aead920769e0771d892836c9"
+    },
+    {
+      "path": "PUBLISH_DECISION.md",
+      "family": "core",
+      "size_bytes": 2337,
+      "executable": false,
+      "sha256": "43b79048c8eeca1ef4024353d988a4f6d1bef01f94ec1dd621354f46d7f2c5c9"
+    },
+    {
+      "path": "README.md",
+      "family": "documentation",
+      "size_bytes": 6640,
+      "executable": false,
+      "sha256": "b66262b73d7ab34a121b75ee0b1dda665a41f0031503e3abdb5d805bef340e88"
+    },
+    {
+      "path": "RELEASE_CONSUMPTION/INVOCORDER_PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_RECEIPT.json",
+      "family": "release_auditing",
+      "size_bytes": 2498,
+      "executable": false,
+      "sha256": "085ef6de6bbfb9d336986caa344341ab961717d6e8954c98754c39ac2b596c74"
+    },
+    {
+      "path": "RELEASE_CONSUMPTION/PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_STANDARD.json",
+      "family": "release_auditing",
+      "size_bytes": 1011,
+      "executable": false,
+      "sha256": "64602b2e6ae6754a80180aee109f646bb047ba62e43f912df9aa097f9d496816"
+    },
+    {
+      "path": "ROADMAP.md",
+      "family": "core",
+      "size_bytes": 289,
+      "executable": false,
+      "sha256": "9282b11b8b1cc57f8a48bd4b4ef0560a3637e8692c92869b07ff7817e9e2e741"
+    },
+    {
+      "path": "SECURITY.md",
+      "family": "core",
+      "size_bytes": 124,
+      "executable": false,
+      "sha256": "e0ad85adb740d4f0d4329a8b38774241a425637c85af63fcaa3e9e5ee1c1b5ae"
+    },
+    {
+      "path": "THREAT_MODEL.md",
+      "family": "core",
+      "size_bytes": 248,
+      "executable": false,
+      "sha256": "c2d7f71fd707b837221732df716b6657bda294c0fbede90170cfc8da6912d943"
+    },
+    {
+      "path": "VERSION",
+      "family": "core",
+      "size_bytes": 6,
+      "executable": false,
+      "sha256": "1575e1af4a95f12f70b4ee6a6adce8160953d93ea17dc2611b90883ccc3ad3b8"
+    },
+    {
+      "path": "bin/invocorder.js",
+      "family": "cli",
+      "size_bytes": 60,
+      "executable": true,
+      "sha256": "5426c789d02a17d02a5452826fcd1953b43b5816d0f8ae935237404c81df473c"
+    },
+    {
+      "path": "dist/src/bundle/compile-replay-bundle.js",
+      "family": "core",
+      "size_bytes": 2184,
+      "executable": false,
+      "sha256": "b934714748bb53f457821befd7a7a236e3234ea06146acca16823ab0bf8bbd96"
+    },
+    {
+      "path": "dist/src/bundle/verify-bundle-file.js",
+      "family": "core",
+      "size_bytes": 3200,
+      "executable": false,
+      "sha256": "d0badb9481c8e5cc9e3e8ca00eef2826735ee0bdbfb942eaf18f4c438ed77bc2"
+    },
+    {
+      "path": "dist/src/bundle/verify-replay-bundle.js",
+      "family": "core",
+      "size_bytes": 838,
+      "executable": false,
+      "sha256": "6e8145a94052231351d1d661d1b6ced3c0963479d15032631e76d8216b4e01fd"
+    },
+    {
+      "path": "dist/src/capture/close-session.js",
+      "family": "core",
+      "size_bytes": 381,
+      "executable": false,
+      "sha256": "4f25c33df2fa46b543c8131148696c126941fe6cbe820eb567aae0f4aef23838"
+    },
+    {
+      "path": "dist/src/capture/record-boundary-fact.js",
+      "family": "core",
+      "size_bytes": 1230,
+      "executable": false,
+      "sha256": "cbb2b7dd143ddecfc97cb38f27e32586ee2dd2d5633b535b805fd9a94fe60768"
+    },
+    {
+      "path": "dist/src/capture/start-session.js",
+      "family": "core",
+      "size_bytes": 876,
+      "executable": false,
+      "sha256": "7645794ef736840831a11e43e6707df9f0da38a100f654dfa74130192da183e9"
+    },
+    {
+      "path": "dist/src/capture/write-record.js",
+      "family": "core",
+      "size_bytes": 214,
+      "executable": false,
+      "sha256": "e9cb62754656eda3194f59c740703016202d67d70977fa048a19b233c05fcd1b"
+    },
+    {
+      "path": "dist/src/cli/invocorder.js",
+      "family": "core",
+      "size_bytes": 2313,
+      "executable": true,
+      "sha256": "9ce78dec9d4e6e4e2bfbdb1c1b035bf01024e4a0bc4b0f6f40f79ee3e64dac1d"
+    },
+    {
+      "path": "dist/src/effects/scan-file-effects.js",
+      "family": "core",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "dist/src/effects/snapshot-env.js",
+      "family": "core",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "dist/src/fixtures/run-mcp-fixtures.js",
+      "family": "core",
+      "size_bytes": 2797,
+      "executable": false,
+      "sha256": "3f64e801f7e7e9df5f2a4d88c62a3c2da3b1ddfd0c2a04310cd8cc1250626aae"
+    },
+    {
+      "path": "dist/src/fixtures/run-signed-bundle-fixtures.js",
+      "family": "core",
+      "size_bytes": 2192,
+      "executable": false,
+      "sha256": "e362aab993db656630ee1218afd3913d92bab3bb6aeb86d56e10d85410e69a82"
+    },
+    {
+      "path": "dist/src/hash/hash-record.js",
+      "family": "core",
+      "size_bytes": 383,
+      "executable": false,
+      "sha256": "2e390a9aff1c26f16399a50f77c9aacae557c3ef73b071ff791aeab555da45de"
+    },
+    {
+      "path": "dist/src/hash/verify-hash-chain.js",
+      "family": "core",
+      "size_bytes": 728,
+      "executable": false,
+      "sha256": "346e3ac2fc9abbbad2eab7d3fcb8f99fcc18d29a26787c707d913f9496ec103b"
+    },
+    {
+      "path": "dist/src/mcp/record-mcp-stdio-file.js",
+      "family": "core",
+      "size_bytes": 3027,
+      "executable": false,
+      "sha256": "40e55a4909befdc20d1d01974a973777f9245594d26b63e68652a28338691935"
+    },
+    {
+      "path": "dist/src/omission/create-omission-record.js",
+      "family": "core",
+      "size_bytes": 332,
+      "executable": false,
+      "sha256": "e158e9070fdc2c477393fa1a84d47f33c8439d05240e3f6e0812d76b36b097f1"
+    },
+    {
+      "path": "dist/src/process/capture-exit.js",
+      "family": "core",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "dist/src/process/capture-stdio.js",
+      "family": "core",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "dist/src/process/run-command.js",
+      "family": "core",
+      "size_bytes": 3248,
+      "executable": false,
+      "sha256": "f5b30ca468ed2e3ce5e3152a71a2f92a7c63ca4945f1e0a73af29e8e3ce4d63f"
+    },
+    {
+      "path": "dist/src/redaction/load-redaction-policy.js",
+      "family": "core",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "dist/src/redaction/redact-record.js",
+      "family": "core",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "dist/src/signing/keys/key-store.js",
+      "family": "core",
+      "size_bytes": 1451,
+      "executable": false,
+      "sha256": "4453979434d24ddf5013a2de0663ac672a5f8d6e18e67e4dfe273b2f9a1383ca"
+    },
+    {
+      "path": "dist/src/signing/sign-bundle-file.js",
+      "family": "core",
+      "size_bytes": 3877,
+      "executable": false,
+      "sha256": "1fa6e63fcec8b637e382e70ea35f6a180cf816663d25f3cebdeb1144df1f353f"
+    },
+    {
+      "path": "dist/src/version.js",
+      "family": "core",
+      "size_bytes": 542,
+      "executable": false,
+      "sha256": "6b7d3a2237bd0ba94f9e4c8132eb99e06afe584ab7f5622bde49283322ae493f"
+    },
+    {
+      "path": "docs/ACTION_SESSION.md",
+      "family": "documentation",
+      "size_bytes": 175,
+      "executable": false,
+      "sha256": "e2b4c71729b5628287066e27c28ffe3d206e7f6862d0286492e7196ee95bf45b"
+    },
+    {
+      "path": "docs/BUNDLE_INTEGRITY.md",
+      "family": "documentation",
+      "size_bytes": 177,
+      "executable": false,
+      "sha256": "6b6f8d74476c32d78e532bd7b91135dba63837b093ab352ef412bd817373ffa9"
+    },
+    {
+      "path": "docs/CAPTURE_CONTRACT.md",
+      "family": "documentation",
+      "size_bytes": 177,
+      "executable": false,
+      "sha256": "b7e11c75590a820b85299f9954eeef8dcb6c7a224c39cc40541d6c537730f742"
+    },
+    {
+      "path": "docs/EVENT_MODEL.md",
+      "family": "documentation",
+      "size_bytes": 172,
+      "executable": false,
+      "sha256": "216bc92586b257a532cdb66976a53f3ad60ed3633009013d8322340857099713"
+    },
+    {
+      "path": "docs/HASH_CHAIN.md",
+      "family": "documentation",
+      "size_bytes": 171,
+      "executable": false,
+      "sha256": "c3526d2f89a69b0d1dd3597278d6ca0c8b932bad7e13d379fc0ef8298cbbf538"
+    },
+    {
+      "path": "docs/MACHINE_ACTION_EVIDENCE.md",
+      "family": "documentation",
+      "size_bytes": 184,
+      "executable": false,
+      "sha256": "a3ceccdede0cc67bdd705e1c62cdee0a27267393f8a1f90fddf766c0474aef8c"
+    },
+    {
+      "path": "docs/NO_BLOCKING.md",
+      "family": "documentation",
+      "size_bytes": 172,
+      "executable": false,
+      "sha256": "7e4e39bee4bc253a7bca2b831c1f3df134a30927747d3e794feae2311d1fa7f3"
+    },
+    {
+      "path": "docs/NO_TELEMETRY.md",
+      "family": "documentation",
+      "size_bytes": 173,
+      "executable": false,
+      "sha256": "423c3bde8e98140718cfd89b497f718718834aab2489dcf6a35a5ac641cf23fc"
+    },
+    {
+      "path": "docs/NO_TRUTH_CLAIMS.md",
+      "family": "documentation",
+      "size_bytes": 176,
+      "executable": false,
+      "sha256": "a8412c3c215eb94e58e83ec5c60ac5aeb55a2d8537d6770683c3aa93575e4248"
+    },
+    {
+      "path": "docs/OMISSION_RECORDS.md",
+      "family": "documentation",
+      "size_bytes": 177,
+      "executable": false,
+      "sha256": "460d77888cc0460db974d5df21c611235e382f8009d964f777f01e547f8fddab"
+    },
+    {
+      "path": "docs/REDACTION_RECORDS.md",
+      "family": "documentation",
+      "size_bytes": 178,
+      "executable": false,
+      "sha256": "6c38ae121f39272ff8d95776e3e0e471e4e61b778fa480eeecc1ac9bf584b5d5"
+    },
+    {
+      "path": "docs/REPLAY_BUNDLE.md",
+      "family": "documentation",
+      "size_bytes": 174,
+      "executable": false,
+      "sha256": "9503cb5317c1e9b7f8ebe7a91306827c33b82b2ddd566d1b3ccfdde72a9701ec"
+    },
+    {
+      "path": "docs/ROLE_BOUNDARY.md",
+      "family": "documentation",
+      "size_bytes": 174,
+      "executable": false,
+      "sha256": "23894280f6cbb673a9b28e7b0b920d644ab18e19d77268f33ff67be65accddf3"
+    },
+    {
+      "path": "docs/mcp/MCP_BOUNDARY_ADAPTER.md",
+      "family": "documentation",
+      "size_bytes": 255,
+      "executable": false,
+      "sha256": "7cfd8a572b3e0ef890817df96e594f678bfe65fa02886c430a79d9573545c22c"
+    },
+    {
+      "path": "docs/signing/PERSISTENT_SIGNING_KEYS.md",
+      "family": "documentation",
+      "size_bytes": 420,
+      "executable": false,
+      "sha256": "08ca1ab4b20eb4a59843ea6afd74080baecc88b838e42796c5129c69569c4c95"
+    },
+    {
+      "path": "docs/signing/SIGNED_BUNDLES.md",
+      "family": "documentation",
+      "size_bytes": 374,
+      "executable": false,
+      "sha256": "30b9765f58dc65a2f255a793ebb2bc209f485669e5fcddb34d613714f8e59b44"
+    },
+    {
+      "path": "package-lock.json",
+      "family": "core",
+      "size_bytes": 1556,
+      "executable": false,
+      "sha256": "1d4c3c87ec8922011573e8594dc666f265becc9d6153b70be388b443697f41f7"
+    },
+    {
+      "path": "package.json",
+      "family": "core",
+      "size_bytes": 840,
+      "executable": false,
+      "sha256": "82cf89926426b0a9b48a8399e3413e7240bfed9d31ebd7cfb26d4595c396b34e"
+    },
+    {
+      "path": "scripts/prepublish-gate.mjs",
+      "family": "core",
+      "size_bytes": 4384,
+      "executable": false,
+      "sha256": "3ce2730be5af0d3c043cd62a95716500c1235da759f585b3596bdb7b09d2e6a9"
+    },
+    {
+      "path": "scripts/verify-capability-supervision-ledger.mjs",
+      "family": "core",
+      "size_bytes": 14043,
+      "executable": true,
+      "sha256": "d866c847e07151a75633f9e71be347949751682908f17d5eb03eb9c844e5c8f4"
+    },
+    {
+      "path": "scripts/verify-public-audit-chain-closure.mjs",
+      "family": "release_auditing",
+      "size_bytes": 17567,
+      "executable": false,
+      "sha256": "88c3e29431a5ea0ce68fd8ebe4b7fe4b5e7c601f768d28f74b64458584457a8a"
+    },
+    {
+      "path": "scripts/verify-public-hostile-execution-release-consumption.mjs",
+      "family": "release_auditing",
+      "size_bytes": 7450,
+      "executable": true,
+      "sha256": "4f119b7a7177693da6848d5f467fa2cb4a073e143d164d87be1e271e557c2a6b"
+    },
+    {
+      "path": "scripts/verify-public-hostile-fixture-consumption-receipt.mjs",
+      "family": "release_auditing",
+      "size_bytes": 11592,
+      "executable": true,
+      "sha256": "940630dead470ce4280ca5128751496682bf0bfc722f7848aa069760b857a707"
+    },
+    {
+      "path": "scripts/verify-public-hostile-fixture-execution-receipt.mjs",
+      "family": "release_auditing",
+      "size_bytes": 11777,
+      "executable": true,
+      "sha256": "aa54e0fe80c3bcb1105c8227d64b2995024cdfa8d03e457689deb217333d9114"
+    },
+    {
+      "path": "scripts/verify-public-org-perimeter-ledger.mjs",
+      "family": "release_auditing",
+      "size_bytes": 5383,
+      "executable": true,
+      "sha256": "f5b62b99fc933d1e9f86006bda23ff1755d6eee5e44d1034b4f8afd7ee670019"
+    },
+    {
+      "path": "scripts/verify-public-release-auditor-runner-consumption.mjs",
+      "family": "release_auditing",
+      "size_bytes": 12766,
+      "executable": false,
+      "sha256": "80c0f27ab6802aaf675f2c6e54069d265882d03be39077e1af3fd52b31bc2392"
+    },
+    {
+      "path": "scripts/verify-public-release-auditor-runner.mjs",
+      "family": "release_auditing",
+      "size_bytes": 5875,
+      "executable": true,
+      "sha256": "903ed97a27f3c6e71fa94212994bef65e3ea15af1542a1ef9447e50fb1ca1c40"
+    },
+    {
+      "path": "src/bundle/compile-replay-bundle.ts",
+      "family": "bundle_replay",
+      "size_bytes": 2088,
+      "executable": false,
+      "sha256": "095e589bf30dfa0716173094633bd4771eae8a62e330406cd2de1ffb01a29f68"
+    },
+    {
+      "path": "src/bundle/verify-bundle-file.ts",
+      "family": "bundle_replay",
+      "size_bytes": 3512,
+      "executable": false,
+      "sha256": "e1d902d17f6758b6e598a6b2701329ee684751e163051a5a8d30e2fc72093d5e"
+    },
+    {
+      "path": "src/bundle/verify-replay-bundle.ts",
+      "family": "bundle_replay",
+      "size_bytes": 926,
+      "executable": false,
+      "sha256": "d4d0ee6f37c54e1751c104aace9bccc420cfec550004a76939098e52a68171af"
+    },
+    {
+      "path": "src/capture/close-session.ts",
+      "family": "capture",
+      "size_bytes": 469,
+      "executable": false,
+      "sha256": "6e04507bc0ac36a2a0cc2af31c7e1e14cf6a7b2790161694d913fd596d76d070"
+    },
+    {
+      "path": "src/capture/record-boundary-fact.ts",
+      "family": "capture",
+      "size_bytes": 2157,
+      "executable": false,
+      "sha256": "663dfad741127078b1d92210f137b6d5c24c6fa322957d12906c75d5026c42ad"
+    },
+    {
+      "path": "src/capture/start-session.ts",
+      "family": "capture",
+      "size_bytes": 1162,
+      "executable": false,
+      "sha256": "e447fbd83588484b2816a74ae215427e0dadd6fb33ebde2bcab30e360ff700cf"
+    },
+    {
+      "path": "src/capture/write-record.ts",
+      "family": "capture",
+      "size_bytes": 318,
+      "executable": false,
+      "sha256": "e91aeacfe292d995e47bfc8f4286aa255229dc26028fe4a822f887cc9b5a970d"
+    },
+    {
+      "path": "src/cli/invocorder.ts",
+      "family": "core",
+      "size_bytes": 2206,
+      "executable": true,
+      "sha256": "14bee12c83bf968ed9d1b55988a57b01a89a7134cadf46d42be1d8cf069bf4fd"
+    },
+    {
+      "path": "src/effects/scan-file-effects.ts",
+      "family": "effects",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "src/effects/snapshot-env.ts",
+      "family": "effects",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "src/fixtures/run-mcp-fixtures.ts",
+      "family": "fixture_execution",
+      "size_bytes": 2897,
+      "executable": false,
+      "sha256": "05858f501a98d69124a83b1aa7acc3cbd4fad0dba835080661fe764b1e679bf4"
+    },
+    {
+      "path": "src/fixtures/run-signed-bundle-fixtures.ts",
+      "family": "fixture_execution",
+      "size_bytes": 2402,
+      "executable": false,
+      "sha256": "91cf16f44ff41e5cf88a275ca678f76f4338044fd1fceab6d32d0805cbe34416"
+    },
+    {
+      "path": "src/hash/hash-record.ts",
+      "family": "hash_chain",
+      "size_bytes": 461,
+      "executable": false,
+      "sha256": "8a4eb5962dc1b405654c1958dc37d680d6647dbf143e540711b367f7d491e034"
+    },
+    {
+      "path": "src/hash/verify-hash-chain.ts",
+      "family": "hash_chain",
+      "size_bytes": 927,
+      "executable": false,
+      "sha256": "0ef21332d96f7b6d206455a7cd690ee761fd7a2f86fcd5ba95ecf10dfa96bcc4"
+    },
+    {
+      "path": "src/mcp/README.md",
+      "family": "mcp_boundary",
+      "size_bytes": 129,
+      "executable": false,
+      "sha256": "1efe237a3767826dc286f0d4982475daf4f8f9d9422c106a25ac78ce14e7ed67"
+    },
+    {
+      "path": "src/mcp/record-mcp-stdio-file.ts",
+      "family": "mcp_boundary",
+      "size_bytes": 2871,
+      "executable": false,
+      "sha256": "a03244f38933e1abc092c0e2f01d99003d5884a4275609bbcb30cf6661050a40"
+    },
+    {
+      "path": "src/omission/create-omission-record.ts",
+      "family": "omission",
+      "size_bytes": 530,
+      "executable": false,
+      "sha256": "55ce646d66786cf8cac547f8668d917938a7e91477d360d94bcf5877c4254bb6"
+    },
+    {
+      "path": "src/process/capture-exit.ts",
+      "family": "process",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "src/process/capture-stdio.ts",
+      "family": "process",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "src/process/run-command.ts",
+      "family": "process",
+      "size_bytes": 3168,
+      "executable": false,
+      "sha256": "ee169827582800988ebfa0bc82b4dadcf99eaaee62c44cdcc5bea72f87141939"
+    },
+    {
+      "path": "src/redaction/load-redaction-policy.ts",
+      "family": "redaction",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "src/redaction/redact-record.ts",
+      "family": "redaction",
+      "size_bytes": 11,
+      "executable": false,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "src/signing/keys/key-store.ts",
+      "family": "signing",
+      "size_bytes": 1639,
+      "executable": false,
+      "sha256": "e54946928f87f8cb9c0f3232b01bf5402ecd88fd92512e31fdc397fc4edbfa55"
+    },
+    {
+      "path": "src/signing/sign-bundle-file.ts",
+      "family": "signing",
+      "size_bytes": 4346,
+      "executable": false,
+      "sha256": "73f8d454fa9473d6f220e0aee44da9a9e6d8b4583e4613a710f9c256584ec00f"
+    },
+    {
+      "path": "src/version.ts",
+      "family": "core",
+      "size_bytes": 497,
+      "executable": false,
+      "sha256": "0322effeb4f7719f0bf1edabf7521f8dd2176924e32fe5e50b3dd5d54c087a63"
+    }
+  ],
+  "future_extension_slots": [
+    {
+      "slot": "plugin_adapters",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may register plugin adapter manifests only when their files, hashes, role boundaries, and non-claims are bound."
+    },
+    {
+      "slot": "external_tool_runners",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may supervise external tool runners only when execution receipts and replay boundaries are machine-readable."
+    },
+    {
+      "slot": "policy_engines",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may bind policy engines only when policy inputs, outputs, versions, and non-claims are explicit."
+    },
+    {
+      "slot": "evidence_schema_expansion",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may add schemas only when schema version, hash, compatibility, and validation surface are bound."
+    },
+    {
+      "slot": "hostile_fixture_expansion",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may expand hostile fixtures only when public fixture sources, expected outputs, and execution receipts are verified."
+    },
+    {
+      "slot": "release_auditor_expansion",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may add public auditors only when the auditor itself is downloadable, hash-verified, executable from a clean temp directory, and non-overclaiming."
+    }
+  ],
+  "local_working_tree_required_for_supervision": false,
+  "private_source_required": false,
+  "public_release_asset_download_required_for_past_closure": true,
+  "proves_capability_supervision_plane": true,
+  "proves_past_public_audit_chain_bound": true,
+  "proves_present_first_party_capability_surface_bound": true,
+  "proves_future_extension_slots_declared_without_implementation_overclaim": true,
+  "proves_v1_0_public_closure_release_assets_bound": true,
+  "proves_cli_surface_bound": true,
+  "proves_workflow_surface_bound": true,
+  "proves_verifier_surface_bound": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}

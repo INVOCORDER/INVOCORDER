@@ -1,0 +1,100 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_SUPERVISION_STANDARD",
+  "schema_version": "1.1.0",
+  "jurisdiction": "INVOCORDER",
+  "purpose": "Bind the INVOCORDER public audit chain, current executable capability surface, integration/plugin/add-on/wire boundaries, and future extension slots into one machine-readable supervision plane.",
+  "time_domains": [
+    "past_public_audit_chain",
+    "present_first_party_capability_surface",
+    "future_declared_extension_slots"
+  ],
+  "required_past_chain_nodes": [
+    "v0.4.0-public-org-perimeter-ledger",
+    "v0.5.0-public-hostile-fixture-consumption-receipt",
+    "v0.6.0-public-hostile-fixture-execution-receipt",
+    "v0.7.0-public-hostile-execution-release-consumption",
+    "v0.8.0-public-release-auditor-runner",
+    "v0.9.0-public-auditor-runner-consumption-receipt",
+    "v1.0.0-public-audit-chain-closure"
+  ],
+  "required_present_surface_roots": [
+    "bin",
+    "src",
+    "dist/src",
+    "docs",
+    "scripts",
+    ".github/workflows",
+    "AUDIT",
+    "ORG_PERIMETER",
+    "FIXTURE_CONSUMPTION",
+    "FIXTURE_EXECUTION",
+    "RELEASE_CONSUMPTION",
+    "CAPABILITY_SUPERVISION"
+  ],
+  "capability_families": [
+    "cli",
+    "capture",
+    "process",
+    "effects",
+    "hash_chain",
+    "bundle_replay",
+    "omission",
+    "redaction",
+    "mcp_boundary",
+    "fixture_execution",
+    "signing",
+    "release_auditing",
+    "public_chain_closure",
+    "workflow_ci",
+    "documentation",
+    "schema_boundary",
+    "integration_boundary",
+    "plugin_boundary",
+    "addon_boundary",
+    "runner_boundary",
+    "supervision_boundary"
+  ],
+  "future_extension_slots": [
+    {
+      "slot": "plugin_adapters",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may register plugin adapter manifests only when their files, hashes, role boundaries, and non-claims are bound."
+    },
+    {
+      "slot": "external_tool_runners",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may supervise external tool runners only when execution receipts and replay boundaries are machine-readable."
+    },
+    {
+      "slot": "policy_engines",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may bind policy engines only when policy inputs, outputs, versions, and non-claims are explicit."
+    },
+    {
+      "slot": "evidence_schema_expansion",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may add schemas only when schema version, hash, compatibility, and validation surface are bound."
+    },
+    {
+      "slot": "hostile_fixture_expansion",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may expand hostile fixtures only when public fixture sources, expected outputs, and execution receipts are verified."
+    },
+    {
+      "slot": "release_auditor_expansion",
+      "status": "declared_extension_boundary_not_claimed_as_implemented",
+      "allowed_claim": "INVOCORDER may add public auditors only when the auditor itself is downloadable, hash-verified, executable from a clean temp directory, and non-overclaiming."
+    }
+  ],
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_future_execution": false,
+    "claims_unimplemented_plugins": false,
+    "claims_unimplemented_addons": false,
+    "claims_unimplemented_integrations": false
+  }
+}
