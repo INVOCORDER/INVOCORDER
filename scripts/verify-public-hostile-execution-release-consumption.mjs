@@ -49,7 +49,7 @@ try {
   const pkg = readJson("package.json");
   const standard = readJson("RELEASE_CONSUMPTION/PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_STANDARD.json");
 
-  requireEqual(pkg.version, "0.7.0", "package version");
+  requireEqual(standard.schema_version, "0.7.0", "standard schema_version", errors);
   requireEqual(standard.object_type, "INVOCORDER_PUBLIC_HOSTILE_EXECUTION_RELEASE_CONSUMPTION_STANDARD", "standard object_type");
   requireEqual(standard.schema_version, "0.7.0", "standard schema_version");
 

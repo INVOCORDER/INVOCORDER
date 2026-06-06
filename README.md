@@ -58,3 +58,11 @@ INVOCORDER v0.7.0 adds a public release-consumption receipt for the v0.6 public 
 It verifies that the v0.6 execution receipt and standard are present as public GitHub release assets, downloads them through the public release surface, parses them, checks the receipt validity, preserves the fixture execution result counts, and confirms that the non-claim boundary remains intact.
 
 This proves public release asset consumption and receipt continuity. It does not prove truth, authorization, safety, admissibility, or external reality.
+
+## v0.8.0 — Standalone Public Release Auditor Runner
+
+INVOCORDER v0.8.0 adds a standalone public release auditor runner.
+
+The runner starts from public GitHub release assets for `v0.7.0-public-hostile-execution-release-consumption`, downloads the v0.7 release-consumption standard and receipt, verifies their SHA-256 and canonical JSON hashes, parses the receipt, and confirms that the public hostile execution result counts remain preserved.
+
+The runner does not require a local working tree, local sibling fixture repository, or private source. It preserves the existing non-claim boundary: it does not prove truth, authorization, safety, admissibility, or external reality.
