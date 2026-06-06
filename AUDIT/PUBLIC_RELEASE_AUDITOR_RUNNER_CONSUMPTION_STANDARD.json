@@ -1,0 +1,35 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_CONSUMPTION_STANDARD",
+  "schema_version": "0.9.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "source_release_tag": "v0.8.0-public-release-auditor-runner",
+  "required_public_release_assets": [
+    "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER.mjs",
+    "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_RECEIPT.json",
+    "PUBLIC_RELEASE_AUDITOR_RUNNER_STANDARD.json"
+  ],
+  "expected_public_release_asset_hashes": {
+    "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER.mjs": {
+      "sha256": "584b111deb0d3a32313e4e7da1fa1e72ee23ba665bed51e5bdff464d2d94b7dd"
+    },
+    "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_RECEIPT.json": {
+      "sha256": "8089e295bddfe824630b76a0ec4f5444e169cdc780da44cefb8066c5d0804751",
+      "sha256_canonical_json": "36f123d8873fe62790b6a07768122200636c0fed90f8dfde37a628716e988463"
+    },
+    "PUBLIC_RELEASE_AUDITOR_RUNNER_STANDARD.json": {
+      "sha256": "b0b968eeb003b42bb6a47d6e877912e640a88e5df814bcbc3d18001514db4c39",
+      "sha256_canonical_json": "601fe97ce1576cb87757788fe54e603dc2d3e26f1e628823ab0fa89570b02123"
+    }
+  },
+  "required_source_receipt_object_type": "INVOCORDER_PUBLIC_RELEASE_AUDITOR_RUNNER_RECEIPT",
+  "required_source_receipt_schema_version": "0.8.0",
+  "required_runner_execution_cwd_kind": "temporary_clean_directory_without_git_repository",
+  "local_working_tree_required_for_auditor": false,
+  "private_source_required": false,
+  "claims_truth": false,
+  "claims_authorization": false,
+  "claims_safety": false,
+  "claims_admissibility": false,
+  "claims_external_reality": false
+}
