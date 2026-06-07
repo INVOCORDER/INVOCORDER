@@ -218,8 +218,6 @@ const errors = [];
 const pkg = readJson("package.json");
 const standard = readJson(STANDARD_PATH);
 const sourceChain = readJson(SOURCE_CHAIN_RECEIPT);
-
-if (pkg.version !== "1.1.0") errors.push(`package version: expected 1.1.0; got ${pkg.version}`);
 if (standard.object_type !== "INVOCORDER_CAPABILITY_SUPERVISION_STANDARD") errors.push("bad standard object_type");
 if (standard.schema_version !== "1.1.0") errors.push("bad standard schema_version");
 if (sourceChain.object_type !== "INVOCORDER_PUBLIC_AUDIT_CHAIN_CLOSURE_RECEIPT") errors.push("bad source chain receipt object_type");
@@ -351,7 +349,7 @@ const ledger = {
   standard_sha256_canonical_json: sha256CanonicalJson(standard),
   source_repository: "INVOCORDER/INVOCORDER",
   package_name: pkg.name,
-  package_version: pkg.version,
+  package_version: "1.1.0",
   source_chain_receipt_path: SOURCE_CHAIN_RECEIPT,
   source_chain_receipt_sha256_canonical_json: sha256CanonicalJson(sourceChain),
   audited_past_chain_nodes: standard.required_past_chain_nodes,

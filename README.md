@@ -117,3 +117,35 @@ Primary artifacts:
 - `CAPABILITY_SUPERVISION/INVOCORDER_CAPABILITY_SUPERVISION_STANDARD.json`
 - `CAPABILITY_SUPERVISION/INVOCORDER_CAPABILITY_SUPERVISION_LEDGER.json`
 <!-- INVOCORDER_V1_1_CAPABILITY_SUPERVISION_END -->
+
+
+<!-- INVOCORDER_V1_2_CAPABILITY_ADMISSION_START -->
+## INVOCORDER v1.2.0 — Capability Admission Control
+
+INVOCORDER v1.2.0 adds a public capability admission-control layer.
+
+v1.1 supervises the whole current capability surface. v1.2 controls what may enter next.
+
+Every future plugin, add-on, runner, wire, tool adapter, policy engine, schema expansion, hostile fixture expansion, or public auditor is closed by default until it has a bound capability manifest with:
+
+- source-file and hash basis,
+- executable-surface boundary,
+- input/output boundary,
+- replay or evidence policy,
+- dependency, network, secret, and release-asset boundaries,
+- explicit non-claims.
+
+The admission registry inherits the v1.1 supervision plane from public release assets and does not grant any new external execution by implication.
+
+Verifier:
+
+```bash
+node scripts/verify-capability-admission-control.mjs
+```
+
+Primary artifacts:
+
+- `CAPABILITY_ADMISSION/INVOCORDER_CAPABILITY_ADMISSION_STANDARD.json`
+- `CAPABILITY_ADMISSION/CAPABILITY_MANIFEST_TEMPLATE.json`
+- `CAPABILITY_ADMISSION/INVOCORDER_CAPABILITY_ADMISSION_REGISTRY.json`
+<!-- INVOCORDER_V1_2_CAPABILITY_ADMISSION_END -->

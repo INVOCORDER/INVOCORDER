@@ -1,0 +1,52 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_MANIFEST",
+  "schema_version": "1.2.0",
+  "jurisdiction": "INVOCORDER",
+  "capability_id": "REPLACE_WITH_STABLE_CAPABILITY_ID",
+  "capability_family": "plugin_adapters | external_tool_runners | policy_engines | evidence_schema_expansion | hostile_fixture_expansion | release_auditor_expansion | first_party_present_bound",
+  "extension_slot": "REPLACE_WITH_EXTENSION_SLOT",
+  "implementation_status": "declared_extension_boundary_not_implemented",
+  "source_files": [],
+  "hash_basis": [],
+  "executable_surface": {
+    "has_executable_surface": false,
+    "entrypoints": []
+  },
+  "input_boundary": {
+    "declared": false,
+    "inputs": []
+  },
+  "output_boundary": {
+    "declared": false,
+    "outputs": []
+  },
+  "replay_or_evidence_policy": {
+    "declared": false,
+    "policy": null
+  },
+  "dependency_boundary": {
+    "declared": false,
+    "dependencies": []
+  },
+  "network_boundary": {
+    "network_required": false,
+    "allowed_hosts": []
+  },
+  "secret_boundary": {
+    "secrets_required": false,
+    "secret_names": []
+  },
+  "release_asset_boundary": {
+    "release_assets_required": false,
+    "assets": []
+  },
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_unimplemented_capability": false,
+    "claims_unsupervised_execution": false
+  }
+}
