@@ -1,0 +1,71 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD",
+  "schema_version": "1.3.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_purpose": "Bind a runtime enforcement gate that consumes v1.2 capability admission control and proves that plugin/add-on/runner/network/secret capability execution remains denied unless admitted by manifest.",
+  "source_admission_release_tag": "v1.2.0-capability-admission-control",
+  "source_admission_release_assets_required": [
+    "INVOCORDER_CAPABILITY_ADMISSION_STANDARD.json",
+    "CAPABILITY_MANIFEST_TEMPLATE.json",
+    "INVOCORDER_CAPABILITY_ADMISSION_REGISTRY.json"
+  ],
+  "runtime_default": "deny_unmanifested_capability_execution",
+  "blocked_implicit_surfaces": {
+    "implicit_plugin_loading_allowed": false,
+    "implicit_addon_loading_allowed": false,
+    "implicit_external_runner_allowed": false,
+    "implicit_network_capability_allowed": false,
+    "implicit_secret_access_allowed": false,
+    "implicit_policy_engine_allowed": false,
+    "implicit_schema_expansion_allowed": false,
+    "implicit_fixture_expansion_allowed": false,
+    "implicit_auditor_expansion_allowed": false,
+    "implicit_truth_claim_allowed": false
+  },
+  "runtime_policy": {
+    "manifest_required_for_future_slots": true,
+    "admission_registry_required": true,
+    "source_hash_required": true,
+    "executable_surface_required": true,
+    "input_boundary_required": true,
+    "output_boundary_required": true,
+    "dependency_boundary_required": true,
+    "network_boundary_required": true,
+    "secret_boundary_required": true,
+    "release_asset_boundary_required": true,
+    "non_claim_boundary_required": true,
+    "unadmitted_manifest_execution_allowed": false,
+    "admitted_external_manifest_count_expected": 0
+  },
+  "runtime_surface_scan": {
+    "scan_package_bin": true,
+    "scan_package_scripts": true,
+    "scan_workflows": true,
+    "scan_first_party_scripts": true,
+    "scan_source_runtime_roots": true
+  },
+  "forbidden_runtime_patterns_without_manifest": [
+    "plugin",
+    "addon",
+    "add-on",
+    "external runner",
+    "external_tool_runner",
+    "policy engine",
+    "secret access",
+    "network capability",
+    "unsupervised execution",
+    "unmanifested execution"
+  ],
+  "allowed_current_runtime_claim": "INVOCORDER enforces a deny-by-default runtime boundary for future capability slots and does not admit external plugins, add-ons, runners, network capability, secret access, policy engines, schema expansion, hostile fixture expansion, or auditor expansion without a bound manifest.",
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_unimplemented_capability": false,
+    "claims_unsupervised_execution": false,
+    "claims_external_plugin_execution": false,
+    "claims_external_runner_execution": false
+  }
+}
