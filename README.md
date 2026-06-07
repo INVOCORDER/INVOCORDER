@@ -149,3 +149,11 @@ Primary artifacts:
 - `CAPABILITY_ADMISSION/CAPABILITY_MANIFEST_TEMPLATE.json`
 - `CAPABILITY_ADMISSION/INVOCORDER_CAPABILITY_ADMISSION_REGISTRY.json`
 <!-- INVOCORDER_V1_2_CAPABILITY_ADMISSION_END -->
+
+## v1.3.0 — Capability Runtime Enforcement Gate
+
+INVOCORDER v1.3.0 adds a runtime enforcement gate over the v1.2 capability admission control layer.
+
+This layer consumes the public v1.2 admission release assets, verifies that future extension slots remain closed by default, and asserts that plugin/add-on/runner/network/secret/policy/schema/fixture/auditor capability execution is denied unless a bound manifest admits it.
+
+It proves only runtime enforcement of the admission boundary. It does not claim truth, authorization, safety, admissibility, or external reality.

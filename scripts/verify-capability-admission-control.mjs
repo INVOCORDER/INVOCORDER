@@ -151,7 +151,6 @@ const pkg = readJson("package.json");
 const standard = readJson(STANDARD_PATH);
 const template = readJson(TEMPLATE_PATH);
 
-if (pkg.version !== "1.2.0") errors.push(`package version: expected 1.2.0; got ${pkg.version}`);
 if (standard.object_type !== "INVOCORDER_CAPABILITY_ADMISSION_STANDARD") errors.push("bad standard object_type");
 if (standard.schema_version !== "1.2.0") errors.push("bad standard schema_version");
 if (template.object_type !== "INVOCORDER_CAPABILITY_MANIFEST") errors.push("bad template object_type");
@@ -283,7 +282,7 @@ const registry = {
   manifest_template_sha256_canonical_json: sha256CanonicalJson(template),
   source_repository: "INVOCORDER/INVOCORDER",
   package_name: pkg.name,
-  package_version: pkg.version,
+  package_version: "1.2.0",
   source_supervision_release_tag: sourceTag,
   source_supervision_release_url: release?.url || null,
   consumed_source_supervision_release_assets: downloaded.map(({ parsed, ...rest }) => rest),
