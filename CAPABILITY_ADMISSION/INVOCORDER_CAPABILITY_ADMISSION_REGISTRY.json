@@ -1,0 +1,345 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_ADMISSION_REGISTRY",
+  "schema_version": "1.2.0",
+  "jurisdiction": "INVOCORDER",
+  "valid": true,
+  "errors": [],
+  "standard_path": "CAPABILITY_ADMISSION/INVOCORDER_CAPABILITY_ADMISSION_STANDARD.json",
+  "standard_sha256_canonical_json": "2da166c57c8b478cf8a9ddba4f517bb8d8cd2a651db612f7c61e4c4f01f7c7d4",
+  "manifest_template_path": "CAPABILITY_ADMISSION/CAPABILITY_MANIFEST_TEMPLATE.json",
+  "manifest_template_sha256_canonical_json": "73a3f1d950a7f8e163599fe06e11c5cd997c08352ae557fcc6f5bade656d12d8",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "package_version": "1.2.0",
+  "source_supervision_release_tag": "v1.1.0-capability-supervision-plane",
+  "source_supervision_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.1.0-capability-supervision-plane",
+  "consumed_source_supervision_release_assets": [
+    {
+      "name": "INVOCORDER_CAPABILITY_SUPERVISION_STANDARD.json",
+      "size_bytes": 3649,
+      "sha256": "14ad6d3b7890e83d5fe614e2c464d25a70dcbf5845f1f32bf64cbf7faca456d5",
+      "sha256_canonical_json": "916d2b80d469966bd8ac46e40809751ac9e4d166d6e4fa605b2938cce940b037",
+      "object_type": "INVOCORDER_CAPABILITY_SUPERVISION_STANDARD",
+      "schema_version": "1.1.0",
+      "valid": null
+    },
+    {
+      "name": "INVOCORDER_CAPABILITY_SUPERVISION_LEDGER.json",
+      "size_bytes": 33837,
+      "sha256": "aa71446db53b40b0dfb248cc9db9400e83154a247adeb4cf4b85a94875101696",
+      "sha256_canonical_json": "0ae39301c4986abcc1a71fb07aa5eb6a8984f5940b4f7838377f6a226ce2a760",
+      "object_type": "INVOCORDER_CAPABILITY_SUPERVISION_LEDGER",
+      "schema_version": "1.1.0",
+      "valid": true
+    }
+  ],
+  "source_supervision_summary": {
+    "object_type": "INVOCORDER_CAPABILITY_SUPERVISION_LEDGER",
+    "schema_version": "1.1.0",
+    "valid": true,
+    "package_name": "@invocorder/recorder",
+    "package_version": "1.1.0",
+    "present_first_party_file_count": 113,
+    "capability_family_counts": {
+      "bundle_replay": 3,
+      "capture": 4,
+      "cli": 1,
+      "core": 39,
+      "documentation": 17,
+      "effects": 2,
+      "fixture_execution": 6,
+      "hash_chain": 2,
+      "integration_boundary": 2,
+      "mcp_boundary": 2,
+      "omission": 1,
+      "process": 3,
+      "redaction": 2,
+      "release_auditing": 16,
+      "signing": 2,
+      "supervision_boundary": 1,
+      "workflow_ci": 10
+    },
+    "workflow_count": 10,
+    "verifier_script_count": 8,
+    "future_extension_slots": [
+      {
+        "slot": "plugin_adapters",
+        "status": "declared_extension_boundary_not_claimed_as_implemented",
+        "allowed_claim": "INVOCORDER may register plugin adapter manifests only when their files, hashes, role boundaries, and non-claims are bound."
+      },
+      {
+        "slot": "external_tool_runners",
+        "status": "declared_extension_boundary_not_claimed_as_implemented",
+        "allowed_claim": "INVOCORDER may supervise external tool runners only when execution receipts and replay boundaries are machine-readable."
+      },
+      {
+        "slot": "policy_engines",
+        "status": "declared_extension_boundary_not_claimed_as_implemented",
+        "allowed_claim": "INVOCORDER may bind policy engines only when policy inputs, outputs, versions, and non-claims are explicit."
+      },
+      {
+        "slot": "evidence_schema_expansion",
+        "status": "declared_extension_boundary_not_claimed_as_implemented",
+        "allowed_claim": "INVOCORDER may add schemas only when schema version, hash, compatibility, and validation surface are bound."
+      },
+      {
+        "slot": "hostile_fixture_expansion",
+        "status": "declared_extension_boundary_not_claimed_as_implemented",
+        "allowed_claim": "INVOCORDER may expand hostile fixtures only when public fixture sources, expected outputs, and execution receipts are verified."
+      },
+      {
+        "slot": "release_auditor_expansion",
+        "status": "declared_extension_boundary_not_claimed_as_implemented",
+        "allowed_claim": "INVOCORDER may add public auditors only when the auditor itself is downloadable, hash-verified, executable from a clean temp directory, and non-overclaiming."
+      }
+    ],
+    "proves_capability_supervision_plane": true,
+    "proves_present_first_party_capability_surface_bound": true,
+    "proves_future_extension_slots_declared_without_implementation_overclaim": true,
+    "proves_truth": false,
+    "proves_authorization": false,
+    "proves_safety": false,
+    "proves_admissibility": false,
+    "proves_external_reality": false
+  },
+  "admission_default": "closed_until_manifest_bound",
+  "manifest_schema": {
+    "object_type": "INVOCORDER_CAPABILITY_MANIFEST_SCHEMA_SUMMARY",
+    "schema_version": "1.2.0",
+    "required_fields": [
+      "object_type",
+      "schema_version",
+      "jurisdiction",
+      "capability_id",
+      "capability_family",
+      "extension_slot",
+      "implementation_status",
+      "source_files",
+      "hash_basis",
+      "executable_surface",
+      "input_boundary",
+      "output_boundary",
+      "replay_or_evidence_policy",
+      "dependency_boundary",
+      "network_boundary",
+      "secret_boundary",
+      "release_asset_boundary",
+      "non_claim_boundary"
+    ],
+    "allowed_implementation_statuses": [
+      "first_party_present_bound",
+      "external_public_release_bound",
+      "declared_extension_boundary_not_implemented",
+      "rejected_unbound",
+      "revoked"
+    ],
+    "future_slot_policy": {
+      "default_state": "closed",
+      "unmanifested_execution_allowed": false,
+      "unhashed_source_allowed": false,
+      "implicit_plugin_loading_allowed": false,
+      "implicit_network_capability_allowed": false,
+      "implicit_secret_access_allowed": false,
+      "implicit_truth_claim_allowed": false
+    },
+    "required_non_claim_boundary": {
+      "claims_truth": false,
+      "claims_authorization": false,
+      "claims_safety": false,
+      "claims_admissibility": false,
+      "claims_external_reality": false,
+      "claims_unimplemented_capability": false,
+      "claims_unsupervised_execution": false
+    }
+  },
+  "first_party_present_capability_families": [
+    {
+      "family": "bundle_replay",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 3,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "capture",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 4,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "cli",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 1,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "core",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 39,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "documentation",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 17,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "effects",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 2,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "fixture_execution",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 6,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "hash_chain",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 2,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "integration_boundary",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 2,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "mcp_boundary",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 2,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "omission",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 1,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "process",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 3,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "redaction",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 2,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "release_auditing",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 16,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "signing",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 2,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "supervision_boundary",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 1,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    },
+    {
+      "family": "workflow_ci",
+      "inherited_from_v1_1_supervision": true,
+      "file_count": 10,
+      "admission_state": "first_party_present_bound_by_v1_1_supervision",
+      "new_execution_granted_by_v1_2": false
+    }
+  ],
+  "future_extension_admission_slots": [
+    {
+      "slot": "plugin_adapters",
+      "inherited_from_supervision_status": "declared_extension_boundary_not_claimed_as_implemented",
+      "admission_state": "closed_until_manifest_bound",
+      "unmanifested_execution_allowed": false,
+      "manifest_required": true
+    },
+    {
+      "slot": "external_tool_runners",
+      "inherited_from_supervision_status": "declared_extension_boundary_not_claimed_as_implemented",
+      "admission_state": "closed_until_manifest_bound",
+      "unmanifested_execution_allowed": false,
+      "manifest_required": true
+    },
+    {
+      "slot": "policy_engines",
+      "inherited_from_supervision_status": "declared_extension_boundary_not_claimed_as_implemented",
+      "admission_state": "closed_until_manifest_bound",
+      "unmanifested_execution_allowed": false,
+      "manifest_required": true
+    },
+    {
+      "slot": "evidence_schema_expansion",
+      "inherited_from_supervision_status": "declared_extension_boundary_not_claimed_as_implemented",
+      "admission_state": "closed_until_manifest_bound",
+      "unmanifested_execution_allowed": false,
+      "manifest_required": true
+    },
+    {
+      "slot": "hostile_fixture_expansion",
+      "inherited_from_supervision_status": "declared_extension_boundary_not_claimed_as_implemented",
+      "admission_state": "closed_until_manifest_bound",
+      "unmanifested_execution_allowed": false,
+      "manifest_required": true
+    },
+    {
+      "slot": "release_auditor_expansion",
+      "inherited_from_supervision_status": "declared_extension_boundary_not_claimed_as_implemented",
+      "admission_state": "closed_until_manifest_bound",
+      "unmanifested_execution_allowed": false,
+      "manifest_required": true
+    }
+  ],
+  "admitted_external_manifest_count": 0,
+  "admitted_external_manifests": [],
+  "rejected_or_closed_slots_count": 6,
+  "unmanifested_execution_allowed": false,
+  "implicit_plugin_loading_allowed": false,
+  "implicit_addon_loading_allowed": false,
+  "implicit_external_runner_allowed": false,
+  "implicit_network_capability_allowed": false,
+  "implicit_secret_access_allowed": false,
+  "implicit_truth_claim_allowed": false,
+  "local_working_tree_required_for_admission_control": false,
+  "private_source_required": false,
+  "public_release_asset_download_required_for_source_supervision": true,
+  "proves_capability_admission_control": true,
+  "proves_v1_1_supervision_plane_consumed": true,
+  "proves_manifest_schema_bound": true,
+  "proves_future_slots_default_closed": true,
+  "proves_no_unmanifested_future_execution": true,
+  "proves_first_party_present_surface_inherited_from_v1_1": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}

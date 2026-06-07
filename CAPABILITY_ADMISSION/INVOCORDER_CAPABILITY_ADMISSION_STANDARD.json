@@ -1,0 +1,57 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_ADMISSION_STANDARD",
+  "schema_version": "1.2.0",
+  "jurisdiction": "INVOCORDER",
+  "purpose": "Convert the v1.1 capability supervision plane into a strict admission-control boundary for plugins, add-ons, runners, wires, tools, policies, schemas, fixtures, auditors, and future extension surfaces.",
+  "source_supervision_release_tag": "v1.1.0-capability-supervision-plane",
+  "source_supervision_required_assets": [
+    "INVOCORDER_CAPABILITY_SUPERVISION_STANDARD.json",
+    "INVOCORDER_CAPABILITY_SUPERVISION_LEDGER.json"
+  ],
+  "admission_default": "closed_until_manifest_bound",
+  "capability_manifest_required_fields": [
+    "object_type",
+    "schema_version",
+    "jurisdiction",
+    "capability_id",
+    "capability_family",
+    "extension_slot",
+    "implementation_status",
+    "source_files",
+    "hash_basis",
+    "executable_surface",
+    "input_boundary",
+    "output_boundary",
+    "replay_or_evidence_policy",
+    "dependency_boundary",
+    "network_boundary",
+    "secret_boundary",
+    "release_asset_boundary",
+    "non_claim_boundary"
+  ],
+  "allowed_implementation_statuses": [
+    "first_party_present_bound",
+    "external_public_release_bound",
+    "declared_extension_boundary_not_implemented",
+    "rejected_unbound",
+    "revoked"
+  ],
+  "future_slot_policy": {
+    "default_state": "closed",
+    "unmanifested_execution_allowed": false,
+    "unhashed_source_allowed": false,
+    "implicit_plugin_loading_allowed": false,
+    "implicit_network_capability_allowed": false,
+    "implicit_secret_access_allowed": false,
+    "implicit_truth_claim_allowed": false
+  },
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_unimplemented_capability": false,
+    "claims_unsupervised_execution": false
+  }
+}
