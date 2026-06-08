@@ -157,3 +157,11 @@ INVOCORDER v1.3.0 adds a runtime enforcement gate over the v1.2 capability admis
 This layer consumes the public v1.2 admission release assets, verifies that future extension slots remain closed by default, and asserts that plugin/add-on/runner/network/secret/policy/schema/fixture/auditor capability execution is denied unless a bound manifest admits it.
 
 It proves only runtime enforcement of the admission boundary. It does not claim truth, authorization, safety, admissibility, or external reality.
+
+## v1.4.0 — Capability Manifest Hostile Fixtures
+
+INVOCORDER v1.4.0 adds hostile capability manifest fixture execution.
+
+It consumes the v1.3 runtime enforcement release, validates capability manifests against the v1.2 admission boundary, and proves rejection of malformed or overclaiming manifests: truth overclaim, authorization overclaim, unimplemented capability overclaim, unsupervised execution overclaim, implicit network capability, implicit secret access, unhashed source, unmanifested runtime execution, missing required boundaries, and external release declarations without release assets.
+
+Non-claims remain preserved: truth, authorization, safety, admissibility, and external reality are not claimed.

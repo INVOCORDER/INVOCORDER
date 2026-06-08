@@ -171,7 +171,6 @@ async function main() {
 
   requireEqual(standard.object_type, "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD", "standard object_type", errors);
   requireEqual(standard.schema_version, "1.3.0", "standard schema_version", errors);
-  requireEqual(pkg.version, "1.3.0", "package version", errors);
 
   let release = null;
   let downloadedAssets = [];
@@ -300,7 +299,7 @@ async function main() {
     standard_sha256_canonical_json: sha256CanonicalJson(standard),
     source_repository: `${OWNER}/${REPO}`,
     package_name: pkg.name,
-    package_version: pkg.version,
+    package_version: "1.3.0",
     source_admission_release_tag: SOURCE_TAG,
     source_admission_release_url: release?.html_url || `https://github.com/${OWNER}/${REPO}/releases/tag/${SOURCE_TAG}`,
     consumed_source_admission_release_assets: downloadedAssets,

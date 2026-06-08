@@ -1,0 +1,77 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_MANIFEST",
+  "schema_version": "1.2.0",
+  "jurisdiction": "INVOCORDER",
+  "capability_id": "external-auditor.example-public-release",
+  "capability_family": "release_auditing",
+  "extension_slot": "release_auditor_expansion",
+  "implementation_status": "external_public_release_bound",
+  "source_files": [
+    {
+      "path": "AUDIT/EXAMPLE_EXTERNAL_AUDITOR.mjs",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "role": "external_public_release_auditor_fixture"
+    }
+  ],
+  "hash_basis": {
+    "source_files_sha256": [
+      "0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "canonical_manifest_sha256": null,
+    "unhashed_source_allowed": false
+  },
+  "executable_surface": {
+    "executable": true,
+    "executable_allowed": true,
+    "commands": [
+      "node AUDIT/EXAMPLE_EXTERNAL_AUDITOR.mjs"
+    ],
+    "entrypoints": [
+      "AUDIT/EXAMPLE_EXTERNAL_AUDITOR.mjs"
+    ],
+    "unmanifested_execution_allowed": false
+  },
+  "input_boundary": {
+    "accepted_inputs": [],
+    "rejects_unmanifested_inputs": true
+  },
+  "output_boundary": {
+    "declared_outputs": [],
+    "no_truth_claim": true
+  },
+  "replay_or_evidence_policy": {
+    "receipt_required_before_execution": true,
+    "replay_required_for_admission": true
+  },
+  "dependency_boundary": {
+    "dependencies": [],
+    "implicit_dependencies_allowed": false
+  },
+  "network_boundary": {
+    "network_access_allowed": false,
+    "implicit_network_capability_allowed": false
+  },
+  "secret_boundary": {
+    "secret_access_allowed": false,
+    "implicit_secret_access_allowed": false
+  },
+  "release_asset_boundary": {
+    "public_release_required_before_external_admission": true,
+    "public_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/example-fixture-only",
+    "release_assets": [
+      {
+        "name": "EXAMPLE_EXTERNAL_AUDITOR.mjs",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_unimplemented_capability": false,
+    "claims_unsupervised_execution": false
+  }
+}

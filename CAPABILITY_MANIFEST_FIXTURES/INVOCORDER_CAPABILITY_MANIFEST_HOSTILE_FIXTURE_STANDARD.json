@@ -1,0 +1,143 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD",
+  "schema_version": "1.4.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "source_runtime_release_tag": "v1.3.0-capability-runtime-enforcement",
+  "source_runtime_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.3.0-capability-runtime-enforcement",
+  "source_admission_release_tag": "v1.2.0-capability-admission-control",
+  "required_manifest_fields": [
+    "object_type",
+    "schema_version",
+    "jurisdiction",
+    "capability_id",
+    "capability_family",
+    "extension_slot",
+    "implementation_status",
+    "source_files",
+    "hash_basis",
+    "executable_surface",
+    "input_boundary",
+    "output_boundary",
+    "replay_or_evidence_policy",
+    "dependency_boundary",
+    "network_boundary",
+    "secret_boundary",
+    "release_asset_boundary",
+    "non_claim_boundary"
+  ],
+  "allowed_implementation_statuses": [
+    "first_party_present_bound",
+    "external_public_release_bound",
+    "declared_extension_boundary_not_implemented",
+    "rejected_unbound",
+    "revoked"
+  ],
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_unimplemented_capability": false,
+    "claims_unsupervised_execution": false
+  },
+  "closed_runtime_policy": {
+    "unmanifested_execution_allowed": false,
+    "implicit_plugin_loading_allowed": false,
+    "implicit_addon_loading_allowed": false,
+    "implicit_external_runner_allowed": false,
+    "implicit_network_capability_allowed": false,
+    "implicit_secret_access_allowed": false,
+    "implicit_truth_claim_allowed": false
+  },
+  "fixture_directory": "CAPABILITY_MANIFEST_FIXTURES/fixtures",
+  "fixture_cases": [
+    {
+      "file": "valid-closed-extension-boundary.json",
+      "expected_valid": true,
+      "expected_errors": []
+    },
+    {
+      "file": "valid-external-public-release-bound.json",
+      "expected_valid": true,
+      "expected_errors": []
+    },
+    {
+      "file": "truth-overclaim.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "claims_truth must be false"
+      ]
+    },
+    {
+      "file": "authorization-overclaim.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "claims_authorization must be false"
+      ]
+    },
+    {
+      "file": "unimplemented-capability-overclaim.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "claims_unimplemented_capability must be false"
+      ]
+    },
+    {
+      "file": "unsupervised-execution-overclaim.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "claims_unsupervised_execution must be false"
+      ]
+    },
+    {
+      "file": "implicit-network-capability.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "implicit_network_capability_allowed must be false"
+      ]
+    },
+    {
+      "file": "implicit-secret-access.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "implicit_secret_access_allowed must be false"
+      ]
+    },
+    {
+      "file": "unhashed-source-external-release.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "source file sha256 required"
+      ]
+    },
+    {
+      "file": "missing-required-output-boundary.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "missing required field: output_boundary"
+      ]
+    },
+    {
+      "file": "unmanifested-runtime-execution.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "unmanifested_execution_allowed must be false",
+        "bound implementations require source_files"
+      ]
+    },
+    {
+      "file": "external-release-without-assets.json",
+      "expected_valid": false,
+      "expected_errors": [
+        "external_public_release_bound requires release assets"
+      ]
+    }
+  ],
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}
