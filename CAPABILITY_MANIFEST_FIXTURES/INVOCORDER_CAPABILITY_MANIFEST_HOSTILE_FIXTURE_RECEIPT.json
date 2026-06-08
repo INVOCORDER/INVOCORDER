@@ -1,0 +1,210 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT",
+  "schema_version": "1.4.0",
+  "jurisdiction": "INVOCORDER",
+  "valid": true,
+  "errors": [],
+  "standard_path": "CAPABILITY_MANIFEST_FIXTURES/INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD.json",
+  "standard_sha256_canonical_json": "be74a05ef4e4f8025571199245ae12b4846fde83975d8ef20f98e00b56bb9d27",
+  "manifest_template_path": "CAPABILITY_ADMISSION/CAPABILITY_MANIFEST_TEMPLATE.json",
+  "manifest_template_sha256_canonical_json": "73a3f1d950a7f8e163599fe06e11c5cd997c08352ae557fcc6f5bade656d12d8",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "source_runtime_release_tag": "v1.3.0-capability-runtime-enforcement",
+  "consumed_source_runtime_release_assets": [
+    {
+      "name": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD.json",
+      "size_bytes": 2951,
+      "sha256": "03590da7518bc6b638584e7430a5f2a9792035cc9c78143b10a152586084cabe",
+      "sha256_canonical_json": "5032b779dcf50b1111867887a0cb140e8f73e91c664569bbdc8af78389e57572",
+      "object_type": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD",
+      "schema_version": "1.3.0",
+      "valid": null
+    },
+    {
+      "name": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_RECEIPT.json",
+      "size_bytes": 9477,
+      "sha256": "66feb602892b7849555257d45cb39adda759561a242aabdac2ab0259504a9732",
+      "sha256_canonical_json": "1380e8707a7c11b7bd60cfd03105542ffc67c20d13f79914843d9cb0ac4aa9a2",
+      "object_type": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_RECEIPT",
+      "schema_version": "1.3.0",
+      "valid": true
+    }
+  ],
+  "fixture_case_count": 12,
+  "fixture_passed_count": 12,
+  "fixture_results": [
+    {
+      "file": "valid-closed-extension-boundary.json",
+      "expected_valid": true,
+      "actual_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "manifest_sha256_canonical_json": "0ba22aea62c273206bfa9c7919982a6780818bd7fb8d4f9a31283e5a88ae9217",
+      "passed": true
+    },
+    {
+      "file": "valid-external-public-release-bound.json",
+      "expected_valid": true,
+      "actual_valid": true,
+      "expected_errors": [],
+      "actual_errors": [],
+      "manifest_sha256_canonical_json": "4f1574afde042ce9592020cf346c545c41d31b607d027bbc44defd49223184f6",
+      "passed": true
+    },
+    {
+      "file": "truth-overclaim.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "claims_truth must be false"
+      ],
+      "actual_errors": [
+        "claims_truth must be false"
+      ],
+      "manifest_sha256_canonical_json": "a2cc1237eb4c0b5a32ccfec2bd1b921e7ba7824f5efebc95f49313f45eb745ad",
+      "passed": true
+    },
+    {
+      "file": "authorization-overclaim.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "claims_authorization must be false"
+      ],
+      "actual_errors": [
+        "claims_authorization must be false"
+      ],
+      "manifest_sha256_canonical_json": "cece6a37af5027bff7913b7e351e978f1ef6e0bee9313730665142648e418249",
+      "passed": true
+    },
+    {
+      "file": "unimplemented-capability-overclaim.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "claims_unimplemented_capability must be false"
+      ],
+      "actual_errors": [
+        "claims_unimplemented_capability must be false"
+      ],
+      "manifest_sha256_canonical_json": "a22d63a88e29bee7e15bafaf74fed031400d258824b6899f47e1aa09ae0e5771",
+      "passed": true
+    },
+    {
+      "file": "unsupervised-execution-overclaim.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "claims_unsupervised_execution must be false"
+      ],
+      "actual_errors": [
+        "claims_unsupervised_execution must be false"
+      ],
+      "manifest_sha256_canonical_json": "20bb401a699a930afd747ff23ecf734c128513cb6f16ccdb79e21af2b42d35d6",
+      "passed": true
+    },
+    {
+      "file": "implicit-network-capability.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "implicit_network_capability_allowed must be false"
+      ],
+      "actual_errors": [
+        "implicit_network_capability_allowed must be false"
+      ],
+      "manifest_sha256_canonical_json": "d715d1ccd3ff8d6cf064271a0a524d6af3d08f18e87320f6cea6d0f800008b2f",
+      "passed": true
+    },
+    {
+      "file": "implicit-secret-access.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "implicit_secret_access_allowed must be false"
+      ],
+      "actual_errors": [
+        "implicit_secret_access_allowed must be false"
+      ],
+      "manifest_sha256_canonical_json": "2bc717d277f0c63b6d0976984941d7a44df7c18c3462cd9e569271c13eb03f8c",
+      "passed": true
+    },
+    {
+      "file": "unhashed-source-external-release.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "source file sha256 required"
+      ],
+      "actual_errors": [
+        "source file sha256 required"
+      ],
+      "manifest_sha256_canonical_json": "bc31ad2bb2b76b3af06e734b9f0895c2e4f26d54bceec50a4a8ba946006cba13",
+      "passed": true
+    },
+    {
+      "file": "missing-required-output-boundary.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "missing required field: output_boundary"
+      ],
+      "actual_errors": [
+        "missing required field: output_boundary"
+      ],
+      "manifest_sha256_canonical_json": "a6c36b925a8331414da1211cf04b7b8fd1bc3ebf6c3d197f2c020e319a8417b5",
+      "passed": true
+    },
+    {
+      "file": "unmanifested-runtime-execution.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "unmanifested_execution_allowed must be false",
+        "bound implementations require source_files"
+      ],
+      "actual_errors": [
+        "unmanifested_execution_allowed must be false",
+        "bound implementations require source_files"
+      ],
+      "manifest_sha256_canonical_json": "999e5f7d5daa23b0d52283ec5f43f436d073a06c9ddcd790b82953c7472801ba",
+      "passed": true
+    },
+    {
+      "file": "external-release-without-assets.json",
+      "expected_valid": false,
+      "actual_valid": false,
+      "expected_errors": [
+        "external_public_release_bound requires release assets"
+      ],
+      "actual_errors": [
+        "external_public_release_bound requires release assets"
+      ],
+      "manifest_sha256_canonical_json": "dcff11693f5999469e67e7951f8e4eb097c41bd762e2d91543432a81f879b039",
+      "passed": true
+    }
+  ],
+  "hostile_cases_rejected": 10,
+  "valid_cases_admitted": 2,
+  "local_working_tree_required_for_source_runtime_enforcement": false,
+  "private_source_required": false,
+  "public_release_asset_download_required_for_source_runtime_enforcement": true,
+  "proves_capability_manifest_hostile_fixture_execution": true,
+  "proves_v1_3_runtime_enforcement_release_consumed": true,
+  "proves_valid_capability_manifests_admitted": true,
+  "proves_truth_overclaim_rejected": true,
+  "proves_authorization_overclaim_rejected": true,
+  "proves_unimplemented_capability_overclaim_rejected": true,
+  "proves_unsupervised_execution_overclaim_rejected": true,
+  "proves_implicit_network_capability_rejected": true,
+  "proves_implicit_secret_access_rejected": true,
+  "proves_unhashed_source_rejected": true,
+  "proves_unmanifested_runtime_execution_rejected": true,
+  "proves_external_release_without_assets_rejected": true,
+  "proves_non_claim_boundary_preserved": true,
+  "proves_truth": false,
+  "proves_authorization": false,
+  "proves_safety": false,
+  "proves_admissibility": false,
+  "proves_external_reality": false
+}

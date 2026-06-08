@@ -1,0 +1,59 @@
+{
+  "object_type": "INVOCORDER_CAPABILITY_MANIFEST",
+  "schema_version": "1.2.0",
+  "jurisdiction": "INVOCORDER",
+  "capability_id": "hostile.authorization-overclaim",
+  "capability_family": "plugin_adapters",
+  "extension_slot": "plugin_adapters",
+  "implementation_status": "declared_extension_boundary_not_implemented",
+  "source_files": [],
+  "hash_basis": {
+    "source_files_sha256": [],
+    "canonical_manifest_sha256": null,
+    "unhashed_source_allowed": false
+  },
+  "executable_surface": {
+    "executable": false,
+    "executable_allowed": false,
+    "commands": [],
+    "entrypoints": [],
+    "unmanifested_execution_allowed": false
+  },
+  "input_boundary": {
+    "accepted_inputs": [],
+    "rejects_unmanifested_inputs": true
+  },
+  "output_boundary": {
+    "declared_outputs": [],
+    "no_truth_claim": true
+  },
+  "replay_or_evidence_policy": {
+    "receipt_required_before_execution": true,
+    "replay_required_for_admission": true
+  },
+  "dependency_boundary": {
+    "dependencies": [],
+    "implicit_dependencies_allowed": false
+  },
+  "network_boundary": {
+    "network_access_allowed": false,
+    "implicit_network_capability_allowed": false
+  },
+  "secret_boundary": {
+    "secret_access_allowed": false,
+    "implicit_secret_access_allowed": false
+  },
+  "release_asset_boundary": {
+    "release_assets": [],
+    "public_release_required_before_external_admission": false
+  },
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": true,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false,
+    "claims_unimplemented_capability": false,
+    "claims_unsupervised_execution": false
+  }
+}
