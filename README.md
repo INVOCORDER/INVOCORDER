@@ -165,3 +165,13 @@ INVOCORDER v1.4.0 adds hostile capability manifest fixture execution.
 It consumes the v1.3 runtime enforcement release, validates capability manifests against the v1.2 admission boundary, and proves rejection of malformed or overclaiming manifests: truth overclaim, authorization overclaim, unimplemented capability overclaim, unsupervised execution overclaim, implicit network capability, implicit secret access, unhashed source, unmanifested runtime execution, missing required boundaries, and external release declarations without release assets.
 
 Non-claims remain preserved: truth, authorization, safety, admissibility, and external reality are not claimed.
+
+## v1.5.0 — External capability release consumption
+
+INVOCORDER v1.5.0 binds external capability admission to public release consumption.
+
+The gate consumes the v1.4.0 capability manifest hostile fixture release assets, verifies their object types, schema versions, validity, byte hashes, and canonical JSON hashes, and records that external capability manifests are not admitted from local-only evidence.
+
+The v1.5 boundary preserves the v1.4 hostile fixture result while strengthening the external admission rule: an external capability candidate must be release-asset-bound, hash-bound, schema-bound, and non-claim-bound before it may be treated as externally consumable.
+
+It does not claim truth, authorization, safety, admissibility, or external reality.

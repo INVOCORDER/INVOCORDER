@@ -1,0 +1,52 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD",
+  "schema_version": "1.5.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_name": "external capability release consumption",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "source_gate": {
+    "release_tag": "v1.4.0-capability-manifest-hostile-fixtures",
+    "release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.4.0-capability-manifest-hostile-fixtures",
+    "required_assets": [
+      {
+        "name": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD.json",
+        "object_type": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD",
+        "schema_version": "1.4.0"
+      },
+      {
+        "name": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT.json",
+        "object_type": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT",
+        "schema_version": "1.4.0",
+        "valid": true
+      }
+    ]
+  },
+  "external_release_consumption_policy": {
+    "external_manifest_must_be_public_release_asset": true,
+    "external_manifest_must_have_bound_release_asset_boundary": true,
+    "external_manifest_must_have_sha256_or_canonical_sha256": true,
+    "external_manifest_must_preserve_non_claim_boundary": true,
+    "external_manifest_must_not_claim_truth": true,
+    "external_manifest_must_not_claim_authorization": true,
+    "external_manifest_must_not_claim_safety": true,
+    "external_manifest_must_not_claim_admissibility": true,
+    "external_manifest_must_not_claim_external_reality": true,
+    "external_manifest_must_not_claim_unimplemented_capability": true,
+    "external_manifest_must_not_claim_unsupervised_execution": true,
+    "local_file_manifest_without_public_release_asset_rejected": true,
+    "implicit_network_capability_rejected": true,
+    "implicit_secret_access_rejected": true,
+    "unhashed_source_rejected": true,
+    "unmanifested_runtime_execution_rejected": true
+  },
+  "receipt_requirements": [
+    "source_v1_4_release_assets_downloaded",
+    "source_v1_4_release_assets_hash_bound",
+    "source_v1_4_receipt_valid",
+    "external_release_asset_policy_bound",
+    "no_local_only_external_manifest_admission",
+    "no_truth_authorization_safety_admissibility_external_reality_claim"
+  ],
+  "pass_condition": "V1_5_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_VALID"
+}
