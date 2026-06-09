@@ -185,3 +185,13 @@ The gate copies a standalone replay runner into a fresh temporary directory and 
 This proves the external capability release boundary can be replayed without a local working tree or private source.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+## v1.7.0 — External capability bundle index
+
+INVOCORDER v1.7.0 publishes a public external capability bundle index.
+
+The index makes the v1.2 through v1.6 external capability chain discoverable from one public asset. It resolves the admission control, runtime enforcement, hostile manifest fixtures, external release consumption, and cold replay release assets, binds their byte hashes and canonical JSON hashes, and preserves the non-claim boundary.
+
+It lets outside consumers discover the capability chain without guessing release order, without private source, and without a local working tree.
+
+It does not claim truth, authorization, safety, admissibility, or external reality.
