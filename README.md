@@ -175,3 +175,13 @@ The gate consumes the v1.4.0 capability manifest hostile fixture release assets,
 The v1.5 boundary preserves the v1.4 hostile fixture result while strengthening the external admission rule: an external capability candidate must be release-asset-bound, hash-bound, schema-bound, and non-claim-bound before it may be treated as externally consumable.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+## v1.6.0 — External capability cold replay
+
+INVOCORDER v1.6.0 adds a cold replay gate for external capability release consumption.
+
+The gate copies a standalone replay runner into a fresh temporary directory and executes it outside the local repository. The runner downloads the v1.5.0 external capability release consumption assets from the public release, verifies their object types, schema versions, validity, byte hashes, and canonical JSON hashes, and confirms that local-only external manifest admission remains blocked.
+
+This proves the external capability release boundary can be replayed without a local working tree or private source.
+
+It does not claim truth, authorization, safety, admissibility, or external reality.

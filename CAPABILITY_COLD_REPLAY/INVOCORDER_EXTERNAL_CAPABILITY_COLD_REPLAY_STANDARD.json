@@ -1,0 +1,45 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_STANDARD",
+  "schema_version": "1.6.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_name": "external capability cold replay",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "source_gate": {
+    "release_tag": "v1.5.0-external-capability-release-consumption",
+    "release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.5.0-external-capability-release-consumption",
+    "required_assets": [
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD",
+        "schema_version": "1.5.0"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_RECEIPT.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_RECEIPT",
+        "schema_version": "1.5.0",
+        "valid": true
+      }
+    ]
+  },
+  "cold_replay_policy": {
+    "must_execute_from_fresh_temporary_directory": true,
+    "must_not_read_local_repository_files": true,
+    "must_download_source_release_assets": true,
+    "must_verify_source_asset_byte_hashes": true,
+    "must_verify_source_asset_canonical_json_hashes": true,
+    "must_verify_source_receipt_validity": true,
+    "must_verify_external_release_consumption_policy": true,
+    "must_verify_local_only_manifest_admission_blocked": true,
+    "must_verify_release_asset_boundary_required": true,
+    "must_preserve_non_claim_boundary": true
+  },
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  },
+  "pass_condition": "V1_6_EXTERNAL_CAPABILITY_COLD_REPLAY_VALID"
+}
