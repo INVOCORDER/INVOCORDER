@@ -195,3 +195,13 @@ The index makes the v1.2 through v1.6 external capability chain discoverable fro
 It lets outside consumers discover the capability chain without guessing release order, without private source, and without a local working tree.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+## v1.8.0 — External capability bundle cold replay
+
+INVOCORDER v1.8.0 adds cold replay for the external capability bundle index.
+
+The gate copies a standalone replay runner into a fresh temporary directory and executes it outside the local repository. The runner downloads the v1.7.0 external capability bundle index release assets, verifies their object types, schema versions, validity, byte hashes, canonical JSON hashes, chain order, and non-claim boundary, then confirms that the v1.2 through v1.6 external capability chain is discoverable from public release assets only.
+
+This proves outside consumers can replay the capability bundle index without guessing release order, without private source, and without a local working tree.
+
+It does not claim truth, authorization, safety, admissibility, or external reality.

@@ -1,0 +1,51 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_STANDARD",
+  "schema_version": "1.8.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_name": "external capability bundle cold replay",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "source_gate": {
+    "release_tag": "v1.7.0-external-capability-bundle-index",
+    "release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.7.0-external-capability-bundle-index",
+    "required_assets": [
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX_STANDARD.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX_STANDARD",
+        "schema_version": "1.7.0"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX",
+        "schema_version": "1.7.0"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX_RECEIPT.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX_RECEIPT",
+        "schema_version": "1.7.0",
+        "valid": true
+      }
+    ]
+  },
+  "cold_replay_policy": {
+    "must_execute_from_fresh_temporary_directory": true,
+    "must_not_read_local_repository_files": true,
+    "must_download_v1_7_bundle_index_release_assets": true,
+    "must_verify_v1_7_bundle_index_receipt_validity": true,
+    "must_verify_v1_7_bundle_index_asset_hashes": true,
+    "must_verify_v1_2_to_v1_6_chain_discoverable": true,
+    "must_verify_chain_order_explicit": true,
+    "must_verify_public_release_assets_only": true,
+    "must_verify_private_source_not_required": true,
+    "must_verify_local_working_tree_not_required": true,
+    "must_preserve_non_claim_boundary": true
+  },
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  },
+  "pass_condition": "V1_8_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_VALID"
+}
