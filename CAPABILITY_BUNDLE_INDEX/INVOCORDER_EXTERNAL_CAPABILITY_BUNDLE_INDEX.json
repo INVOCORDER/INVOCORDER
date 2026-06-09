@@ -1,0 +1,271 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX",
+  "schema_version": "1.7.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "capability_chain_scope": {
+    "starts_at": "v1.2.0-capability-admission-control",
+    "ends_at": "v1.6.0-external-capability-cold-replay",
+    "requires_public_release_assets_only": true,
+    "requires_private_source": false,
+    "requires_local_working_tree": false
+  },
+  "chain_releases": [
+    {
+      "tag": "v1.2.0-capability-admission-control",
+      "role": "capability admission control",
+      "required_asset_count": 3,
+      "resolved_asset_count": 3,
+      "assets": [
+        {
+          "name": "INVOCORDER_CAPABILITY_ADMISSION_STANDARD.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.2.0-capability-admission-control/INVOCORDER_CAPABILITY_ADMISSION_STANDARD.json",
+          "size_bytes": 1926,
+          "sha256": "c6ebe2ec7a04863fa144b6df5eb90d63292ef62635128421612fef340ce61001",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "2da166c57c8b478cf8a9ddba4f517bb8d8cd2a651db612f7c61e4c4f01f7c7d4",
+          "object_type": "INVOCORDER_CAPABILITY_ADMISSION_STANDARD",
+          "schema_version": "1.2.0",
+          "valid": null,
+          "proves_truth": null,
+          "proves_authorization": null,
+          "proves_safety": null,
+          "proves_admissibility": null,
+          "proves_external_reality": null
+        },
+        {
+          "name": "CAPABILITY_MANIFEST_TEMPLATE.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.2.0-capability-admission-control/CAPABILITY_MANIFEST_TEMPLATE.json",
+          "size_bytes": 1456,
+          "sha256": "c27f7a06061f39e14ff1e8bc178f7cfd8244bebcf56468ad8fad71be9892ddd7",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "73a3f1d950a7f8e163599fe06e11c5cd997c08352ae557fcc6f5bade656d12d8",
+          "object_type": "INVOCORDER_CAPABILITY_MANIFEST",
+          "schema_version": "1.2.0",
+          "valid": null,
+          "proves_truth": null,
+          "proves_authorization": null,
+          "proves_safety": null,
+          "proves_admissibility": null,
+          "proves_external_reality": null
+        },
+        {
+          "name": "INVOCORDER_CAPABILITY_ADMISSION_REGISTRY.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.2.0-capability-admission-control/INVOCORDER_CAPABILITY_ADMISSION_REGISTRY.json",
+          "size_bytes": 13055,
+          "sha256": "47044b66c4f5099a5a7f0934111ab044501f733ccafa5a17e6de4c01e3ff9515",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "a02d68dfd9d68fe51a6e3764decd65af871bb3d0fe544fb801ef96a5a97595ed",
+          "object_type": "INVOCORDER_CAPABILITY_ADMISSION_REGISTRY",
+          "schema_version": "1.2.0",
+          "valid": true,
+          "proves_truth": false,
+          "proves_authorization": false,
+          "proves_safety": false,
+          "proves_admissibility": false,
+          "proves_external_reality": false
+        }
+      ]
+    },
+    {
+      "tag": "v1.3.0-capability-runtime-enforcement",
+      "role": "capability runtime enforcement",
+      "required_asset_count": 2,
+      "resolved_asset_count": 2,
+      "assets": [
+        {
+          "name": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.3.0-capability-runtime-enforcement/INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD.json",
+          "size_bytes": 2951,
+          "sha256": "03590da7518bc6b638584e7430a5f2a9792035cc9c78143b10a152586084cabe",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "5032b779dcf50b1111867887a0cb140e8f73e91c664569bbdc8af78389e57572",
+          "object_type": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD",
+          "schema_version": "1.3.0",
+          "valid": null,
+          "proves_truth": null,
+          "proves_authorization": null,
+          "proves_safety": null,
+          "proves_admissibility": null,
+          "proves_external_reality": null
+        },
+        {
+          "name": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_RECEIPT.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.3.0-capability-runtime-enforcement/INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_RECEIPT.json",
+          "size_bytes": 9477,
+          "sha256": "66feb602892b7849555257d45cb39adda759561a242aabdac2ab0259504a9732",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "1380e8707a7c11b7bd60cfd03105542ffc67c20d13f79914843d9cb0ac4aa9a2",
+          "object_type": "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_RECEIPT",
+          "schema_version": "1.3.0",
+          "valid": true,
+          "proves_truth": false,
+          "proves_authorization": false,
+          "proves_safety": false,
+          "proves_admissibility": false,
+          "proves_external_reality": false
+        }
+      ]
+    },
+    {
+      "tag": "v1.4.0-capability-manifest-hostile-fixtures",
+      "role": "capability manifest hostile fixtures",
+      "required_asset_count": 2,
+      "resolved_asset_count": 2,
+      "assets": [
+        {
+          "name": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.4.0-capability-manifest-hostile-fixtures/INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD.json",
+          "size_bytes": 4138,
+          "sha256": "102ab75098da917ce37dcc9152585940055854fefde66849b10fb7d2f4f82542",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "be74a05ef4e4f8025571199245ae12b4846fde83975d8ef20f98e00b56bb9d27",
+          "object_type": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD",
+          "schema_version": "1.4.0",
+          "valid": null,
+          "proves_truth": false,
+          "proves_authorization": false,
+          "proves_safety": false,
+          "proves_admissibility": false,
+          "proves_external_reality": false
+        },
+        {
+          "name": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.4.0-capability-manifest-hostile-fixtures/INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT.json",
+          "size_bytes": 7783,
+          "sha256": "749fc54493c00bd3feef6713e5eb27fa7cf68d487afdb2cd4eba2652cbd909ef",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "0b750724d5520fa23bd439a8f6868619e6cbcbc5186820223efafca4974b7b00",
+          "object_type": "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT",
+          "schema_version": "1.4.0",
+          "valid": true,
+          "proves_truth": false,
+          "proves_authorization": false,
+          "proves_safety": false,
+          "proves_admissibility": false,
+          "proves_external_reality": false
+        }
+      ]
+    },
+    {
+      "tag": "v1.5.0-external-capability-release-consumption",
+      "role": "external capability release consumption",
+      "required_asset_count": 2,
+      "resolved_asset_count": 2,
+      "assets": [
+        {
+          "name": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.5.0-external-capability-release-consumption/INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD.json",
+          "size_bytes": 2372,
+          "sha256": "7d30272ba608580c8a65805bbcbc69a4b7988482724b332251d83803be292163",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "b0f1caebf9b919ef3d7fcad7a1cc955d0aa54299a33076ebcf5d2907c7b825be",
+          "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD",
+          "schema_version": "1.5.0",
+          "valid": null,
+          "proves_truth": null,
+          "proves_authorization": null,
+          "proves_safety": null,
+          "proves_admissibility": null,
+          "proves_external_reality": null
+        },
+        {
+          "name": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_RECEIPT.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.5.0-external-capability-release-consumption/INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_RECEIPT.json",
+          "size_bytes": 3901,
+          "sha256": "8dda5fb89e8252214277193b52a3a1815ffcff28f8a17d1cb808d89ce41b6536",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "35317301d7e7a3f22b9cef1c406fb369f540d92ec70f7a4d1579ff158b71a375",
+          "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_RECEIPT",
+          "schema_version": "1.5.0",
+          "valid": true,
+          "proves_truth": false,
+          "proves_authorization": false,
+          "proves_safety": false,
+          "proves_admissibility": false,
+          "proves_external_reality": false
+        }
+      ]
+    },
+    {
+      "tag": "v1.6.0-external-capability-cold-replay",
+      "role": "external capability cold replay",
+      "required_asset_count": 3,
+      "resolved_asset_count": 3,
+      "assets": [
+        {
+          "name": "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_STANDARD.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.6.0-external-capability-cold-replay/INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_STANDARD.json",
+          "size_bytes": 1829,
+          "sha256": "e3e7c4620572955b92032787a5d53f79d9c4a96576ff152e0a6de2d88b789d68",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "35c4587a0db43cdf56d1fdfbd67512412d6d9718879d3001f46f02a93468e49d",
+          "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_STANDARD",
+          "schema_version": "1.6.0",
+          "valid": null,
+          "proves_truth": null,
+          "proves_authorization": null,
+          "proves_safety": null,
+          "proves_admissibility": null,
+          "proves_external_reality": null
+        },
+        {
+          "name": "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RUNNER.mjs",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.6.0-external-capability-cold-replay/INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RUNNER.mjs",
+          "size_bytes": 8041,
+          "sha256": "4a2823ba95500364a20b4b1879b7ea35d06e28fbb7ff5e1470564bc382bbbca5",
+          "is_json": false,
+          "json_parse_error": null,
+          "sha256_canonical_json": null,
+          "object_type": null,
+          "schema_version": null,
+          "valid": null,
+          "proves_truth": null,
+          "proves_authorization": null,
+          "proves_safety": null,
+          "proves_admissibility": null,
+          "proves_external_reality": null
+        },
+        {
+          "name": "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RECEIPT.json",
+          "url": "https://github.com/INVOCORDER/INVOCORDER/releases/download/v1.6.0-external-capability-cold-replay/INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RECEIPT.json",
+          "size_bytes": 4630,
+          "sha256": "5bd4a604f69cbb6172d9dad66ea54d060f4fc9bbfa22de68f37f85168959adf0",
+          "is_json": true,
+          "json_parse_error": null,
+          "sha256_canonical_json": "f3632530ab2fabc7645ffd156e5252bf2e8af1b2bd856d427e32f5b7d62b8025",
+          "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RECEIPT",
+          "schema_version": "1.6.0",
+          "valid": true,
+          "proves_truth": false,
+          "proves_authorization": false,
+          "proves_safety": false,
+          "proves_admissibility": false,
+          "proves_external_reality": false
+        }
+      ]
+    }
+  ],
+  "total_release_count": 5,
+  "total_asset_count": 12,
+  "generated_from_public_release_assets_only": true,
+  "private_source_required": false,
+  "local_working_tree_required_for_consumers": false,
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@invocorder/recorder",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Machine-action evidence substrate: hash-chained boundary records and replayable evidence bundles.",
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",

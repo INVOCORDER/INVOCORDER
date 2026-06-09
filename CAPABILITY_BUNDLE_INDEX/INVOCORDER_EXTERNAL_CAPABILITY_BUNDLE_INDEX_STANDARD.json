@@ -1,0 +1,76 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_INDEX_STANDARD",
+  "schema_version": "1.7.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_name": "external capability bundle index",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "capability_chain_scope": {
+    "starts_at": "v1.2.0-capability-admission-control",
+    "ends_at": "v1.6.0-external-capability-cold-replay",
+    "requires_public_release_assets_only": true,
+    "requires_private_source": false,
+    "requires_local_working_tree": false
+  },
+  "chain_releases": [
+    {
+      "tag": "v1.2.0-capability-admission-control",
+      "role": "capability admission control",
+      "required_assets": [
+        "INVOCORDER_CAPABILITY_ADMISSION_STANDARD.json",
+        "CAPABILITY_MANIFEST_TEMPLATE.json",
+        "INVOCORDER_CAPABILITY_ADMISSION_REGISTRY.json"
+      ]
+    },
+    {
+      "tag": "v1.3.0-capability-runtime-enforcement",
+      "role": "capability runtime enforcement",
+      "required_assets": [
+        "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_STANDARD.json",
+        "INVOCORDER_CAPABILITY_RUNTIME_ENFORCEMENT_RECEIPT.json"
+      ]
+    },
+    {
+      "tag": "v1.4.0-capability-manifest-hostile-fixtures",
+      "role": "capability manifest hostile fixtures",
+      "required_assets": [
+        "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_STANDARD.json",
+        "INVOCORDER_CAPABILITY_MANIFEST_HOSTILE_FIXTURE_RECEIPT.json"
+      ]
+    },
+    {
+      "tag": "v1.5.0-external-capability-release-consumption",
+      "role": "external capability release consumption",
+      "required_assets": [
+        "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_STANDARD.json",
+        "INVOCORDER_EXTERNAL_CAPABILITY_RELEASE_CONSUMPTION_RECEIPT.json"
+      ]
+    },
+    {
+      "tag": "v1.6.0-external-capability-cold-replay",
+      "role": "external capability cold replay",
+      "required_assets": [
+        "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_STANDARD.json",
+        "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RUNNER.mjs",
+        "INVOCORDER_EXTERNAL_CAPABILITY_COLD_REPLAY_RECEIPT.json"
+      ]
+    }
+  ],
+  "index_requirements": {
+    "all_required_release_assets_resolve": true,
+    "all_json_assets_parse": true,
+    "all_json_assets_have_byte_sha256": true,
+    "all_json_assets_have_canonical_json_sha256": true,
+    "all_receipts_with_valid_field_are_valid": true,
+    "chain_order_is_explicit": true,
+    "non_claim_boundary_is_preserved": true
+  },
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  },
+  "pass_condition": "V1_7_EXTERNAL_CAPABILITY_BUNDLE_INDEX_VALID"
+}
