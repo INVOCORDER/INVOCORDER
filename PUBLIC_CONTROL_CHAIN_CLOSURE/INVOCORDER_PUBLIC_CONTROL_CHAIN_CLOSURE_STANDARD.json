@@ -1,0 +1,57 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_CONTROL_CHAIN_CLOSURE_STANDARD",
+  "schema_version": "2.0.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_name": "public control chain closure",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "source_gate": {
+    "release_tag": "v1.9.0-external-capability-capsule-digest",
+    "release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.9.0-external-capability-capsule-digest",
+    "required_assets": [
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_STANDARD.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_STANDARD",
+        "schema_version": "1.9.0"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST",
+        "schema_version": "1.9.0"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_RECEIPT.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_RECEIPT",
+        "schema_version": "1.9.0",
+        "valid": true
+      }
+    ]
+  },
+  "closure_policy": {
+    "must_consume_v1_9_capsule_release_assets": true,
+    "must_verify_v1_9_capsule_receipt_validity": true,
+    "must_bind_capsule_digest": true,
+    "must_bind_v1_2_to_v1_9_public_control_chain": true,
+    "must_preserve_public_release_asset_only_boundary": true,
+    "must_preserve_private_source_not_required_boundary": true,
+    "must_preserve_local_working_tree_not_required_boundary": true,
+    "must_preserve_non_claim_boundary": true,
+    "must_publish_closure_receipt": true
+  },
+  "chain_scope": {
+    "starts_at": "v1.2.0-capability-admission-control",
+    "ends_at": "v1.9.0-external-capability-capsule-digest",
+    "ordered_release_count": 8,
+    "public_release_assets_only": true,
+    "private_source_required": false,
+    "local_working_tree_required_for_consumers": false
+  },
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  },
+  "pass_condition": "V2_0_PUBLIC_CONTROL_CHAIN_CLOSURE_VALID"
+}
