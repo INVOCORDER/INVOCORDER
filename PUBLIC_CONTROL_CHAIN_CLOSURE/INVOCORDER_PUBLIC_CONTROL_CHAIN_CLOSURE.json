@@ -1,0 +1,82 @@
+{
+  "object_type": "INVOCORDER_PUBLIC_CONTROL_CHAIN_CLOSURE",
+  "schema_version": "2.0.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "package_version": "2.0.0",
+  "source_release_tag": "v1.9.0-external-capability-capsule-digest",
+  "source_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.9.0-external-capability-capsule-digest",
+  "chain_scope": {
+    "starts_at": "v1.2.0-capability-admission-control",
+    "ends_at": "v1.9.0-external-capability-capsule-digest",
+    "ordered_release_count": 8,
+    "public_release_assets_only": true,
+    "private_source_required": false,
+    "local_working_tree_required_for_consumers": false
+  },
+  "source_capsule_digest_sha256": "4f3f99fffa8e171f45a3d3e9b10b2e6ca3a17c320db385ba3581f68dbe77fd94",
+  "closure_digest_algorithm": "sha256_canonical_json",
+  "closure_digest_sha256": "c0592f303b52208a131c404d74dcfa93e82f9e36355a65c8e4113dbb3fc906ad",
+  "closure_digest_input": {
+    "object_type": "INVOCORDER_PUBLIC_CONTROL_CHAIN_CLOSURE_DIGEST_INPUT",
+    "schema_version": "2.0.0",
+    "source_repository": "INVOCORDER/INVOCORDER",
+    "source_release_tag": "v1.9.0-external-capability-capsule-digest",
+    "chain_scope": {
+      "starts_at": "v1.2.0-capability-admission-control",
+      "ends_at": "v1.9.0-external-capability-capsule-digest",
+      "ordered_release_count": 8,
+      "public_release_assets_only": true,
+      "private_source_required": false,
+      "local_working_tree_required_for_consumers": false
+    },
+    "source_capsule_digest_sha256": "4f3f99fffa8e171f45a3d3e9b10b2e6ca3a17c320db385ba3581f68dbe77fd94",
+    "ordered_source_assets": [
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_STANDARD.json",
+        "sha256": "a3d2d637855b3f55e37e6549624a143fa05905900643b813e9eb4f1ce193e098",
+        "sha256_canonical_json": "522f50269bd392c415bcc920ed9b38ca43ab3effc01c77191ef14c91685e8676",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_STANDARD",
+        "schema_version": "1.9.0",
+        "valid": null,
+        "capsule_digest_sha256": null
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST.json",
+        "sha256": "fd9cc5959fcab7d552d4f02100f03662ca174056bd6c749fafaf4b18b62829fc",
+        "sha256_canonical_json": "4b89b2d6c8a466a502b0e2c7c53c824daddc237074effccc22d0ee2cb72d1ecd",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST",
+        "schema_version": "1.9.0",
+        "valid": null,
+        "capsule_digest_sha256": "4f3f99fffa8e171f45a3d3e9b10b2e6ca3a17c320db385ba3581f68dbe77fd94"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_RECEIPT.json",
+        "sha256": "bd3b57d3329c280af63896de52b19b49d51a5a2f9573b2f75a29cca1f3bb21e5",
+        "sha256_canonical_json": "c9db4cb80078b1f374c321d27a9ef07e6e38da56e3d15302be527e9566de9284",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_RECEIPT",
+        "schema_version": "1.9.0",
+        "valid": true,
+        "capsule_digest_sha256": "4f3f99fffa8e171f45a3d3e9b10b2e6ca3a17c320db385ba3581f68dbe77fd94"
+      }
+    ],
+    "non_claim_boundary": {
+      "claims_truth": false,
+      "claims_authorization": false,
+      "claims_safety": false,
+      "claims_admissibility": false,
+      "claims_external_reality": false
+    }
+  },
+  "public_release_assets_only": true,
+  "private_source_required": false,
+  "local_working_tree_required_for_consumers": false,
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  }
+}

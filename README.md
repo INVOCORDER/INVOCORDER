@@ -215,3 +215,13 @@ The digest consumes the v1.8.0 external capability bundle cold replay release as
 The capsule digest gives consumers one stable digest object for the v1.2 through v1.8 external capability chain while preserving the public-release-asset-only, no-private-source, no-local-working-tree, and non-claim boundaries.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+## v2.0.0 — Public control chain closure
+
+INVOCORDER v2.0.0 publishes a public control chain closure.
+
+The closure consumes the v1.9.0 external capability capsule digest release assets, verifies the source receipt, binds the capsule digest, computes a closure digest, and records the v1.2 through v1.9 public control chain scope.
+
+The closure gives consumers one bounded public object for the external capability control chain while preserving public-release-asset-only replay, no-private-source replay, no-local-working-tree replay, and the non-claim boundary.
+
+It does not claim truth, authorization, safety, admissibility, or external reality.
