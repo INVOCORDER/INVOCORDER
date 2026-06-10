@@ -1,0 +1,77 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST",
+  "schema_version": "1.9.0",
+  "jurisdiction": "INVOCORDER",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "package_version": "1.9.0",
+  "source_release_tag": "v1.8.0-external-capability-bundle-cold-replay",
+  "source_release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.8.0-external-capability-bundle-cold-replay",
+  "chain_scope": {
+    "starts_at": "v1.2.0-capability-admission-control",
+    "ends_at": "v1.8.0-external-capability-bundle-cold-replay",
+    "ordered_release_count": 7,
+    "public_release_assets_only": true,
+    "private_source_required": false,
+    "local_working_tree_required_for_consumers": false
+  },
+  "capsule_digest_algorithm": "sha256_canonical_json",
+  "capsule_digest_sha256": "4f3f99fffa8e171f45a3d3e9b10b2e6ca3a17c320db385ba3581f68dbe77fd94",
+  "ordered_digest_input": {
+    "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_INPUT",
+    "schema_version": "1.9.0",
+    "source_repository": "INVOCORDER/INVOCORDER",
+    "source_release_tag": "v1.8.0-external-capability-bundle-cold-replay",
+    "chain_scope": {
+      "starts_at": "v1.2.0-capability-admission-control",
+      "ends_at": "v1.8.0-external-capability-bundle-cold-replay",
+      "ordered_release_count": 7,
+      "public_release_assets_only": true,
+      "private_source_required": false,
+      "local_working_tree_required_for_consumers": false
+    },
+    "ordered_assets": [
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_STANDARD.json",
+        "sha256": "1e4bec7db788613793d0d8830d9d25d4219860256a74907bf75db4e9ac75097e",
+        "sha256_canonical_json": "255bd81d2ac72fb2d29a3fbc069cd607953bdb212cc91ec3114075fa35726443",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_STANDARD",
+        "schema_version": "1.8.0",
+        "valid": null
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_RUNNER.mjs",
+        "sha256": "7b158d49ed17c9241d97e78e9a11a558f1423e9c7ce8d02726dd40483ad86857",
+        "sha256_canonical_json": null,
+        "object_type": null,
+        "schema_version": null,
+        "valid": null
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_RECEIPT.json",
+        "sha256": "13f8c5d2bd8602262ffbbbd49cca143b87265c4bdeb51f364e3339a6e16dee87",
+        "sha256_canonical_json": "95da505ac715a717b76d4f3463082a4b00201ed6934e181bc8e3ea9561305e4d",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_RECEIPT",
+        "schema_version": "1.8.0",
+        "valid": true
+      }
+    ],
+    "non_claim_boundary": {
+      "claims_truth": false,
+      "claims_authorization": false,
+      "claims_safety": false,
+      "claims_admissibility": false,
+      "claims_external_reality": false
+    }
+  },
+  "public_release_assets_only": true,
+  "private_source_required": false,
+  "local_working_tree_required_for_consumers": false,
+  "non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  }
+}

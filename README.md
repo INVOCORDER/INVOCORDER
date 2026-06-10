@@ -205,3 +205,13 @@ The gate copies a standalone replay runner into a fresh temporary directory and 
 This proves outside consumers can replay the capability bundle index without guessing release order, without private source, and without a local working tree.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+## v1.9.0 — External capability capsule digest
+
+INVOCORDER v1.9.0 publishes an external capability capsule digest.
+
+The digest consumes the v1.8.0 external capability bundle cold replay release assets, verifies the source receipt, binds the source assets by byte hash and canonical JSON hash, and computes a single ordered capsule digest over the public external capability chain scope.
+
+The capsule digest gives consumers one stable digest object for the v1.2 through v1.8 external capability chain while preserving the public-release-asset-only, no-private-source, no-local-working-tree, and non-claim boundaries.
+
+It does not claim truth, authorization, safety, admissibility, or external reality.

@@ -1,0 +1,56 @@
+{
+  "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_STANDARD",
+  "schema_version": "1.9.0",
+  "jurisdiction": "INVOCORDER",
+  "standard_name": "external capability capsule digest",
+  "source_repository": "INVOCORDER/INVOCORDER",
+  "package_name": "@invocorder/recorder",
+  "source_gate": {
+    "release_tag": "v1.8.0-external-capability-bundle-cold-replay",
+    "release_url": "https://github.com/INVOCORDER/INVOCORDER/releases/tag/v1.8.0-external-capability-bundle-cold-replay",
+    "required_assets": [
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_STANDARD.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_STANDARD",
+        "schema_version": "1.8.0"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_RUNNER.mjs"
+      },
+      {
+        "name": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_RECEIPT.json",
+        "object_type": "INVOCORDER_EXTERNAL_CAPABILITY_BUNDLE_COLD_REPLAY_RECEIPT",
+        "schema_version": "1.8.0",
+        "valid": true
+      }
+    ]
+  },
+  "capsule_digest_policy": {
+    "must_download_v1_8_release_assets": true,
+    "must_verify_source_receipt_validity": true,
+    "must_bind_source_assets_by_byte_hash": true,
+    "must_bind_json_assets_by_canonical_json_hash": true,
+    "must_compute_ordered_capsule_digest": true,
+    "must_include_chain_scope_v1_2_to_v1_8": true,
+    "must_preserve_public_release_asset_only_boundary": true,
+    "must_preserve_no_private_source_boundary": true,
+    "must_preserve_no_local_working_tree_boundary": true,
+    "must_preserve_non_claim_boundary": true
+  },
+  "chain_scope": {
+    "starts_at": "v1.2.0-capability-admission-control",
+    "ends_at": "v1.8.0-external-capability-bundle-cold-replay",
+    "ordered_release_count": 7,
+    "public_release_assets_only": true,
+    "private_source_required": false,
+    "local_working_tree_required_for_consumers": false
+  },
+  "required_non_claim_boundary": {
+    "claims_truth": false,
+    "claims_authorization": false,
+    "claims_safety": false,
+    "claims_admissibility": false,
+    "claims_external_reality": false
+  },
+  "pass_condition": "V1_9_EXTERNAL_CAPABILITY_CAPSULE_DIGEST_VALID"
+}
