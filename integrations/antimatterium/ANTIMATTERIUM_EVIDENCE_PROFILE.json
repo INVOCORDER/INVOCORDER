@@ -1,0 +1,44 @@
+{
+  "profile": "INVOCORDER_ANTIMATTERIUM_EVIDENCE_PROFILE",
+  "version": "v0.1.0",
+  "external_stack": {
+    "owner": "ANTIMATTERIUM",
+    "core_repository": "https://github.com/ANTIMATTERIUM/ANTIMATTERIUM",
+    "www_repository": "https://github.com/ANTIMATTERIUM/WWW",
+    "www_site": "https://antimatterium.github.io/WWW/",
+    "npm_package": "https://www.npmjs.com/package/@antimatterium/antimatterium",
+    "latest_core_release": "https://github.com/ANTIMATTERIUM/ANTIMATTERIUM/releases/tag/v0.1.8-antimatterium-cross-stack-bindings",
+    "latest_www_release": "https://github.com/ANTIMATTERIUM/WWW/releases/tag/v0.1.1-antimatterium-www-cross-stack-surface"
+  },
+  "recordable_machine_actions": [
+    "mission estimate command",
+    "mission runner JSON output",
+    "verifier command output",
+    "release receipt publication",
+    "npm package assertion",
+    "GitHub Pages deployment assertion"
+  ],
+  "required_record_fields": [
+    "schema_version",
+    "action",
+    "actor",
+    "tool_or_command",
+    "input_ref",
+    "output_ref",
+    "external_stack_ref",
+    "claim_boundary",
+    "hash",
+    "previous_hash",
+    "timestamp_utc"
+  ],
+  "claim_boundary": {
+    "claims_current_industrial_antimatter_production": false,
+    "claims_current_starship_readiness": false,
+    "claims_physical_production_instructions": false
+  },
+  "completion": {
+    "ANTIMATTERIUM_EVIDENCE_PROFILE_BOUND": true,
+    "EXTERNAL_STACK_ACTION_RECORDABLE": true,
+    "NO_PHYSICAL_PRODUCTION_INSTRUCTIONS": true
+  }
+}
