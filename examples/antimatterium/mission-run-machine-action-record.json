@@ -1,0 +1,26 @@
+{
+  "schema_version": "invocorder.machine_action_record.v0.1.0",
+  "action": "ANTIMATTERIUM_MISSION_RUN_EXAMPLE",
+  "actor": "midiakiasat",
+  "tool_or_command": "node scripts/antimatterium-mission.mjs examples/mission-runner-class-4.json",
+  "input_ref": "https://github.com/ANTIMATTERIUM/ANTIMATTERIUM/blob/main/examples/mission-runner-class-4.json",
+  "output_ref": "https://github.com/ANTIMATTERIUM/ANTIMATTERIUM/blob/main/receipts/MISSION_CLASS_4_EXAMPLE_RECEIPT.json",
+  "external_stack_ref": "https://github.com/ANTIMATTERIUM/ANTIMATTERIUM/releases/tag/v0.1.8-antimatterium-cross-stack-bindings",
+  "machine_output_summary": {
+    "mission_class": 4,
+    "vehicle_kg": 10,
+    "cruise_fraction_c": 0.01,
+    "coupling_efficiency": 0.25,
+    "includes_deceleration": true,
+    "burn_count": 2,
+    "claim_boundary": "bounded non-relativistic estimate; not production readiness; not starship readiness"
+  },
+  "claim_boundary": {
+    "claims_current_industrial_antimatter_production": false,
+    "claims_current_starship_readiness": false,
+    "claims_physical_production_instructions": false
+  },
+  "hash": "sha256:antimatterium-example-record-placeholder",
+  "previous_hash": null,
+  "timestamp_utc": "2026-06-20T06:20:00Z"
+}

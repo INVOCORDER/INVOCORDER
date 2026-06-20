@@ -23,7 +23,8 @@
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js || true",
     "release:check": "npm run build && npm test",
-    "prepublish:gate": "node scripts/prepublish-gate.mjs"
+    "prepublish:gate": "node scripts/prepublish-gate.mjs",
+    "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
