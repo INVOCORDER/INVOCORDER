@@ -354,3 +354,12 @@ npm run stack:terminality
 ```
 
 <!-- INVOCORDER_STACK_TERMINALITY_END -->
+
+
+## Stack merge readiness ledger
+
+INVOCORDER records a stack merge-readiness ledger for the open public-control pull request chain.
+
+The ledger records PR number, base, head, title, reviewer request, check totals, check success count, pending count, and failing count for the current stack.
+
+This surface is not merge, approval, accepted truth, reviewer consent, terminal recourse, or system completion. It only records that the listed open pull requests were observed with zero pending checks, zero failing checks, matching stack order, and the required reviewer request.
