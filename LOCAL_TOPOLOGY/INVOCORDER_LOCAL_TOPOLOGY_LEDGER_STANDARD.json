@@ -1,0 +1,113 @@
+{
+  "schema": "invocorder.local_topology_ledger.standard.v1",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "purpose": "Bind the local INVOCORDER-org workspace topology as inspection evidence without treating local presence, node_modules, dist, sibling repositories, generated media, or package installation as truth.",
+  "workspace_root_policy": {
+    "default_workspace_root": "..",
+    "native_repo_path": "INVOCORDER",
+    "require_native_repo": true,
+    "require_declared_sibling_surfaces": true
+  },
+  "declared_surfaces": [
+    {
+      "id": "CAPTURE_CONTRACT",
+      "path": "CAPTURE-CONTRACT",
+      "required": true,
+      "role": "capture contract boundary",
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "CAPTURE_CONTRACT.md",
+        "BOUNDARY_FACTS.md",
+        "REPLAY_BUNDLE_REQUIREMENTS.md"
+      ]
+    },
+    {
+      "id": "CINEMATICUM",
+      "path": "CINEMATICUM",
+      "required": true,
+      "role": "adjacent admissible motion picture jurisdiction surface",
+      "required_files": [
+        "README.md",
+        "LICENSE",
+        "package.json",
+        "PRODUCT/INSTALLABLE_PRODUCT_BOUNDARY.json",
+        "CASES/CASE_001_THE_LAST_RENDER/DIRECTION/DIRECTOR_ENGINE_MANIFEST.json"
+      ]
+    },
+    {
+      "id": "EVIDENCE_SCHEMAS",
+      "path": "EVIDENCE-SCHEMAS",
+      "required": true,
+      "role": "machine action evidence schema surface",
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "schemas/machine-action-record.schema.json",
+        "schemas/replay-bundle.schema.json",
+        "schemas/action-session.schema.json"
+      ]
+    },
+    {
+      "id": "HOSTILE_FIXTURES",
+      "path": "HOSTILE-FIXTURES",
+      "required": true,
+      "role": "hostile fixture replay surface",
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "fixtures/mcp/INDEX.json",
+        "fixtures/signed-bundles/INDEX.json"
+      ]
+    },
+    {
+      "id": "INTEGRATIONS",
+      "path": "INTEGRATIONS",
+      "required": true,
+      "role": "integration boundary documentation surface",
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "mcp-stdio/README.md",
+        "local-command/README.md",
+        "verifrax-ingestion/README.md"
+      ]
+    },
+    {
+      "id": "INVOCORDER",
+      "path": "INVOCORDER",
+      "required": true,
+      "role": "native machine action evidence substrate",
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "package.json",
+        "POWER_PLANE/INVOCORDER_NPM_POWER_PLANE_STANDARD.json",
+        "WORKSPACE_PERIMETER/INVOCORDER_LOCAL_WORKSPACE_PERIMETER_STANDARD.json"
+      ]
+    }
+  ],
+  "ignored_for_hashing": [
+    ".git",
+    "node_modules",
+    "dist",
+    ".invocorder",
+    ".DS_Store",
+    "*.tgz",
+    "*.tar.gz",
+    "*.mp4"
+  ],
+  "non_claims": {
+    "topology_presence_is_truth": false,
+    "sibling_presence_expands_invocorder_role": false,
+    "generated_media_is_source_authority": false,
+    "node_modules_is_source_authority": false,
+    "dist_is_source_authority": false,
+    "topology_ledger_is_system_completion": false
+  }
+}

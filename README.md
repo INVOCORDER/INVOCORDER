@@ -270,3 +270,46 @@ Bound external packages:
 
 This power plane proves package binding and local runtime resolution only. It does not prove truth, authorization, safety, admissibility, recognition, recourse, system completion, or external reality.
 <!-- INVOCORDER_NPM_POWER_PLANE_END -->
+
+<!-- INVOCORDER_LOCAL_WORKSPACE_PERIMETER_START -->
+
+## Local workspace perimeter
+
+INVOCORDER can inspect the local `INVOCORDER-org` workspace perimeter when the sibling surfaces are present beside the native repository.
+
+The local perimeter currently binds these surfaces as evidence-bearing adjacent boundaries:
+
+- `INVOCORDER`
+- `CAPTURE-CONTRACT`
+- `EVIDENCE-SCHEMAS`
+- `HOSTILE-FIXTURES`
+- `INTEGRATIONS`
+- `CINEMATICUM`
+
+This binding is deliberately narrow. Local workspace presence is evidence of operator-visible surfaces. It is not accepted truth, authority issuance, governed execution truth, verification result, terminal recognition, terminal recourse, package truth, host truth, or system completion.
+
+Commands:
+
+```bash
+npm run workspace:perimeter
+npm run workspace:perimeter:local
+invocorder workspace-perimeter --workspace-root .. --require-local
+```
+
+The default verifier mode is CI-safe and does not require sibling repositories. The local-required mode is for operator validation from the full workspace root.
+
+<!-- INVOCORDER_LOCAL_WORKSPACE_PERIMETER_END -->
+
+<!-- INVOCORDER_LOCAL_TOPOLOGY_LEDGER_START -->
+## Local topology ledger
+
+INVOCORDER can inspect the surrounding local workspace topology without treating that topology as truth, source authority, completion, or an expansion of INVOCORDER's role.
+
+```bash
+invocorder local-topology --workspace-root ..
+npm run topology:verify
+```
+
+The ledger intentionally excludes `node_modules`, `dist`, generated package archives, local session output, and generated media from topology hashing.
+<!-- INVOCORDER_LOCAL_TOPOLOGY_LEDGER_END -->
+

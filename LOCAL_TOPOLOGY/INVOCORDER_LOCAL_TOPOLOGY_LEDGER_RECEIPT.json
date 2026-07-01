@@ -1,0 +1,273 @@
+{
+  "schema": "invocorder.local_topology_ledger.receipt.v1",
+  "status": "LOCAL_TOPOLOGY_LEDGER_VERIFIED",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "workspace_root": "/Users/midiakiasat/Downloads/Apps/midiakiasat/INVOCORDER-org",
+  "require_local": false,
+  "standard_hash": "816681a6f58b4e10b87b4106733bad0a85c7e59fbbabdd10db0c1d0700d13103",
+  "inspected_surface_count": 6,
+  "inspected_surfaces": [
+    {
+      "id": "CAPTURE_CONTRACT",
+      "path": "CAPTURE-CONTRACT",
+      "role": "capture contract boundary",
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true,
+          "sha256": "9deb2516cda0ff8814271a6963ba77be145bdd5d21ea34cc1dc0cb2d00c8ef45"
+        },
+        {
+          "file": "VERSION",
+          "exists": true,
+          "sha256": "cbf6d6b5d7422c9e61e4d0ecfd8ce67702d2cdc1da448f7a9064cfc2dd759bd1"
+        },
+        {
+          "file": "LICENSE",
+          "exists": true,
+          "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+        },
+        {
+          "file": "CAPTURE_CONTRACT.md",
+          "exists": true,
+          "sha256": "4226dcc6d00c630a4b2b63a26fd66f6d9804eee65cf1e8e502f5037294dbdad8"
+        },
+        {
+          "file": "BOUNDARY_FACTS.md",
+          "exists": true,
+          "sha256": "0d19dc41ede57a47207a8570d0552ead77898783a3c04f9ade6aa436bbbb9698"
+        },
+        {
+          "file": "REPLAY_BUNDLE_REQUIREMENTS.md",
+          "exists": true,
+          "sha256": "ce2d5f72fe1ec830c6c26418052760e0ec45267cdd109699b8e42caaf5b7e7d1"
+        }
+      ],
+      "missing_required_files": [],
+      "inspected_file_count": 8,
+      "topology_hash": "09f89916e3b23254fdaa8fcfdc04652e030e6dc77b5603843b5e0ebd325962ff"
+    },
+    {
+      "id": "CINEMATICUM",
+      "path": "CINEMATICUM",
+      "role": "adjacent admissible motion picture jurisdiction surface",
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true,
+          "sha256": "d833bc62c1a9e624f21379edf763883e33c8b55cee49c55d7d00ecfe7d1339c6"
+        },
+        {
+          "file": "LICENSE",
+          "exists": true,
+          "sha256": "36197db5fa45c7f07a8a1d933383e1172222ee401c14c83ae8f53d7095365c8e"
+        },
+        {
+          "file": "package.json",
+          "exists": true,
+          "sha256": "03a0a1bfacca240a6b881fe285322026a6041a2173554d8949e433e8f544d470"
+        },
+        {
+          "file": "PRODUCT/INSTALLABLE_PRODUCT_BOUNDARY.json",
+          "exists": true,
+          "sha256": "480cde5e98d8ccf8c396db2ef31a0a3f22777f383acef75cb8e109f0c78b5dfa"
+        },
+        {
+          "file": "CASES/CASE_001_THE_LAST_RENDER/DIRECTION/DIRECTOR_ENGINE_MANIFEST.json",
+          "exists": true,
+          "sha256": "222e01a302a383f88570b128cd0fa6f7f0bdc3e1674a9dd977d5bc3aae2dbede"
+        }
+      ],
+      "missing_required_files": [],
+      "inspected_file_count": 1080,
+      "topology_hash": "9b59244299cedb3e76de653292b7080326aa3d83d9f78186397a391d3ff6b459"
+    },
+    {
+      "id": "EVIDENCE_SCHEMAS",
+      "path": "EVIDENCE-SCHEMAS",
+      "role": "machine action evidence schema surface",
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true,
+          "sha256": "e1255b76469a3090edd9e6aca42d9ca2e4924282e682820ce0baceeae1cdbd13"
+        },
+        {
+          "file": "VERSION",
+          "exists": true,
+          "sha256": "cbf6d6b5d7422c9e61e4d0ecfd8ce67702d2cdc1da448f7a9064cfc2dd759bd1"
+        },
+        {
+          "file": "LICENSE",
+          "exists": true,
+          "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+        },
+        {
+          "file": "schemas/machine-action-record.schema.json",
+          "exists": true,
+          "sha256": "ff41c998d80d3b1df81fad96878db9f010fac6211709034cad44c5187ffc63ef"
+        },
+        {
+          "file": "schemas/replay-bundle.schema.json",
+          "exists": true,
+          "sha256": "eac7ac14c48fe1780311145a85be137ee480a09763dc126d21aa4713c0756de2"
+        },
+        {
+          "file": "schemas/action-session.schema.json",
+          "exists": true,
+          "sha256": "63eb589d1f09b22cedcf734043e070ad26b5c02b2650e8ce91c80c8b70ea4966"
+        }
+      ],
+      "missing_required_files": [],
+      "inspected_file_count": 13,
+      "topology_hash": "051a43b878b86d4bb07ce47572c31811e9ef4139b7c967619aa04cd049fde7ae"
+    },
+    {
+      "id": "HOSTILE_FIXTURES",
+      "path": "HOSTILE-FIXTURES",
+      "role": "hostile fixture replay surface",
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true,
+          "sha256": "8977beb039b3ae7e9730de8db034c30ae5968d1b84f36eb6e7b4dd876d6f05a3"
+        },
+        {
+          "file": "VERSION",
+          "exists": true,
+          "sha256": "37f2548f61073f73a31693a93e18e90a9d4cf26f4fc0f38d47357f1fe1a257f9"
+        },
+        {
+          "file": "LICENSE",
+          "exists": true,
+          "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+        },
+        {
+          "file": "fixtures/mcp/INDEX.json",
+          "exists": true,
+          "sha256": "73600937f2e7a7fce9c8bb633c75aef5996aa4bf05ef9e5bbdffd3b6c8cbb835"
+        },
+        {
+          "file": "fixtures/signed-bundles/INDEX.json",
+          "exists": true,
+          "sha256": "5219b2ae9a7a298c9e61e94ecf6a9074e5a1ddfe5675c1e78d294eb725c5e36f"
+        }
+      ],
+      "missing_required_files": [],
+      "inspected_file_count": 100,
+      "topology_hash": "b7925ac63e79dfe14c47611f2d08fc07d80795104a2ad0becd4892fd979a87f0"
+    },
+    {
+      "id": "INTEGRATIONS",
+      "path": "INTEGRATIONS",
+      "role": "integration boundary documentation surface",
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true,
+          "sha256": "e9c09c7033282de065a306b031d89c952d63d00c9fa5faf078bd7f97cfdcd4f5"
+        },
+        {
+          "file": "VERSION",
+          "exists": true,
+          "sha256": "cbf6d6b5d7422c9e61e4d0ecfd8ce67702d2cdc1da448f7a9064cfc2dd759bd1"
+        },
+        {
+          "file": "LICENSE",
+          "exists": true,
+          "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+        },
+        {
+          "file": "mcp-stdio/README.md",
+          "exists": true,
+          "sha256": "92d7bc8832d02e2701269df188cc2e10f0b39146e27071e700031b7a5a14d4e6"
+        },
+        {
+          "file": "local-command/README.md",
+          "exists": true,
+          "sha256": "a650831ceb7846803bd584761516885b643becc3bacbd7c368e552e7eb49eba4"
+        },
+        {
+          "file": "verifrax-ingestion/README.md",
+          "exists": true,
+          "sha256": "aba2cf59a4ee37026fa402e53ddfb9ac2c4586ec6851e6431144ca558a64c4b6"
+        }
+      ],
+      "missing_required_files": [],
+      "inspected_file_count": 10,
+      "topology_hash": "fdc578db6e657507c41c788d943b822a4c6a214fdb123c92d1c848e4bc2291bb"
+    },
+    {
+      "id": "INVOCORDER",
+      "path": "INVOCORDER",
+      "role": "native machine action evidence substrate",
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true,
+          "sha256": "48966eba221c00d1899e75c0ae3b1c4b36652445f8e36c5b5cb9a77fafb622dd"
+        },
+        {
+          "file": "VERSION",
+          "exists": true,
+          "sha256": "c28fcca53637bc88e124af1725df13cb98c69dedefd62fb3cdbe1cdb6b760624"
+        },
+        {
+          "file": "LICENSE",
+          "exists": true,
+          "sha256": "e9dac97defd6c12e0fe111be917a19186ac4e03b9e946fc08f0db8bc32f28385"
+        },
+        {
+          "file": "package.json",
+          "exists": true,
+          "sha256": "0fe96624eccb7727141b0bb066dcad48a2cf1080792de9880ba606bdb460b8f3"
+        },
+        {
+          "file": "POWER_PLANE/INVOCORDER_NPM_POWER_PLANE_STANDARD.json",
+          "exists": true,
+          "sha256": "6335e6fa7f405f82c3d6f39ced877b9349bf8ec5c565c207059900ddfc63d8e5"
+        },
+        {
+          "file": "WORKSPACE_PERIMETER/INVOCORDER_LOCAL_WORKSPACE_PERIMETER_STANDARD.json",
+          "exists": true,
+          "sha256": "bec5c8a530c4134191502c0da2aefce6efad94633b9dd787551aae578c8d040c"
+        }
+      ],
+      "missing_required_files": [],
+      "inspected_file_count": 167,
+      "topology_hash": "2ef69d544f3b3e07f42c28f7e68eeb3a025747146bfbec8ec6915d6a61a5690e"
+    }
+  ],
+  "ignored_for_hashing": [
+    ".git",
+    "node_modules",
+    "dist",
+    ".invocorder",
+    ".DS_Store",
+    "*.tgz",
+    "*.tar.gz",
+    "*.mp4"
+  ],
+  "non_claims": {
+    "topology_presence_is_truth": false,
+    "sibling_presence_expands_invocorder_role": false,
+    "generated_media_is_source_authority": false,
+    "node_modules_is_source_authority": false,
+    "dist_is_source_authority": false,
+    "topology_ledger_is_system_completion": false
+  },
+  "failures_count": 0,
+  "failures": []
+}
