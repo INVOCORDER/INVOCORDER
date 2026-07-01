@@ -217,7 +217,7 @@
         {
           "file": "README.md",
           "exists": true,
-          "sha256": "d2fdc32ebebaa8527478bd503f57bba89988f277b406d2e8d86497e85492398b"
+          "sha256": "1863641ae33d7019e9412013bf9b3b3e96b4ddb194149daeaf47bbbed51a4951"
         },
         {
           "file": "VERSION",
@@ -232,7 +232,7 @@
         {
           "file": "package.json",
           "exists": true,
-          "sha256": "f39f993052cec913881f17336e4f18947ba43ef34d1b53eda07fcaf9f01da029"
+          "sha256": "c2270fa4737e48413a6adbbc214e70507d59d3de106ff77981b5e57ce92eaf38"
         },
         {
           "file": "POWER_PLANE/INVOCORDER_NPM_POWER_PLANE_STANDARD.json",
@@ -246,8 +246,8 @@
         }
       ],
       "missing_required_files": [],
-      "inspected_file_count": 179,
-      "topology_hash": "c8f0b58a580f50ca0a5f69073f7c661b46b5ebbd47a8d619c3c647ff06612ee5"
+      "inspected_file_count": 182,
+      "topology_hash": "5dc87e62f03bdb6ce1d8ad43c89cdea40a1b8555dae180d15df0e672b4976172"
     }
   ],
   "ignored_for_hashing": [
