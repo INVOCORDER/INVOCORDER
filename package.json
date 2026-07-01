@@ -20,7 +20,8 @@
     "PUBLISH_DECISION.md",
     "POWER_PLANE",
     "WORKSPACE_PERIMETER",
-    "LOCAL_TOPOLOGY"
+    "LOCAL_TOPOLOGY",
+    "STACKED_PR_LEDGER"
   ],
   "scripts": {
     "build": "tsc",
@@ -32,7 +33,8 @@
     "power:status": "node dist/src/cli/invocorder.js power-plane",
     "workspace:perimeter": "node scripts/verify-local-workspace-perimeter.mjs",
     "workspace:perimeter:local": "node scripts/verify-local-workspace-perimeter.mjs --require-local",
-    "topology:verify": "node scripts/verify-local-topology-ledger.mjs"
+    "topology:verify": "node scripts/verify-local-topology-ledger.mjs",
+    "stack:pr-ledger": "node scripts/verify-stacked-pr-ledger.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
