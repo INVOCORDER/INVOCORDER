@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import { runCommand } from "../process/run-command.js";
 import { recordMcpStdioFile } from "../mcp/record-mcp-stdio-file.js";
 import { verifyBundleFile } from "../bundle/verify-bundle-file.js";
@@ -7,6 +6,30 @@ import { signBundleFile, signBundleFileWithKey, verifySignedBundleEnvelope } fro
 import { createSigningKeyFile } from "../signing/keys/key-store.js";
 import { inspectNpmPowerPlane } from "../power/npm-power-plane.js";
 import { inspectLocalWorkspacePerimeter } from "../perimeter/local-workspace-perimeter.js";
+import { inspectLocalTopologyLedger } from "../topology/local-topology-ledger.js";
+
+/* INVOCORDER_LOCAL_TOPOLOGY_LEDGER_CLI_START */
+function maybeHandleLocalTopologyLedgerCommand(argv: string[]): void {
+  if (argv[0] !== "local-topology") {
+    return;
+  }
+
+  const workspaceRootIndex = argv.indexOf("--workspace-root");
+  const workspaceRoot = workspaceRootIndex >= 0 ? argv[workspaceRootIndex + 1] : undefined;
+  const receipt = inspectLocalTopologyLedger(workspaceRoot);
+
+  console.log(JSON.stringify(receipt, null, 2));
+
+  if (receipt.failures.length > 0) {
+    process.exitCode = 1;
+  }
+
+  process.exit();
+}
+
+maybeHandleLocalTopologyLedgerCommand(process.argv.slice(2));
+/* INVOCORDER_LOCAL_TOPOLOGY_LEDGER_CLI_END */
+
 const __INVOCORDER_WORKSPACE_PERIMETER_CLI_BOUNDARY__ = true;
 const __invocorderWorkspacePerimeterArgs = process.argv.slice(2);
 

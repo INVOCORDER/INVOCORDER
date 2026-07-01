@@ -19,18 +19,20 @@
     "SECURITY.md",
     "PUBLISH_DECISION.md",
     "POWER_PLANE",
-    "WORKSPACE_PERIMETER"
+    "WORKSPACE_PERIMETER",
+    "LOCAL_TOPOLOGY"
   ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js || true",
-    "release:check": "npm run build && npm test && npm run power:verify && npm run workspace:perimeter",
+    "release:check": "npm run build && npm test && npm run power:verify && npm run workspace:perimeter && npm run topology:verify",
     "prepublish:gate": "node scripts/prepublish-gate.mjs",
     "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs",
     "power:verify": "node scripts/verify-npm-power-plane.mjs",
     "power:status": "node dist/src/cli/invocorder.js power-plane",
     "workspace:perimeter": "node scripts/verify-local-workspace-perimeter.mjs",
-    "workspace:perimeter:local": "node scripts/verify-local-workspace-perimeter.mjs --require-local"
+    "workspace:perimeter:local": "node scripts/verify-local-workspace-perimeter.mjs --require-local",
+    "topology:verify": "node scripts/verify-local-topology-ledger.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
