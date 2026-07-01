@@ -383,3 +383,13 @@ INVOCORDER records a bounded stack release-candidate ledger for the open green P
 The ledger observes PR 32 through PR 38 as open, ordered, reviewer-requested, and terminal-green at receipt time.
 
 This is not release, approval, merge, publication, accepted truth, safety, authorization, or system completion.
+
+
+<!-- INVOCORDER_STACK_PUBLICATION_READINESS_BOUNDARY -->
+## Stack publication-readiness ledger
+
+INVOCORDER records a bounded publication-readiness ledger over the open green stack.
+
+The ledger observes package name, package version, package file surfaces, required ledger files, PR 32 through PR 39, reviewer-request presence, and terminal-green checks.
+
+This is not publication, release, approval, merge, accepted truth, safety, authorization, or system completion.
