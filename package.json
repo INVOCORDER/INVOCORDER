@@ -18,16 +18,19 @@
     "bin",
     "SECURITY.md",
     "PUBLISH_DECISION.md",
-    "POWER_PLANE"
+    "POWER_PLANE",
+    "WORKSPACE_PERIMETER"
   ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js || true",
-    "release:check": "npm run build && npm test && npm run power:verify",
+    "release:check": "npm run build && npm test && npm run power:verify && npm run workspace:perimeter",
     "prepublish:gate": "node scripts/prepublish-gate.mjs",
     "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs",
     "power:verify": "node scripts/verify-npm-power-plane.mjs",
-    "power:status": "node dist/src/cli/invocorder.js power-plane"
+    "power:status": "node dist/src/cli/invocorder.js power-plane",
+    "workspace:perimeter": "node scripts/verify-local-workspace-perimeter.mjs",
+    "workspace:perimeter:local": "node scripts/verify-local-workspace-perimeter.mjs --require-local"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",

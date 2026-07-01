@@ -1,0 +1,117 @@
+{
+  "schema": "invocorder.local_workspace_perimeter_standard.v1",
+  "status": "LOCAL_WORKSPACE_PERIMETER_STANDARD_BOUND",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "native_repository": "INVOCORDER",
+  "workspace_root_label": "INVOCORDER-org",
+  "purpose": "Bind the local sibling workspace visible during operator validation without expanding INVOCORDER into a truth owner, package truth source, or universal system completion surface.",
+  "truth_rule": "LOCAL_WORKSPACE_PRESENCE_IS_EVIDENCE_NOT_ACCEPTED_TRUTH",
+  "package_rule": "PACKAGE_INSTALLATION_IS_DISTRIBUTION_EVIDENCE_NOT_VERIFICATION_RESULT",
+  "node_modules_rule": "NODE_MODULES_PRESENCE_IS_RUNTIME_INSTALLATION_EVIDENCE_NOT_SOURCE_AUTHORITY",
+  "surfaces": [
+    {
+      "id": "INVOCORDER",
+      "path": "INVOCORDER",
+      "role": "machine_action_evidence_substrate",
+      "native": true,
+      "required": true,
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "package.json",
+        "POWER_PLANE/INVOCORDER_NPM_POWER_PLANE_STANDARD.json"
+      ]
+    },
+    {
+      "id": "CAPTURE_CONTRACT",
+      "path": "CAPTURE-CONTRACT",
+      "role": "capture_contract_boundary",
+      "native": false,
+      "required": true,
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "CAPTURE_CONTRACT.md",
+        "BOUNDARY_FACTS.md",
+        "REPLAY_BUNDLE_REQUIREMENTS.md"
+      ]
+    },
+    {
+      "id": "EVIDENCE_SCHEMAS",
+      "path": "EVIDENCE-SCHEMAS",
+      "role": "machine_action_evidence_schema_surface",
+      "native": false,
+      "required": true,
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "schemas/machine-action-record.schema.json",
+        "schemas/replay-bundle.schema.json",
+        "schemas/action-session.schema.json"
+      ]
+    },
+    {
+      "id": "HOSTILE_FIXTURES",
+      "path": "HOSTILE-FIXTURES",
+      "role": "hostile_fixture_replay_surface",
+      "native": false,
+      "required": true,
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "fixtures/mcp/INDEX.json",
+        "fixtures/signed-bundles/INDEX.json"
+      ]
+    },
+    {
+      "id": "INTEGRATIONS",
+      "path": "INTEGRATIONS",
+      "role": "integration_boundary_documentation_surface",
+      "native": false,
+      "required": true,
+      "required_files": [
+        "README.md",
+        "VERSION",
+        "LICENSE",
+        "mcp-stdio/README.md",
+        "local-command/README.md",
+        "verifrax-ingestion/README.md"
+      ]
+    },
+    {
+      "id": "CINEMATICUM",
+      "path": "CINEMATICUM",
+      "role": "adjacent_admissible_motion_picture_jurisdiction_surface",
+      "native": false,
+      "required": true,
+      "required_files": [
+        "README.md",
+        "LICENSE",
+        "package.json",
+        "PRODUCT/INSTALLABLE_PRODUCT_BOUNDARY.json",
+        "CASES/CASE_001_THE_LAST_RENDER/DIRECTION/DIRECTOR_ENGINE_MANIFEST.json"
+      ]
+    }
+  ],
+  "does_not_define": [
+    "constitutional_law",
+    "accepted_state",
+    "authority_issuance",
+    "governed_execution_truth",
+    "verification_result",
+    "terminal_recognition",
+    "terminal_recourse",
+    "system_completion",
+    "package_truth",
+    "host_truth",
+    "sibling_repository_sovereignty"
+  ],
+  "validation_modes": {
+    "repo_default": "Checks INVOCORDER-bound files and standard shape without requiring sibling directories to exist in CI.",
+    "local_required": "Requires all declared sibling surfaces under the local workspace root."
+  }
+}
