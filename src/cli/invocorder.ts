@@ -6,6 +6,24 @@ import { verifyBundleFile } from "../bundle/verify-bundle-file.js";
 import { signBundleFile, signBundleFileWithKey, verifySignedBundleEnvelope } from "../signing/sign-bundle-file.js";
 import { createSigningKeyFile } from "../signing/keys/key-store.js";
 import { inspectNpmPowerPlane } from "../power/npm-power-plane.js";
+import { inspectLocalWorkspacePerimeter } from "../perimeter/local-workspace-perimeter.js";
+const __INVOCORDER_WORKSPACE_PERIMETER_CLI_BOUNDARY__ = true;
+const __invocorderWorkspacePerimeterArgs = process.argv.slice(2);
+
+if (__invocorderWorkspacePerimeterArgs[0] === "workspace-perimeter") {
+  const requireLocal = __invocorderWorkspacePerimeterArgs.includes("--require-local") || __invocorderWorkspacePerimeterArgs.includes("--local");
+  const workspaceRootIndex = __invocorderWorkspacePerimeterArgs.indexOf("--workspace-root");
+  const workspaceRoot = workspaceRootIndex >= 0 ? __invocorderWorkspacePerimeterArgs[workspaceRootIndex + 1] : undefined;
+
+  if (workspaceRootIndex >= 0 && !workspaceRoot) {
+    throw new Error("--workspace-root requires a path");
+  }
+
+  console.log(JSON.stringify(inspectLocalWorkspacePerimeter({ workspaceRoot, requireSiblings: requireLocal }), null, 2));
+  process.exit(0);
+}
+
+
 
 const args = process.argv.slice(2);
 
@@ -56,6 +74,7 @@ async function main(): Promise<void> {
   }
 
   console.error("Usage:");
+  console.error("  invocorder workspace-perimeter [--workspace-root <path>] [--require-local]");
   console.error("  invocorder run -- <command> [args...]");
   console.error("  invocorder mcp-stdio-file <jsonl-file>");
   console.error("  invocorder verify-bundle <replay-bundle.json>");

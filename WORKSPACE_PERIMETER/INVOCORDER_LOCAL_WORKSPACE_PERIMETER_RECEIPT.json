@@ -1,0 +1,218 @@
+{
+  "schema": "invocorder.local_workspace_perimeter_receipt.v1",
+  "status": "LOCAL_WORKSPACE_PERIMETER_VERIFIED",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "workspace_root": "/Users/midiakiasat/Downloads/Apps/midiakiasat/INVOCORDER-org",
+  "require_local": true,
+  "standard_hash": "bec5c8a530c4134191502c0da2aefce6efad94633b9dd787551aae578c8d040c",
+  "inspected_surface_count": 6,
+  "inspected_surfaces": [
+    {
+      "id": "INVOCORDER",
+      "path": "INVOCORDER",
+      "role": "machine_action_evidence_substrate",
+      "native": true,
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "VERSION",
+          "exists": true
+        },
+        {
+          "file": "LICENSE",
+          "exists": true
+        },
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "POWER_PLANE/INVOCORDER_NPM_POWER_PLANE_STANDARD.json",
+          "exists": true
+        }
+      ],
+      "missing_required_files": []
+    },
+    {
+      "id": "CAPTURE_CONTRACT",
+      "path": "CAPTURE-CONTRACT",
+      "role": "capture_contract_boundary",
+      "native": false,
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "VERSION",
+          "exists": true
+        },
+        {
+          "file": "LICENSE",
+          "exists": true
+        },
+        {
+          "file": "CAPTURE_CONTRACT.md",
+          "exists": true
+        },
+        {
+          "file": "BOUNDARY_FACTS.md",
+          "exists": true
+        },
+        {
+          "file": "REPLAY_BUNDLE_REQUIREMENTS.md",
+          "exists": true
+        }
+      ],
+      "missing_required_files": []
+    },
+    {
+      "id": "EVIDENCE_SCHEMAS",
+      "path": "EVIDENCE-SCHEMAS",
+      "role": "machine_action_evidence_schema_surface",
+      "native": false,
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "VERSION",
+          "exists": true
+        },
+        {
+          "file": "LICENSE",
+          "exists": true
+        },
+        {
+          "file": "schemas/machine-action-record.schema.json",
+          "exists": true
+        },
+        {
+          "file": "schemas/replay-bundle.schema.json",
+          "exists": true
+        },
+        {
+          "file": "schemas/action-session.schema.json",
+          "exists": true
+        }
+      ],
+      "missing_required_files": []
+    },
+    {
+      "id": "HOSTILE_FIXTURES",
+      "path": "HOSTILE-FIXTURES",
+      "role": "hostile_fixture_replay_surface",
+      "native": false,
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "VERSION",
+          "exists": true
+        },
+        {
+          "file": "LICENSE",
+          "exists": true
+        },
+        {
+          "file": "fixtures/mcp/INDEX.json",
+          "exists": true
+        },
+        {
+          "file": "fixtures/signed-bundles/INDEX.json",
+          "exists": true
+        }
+      ],
+      "missing_required_files": []
+    },
+    {
+      "id": "INTEGRATIONS",
+      "path": "INTEGRATIONS",
+      "role": "integration_boundary_documentation_surface",
+      "native": false,
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "VERSION",
+          "exists": true
+        },
+        {
+          "file": "LICENSE",
+          "exists": true
+        },
+        {
+          "file": "mcp-stdio/README.md",
+          "exists": true
+        },
+        {
+          "file": "local-command/README.md",
+          "exists": true
+        },
+        {
+          "file": "verifrax-ingestion/README.md",
+          "exists": true
+        }
+      ],
+      "missing_required_files": []
+    },
+    {
+      "id": "CINEMATICUM",
+      "path": "CINEMATICUM",
+      "role": "adjacent_admissible_motion_picture_jurisdiction_surface",
+      "native": false,
+      "required": true,
+      "exists": true,
+      "required_files": [
+        {
+          "file": "README.md",
+          "exists": true
+        },
+        {
+          "file": "LICENSE",
+          "exists": true
+        },
+        {
+          "file": "package.json",
+          "exists": true
+        },
+        {
+          "file": "PRODUCT/INSTALLABLE_PRODUCT_BOUNDARY.json",
+          "exists": true
+        },
+        {
+          "file": "CASES/CASE_001_THE_LAST_RENDER/DIRECTION/DIRECTOR_ENGINE_MANIFEST.json",
+          "exists": true
+        }
+      ],
+      "missing_required_files": []
+    }
+  ],
+  "non_claims": {
+    "local_workspace_presence_is_truth": false,
+    "sibling_presence_expands_invocorder_role": false,
+    "node_modules_presence_is_source_authority": false,
+    "package_installation_is_verification_result": false,
+    "workspace_perimeter_is_system_completion": false
+  },
+  "failures_count": 0,
+  "failures": []
+}
