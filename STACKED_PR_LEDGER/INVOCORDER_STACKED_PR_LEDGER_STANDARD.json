@@ -1,0 +1,46 @@
+{
+  "schema": "invocorder.stacked_pr_ledger.standard.v1",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "status": "STACKED_PR_LEDGER_STANDARD_BOUND",
+  "stack_root": "main",
+  "current_tip": "invocorder/local-topology-ledger",
+  "expected_pull_requests": [
+    {
+      "number": 32,
+      "title": "Bind npm power plane into INVOCORDER capability surface",
+      "base": "main",
+      "head": "invocorder/npm-power-plane",
+      "role": "npm package power plane boundary"
+    },
+    {
+      "number": 33,
+      "title": "Bind local workspace perimeter into INVOCORDER",
+      "base": "invocorder/npm-power-plane",
+      "head": "invocorder/local-workspace-perimeter",
+      "role": "local workspace perimeter boundary"
+    },
+    {
+      "number": 34,
+      "title": "Bind local topology ledger into INVOCORDER",
+      "base": "invocorder/local-workspace-perimeter",
+      "head": "invocorder/local-topology-ledger",
+      "role": "local topology ledger boundary"
+    }
+  ],
+  "validation_policy": {
+    "require_expected_base_head_alignment": true,
+    "require_open_state": true,
+    "require_terminal_successful_checks": true,
+    "require_review_request_presence": true,
+    "do_not_commit_node_modules": true,
+    "do_not_commit_dist": true,
+    "do_not_commit_generated_media": true
+  },
+  "non_claims": {
+    "stacked_pr_presence_is_truth": false,
+    "green_checks_are_truth": false,
+    "reviewer_request_is_approval": false,
+    "merged_status_is_system_completion": false,
+    "local_topology_is_source_authority": false
+  }
+}
