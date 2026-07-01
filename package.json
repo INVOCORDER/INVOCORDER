@@ -21,7 +21,8 @@
     "POWER_PLANE",
     "WORKSPACE_PERIMETER",
     "LOCAL_TOPOLOGY",
-    "STACKED_PR_LEDGER"
+    "STACKED_PR_LEDGER",
+    "STACK_TERMINALITY"
   ],
   "scripts": {
     "build": "tsc",
@@ -34,7 +35,8 @@
     "workspace:perimeter": "node scripts/verify-local-workspace-perimeter.mjs",
     "workspace:perimeter:local": "node scripts/verify-local-workspace-perimeter.mjs --require-local",
     "topology:verify": "node scripts/verify-local-topology-ledger.mjs",
-    "stack:pr-ledger": "node scripts/verify-stacked-pr-ledger.mjs"
+    "stack:pr-ledger": "node scripts/verify-stacked-pr-ledger.mjs",
+    "stack:terminality": "node scripts/verify-stack-terminality.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",

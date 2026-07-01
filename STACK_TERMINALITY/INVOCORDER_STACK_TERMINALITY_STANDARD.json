@@ -1,0 +1,66 @@
+{
+  "schema": "invocorder.stack_terminality.standard.v1",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "status": "STACK_TERMINALITY_STANDARD_BOUND",
+  "chain_root": "main",
+  "chain_tip": "invocorder/stacked-pr-ledger",
+  "terminality_definition": {
+    "required_state": "OPEN",
+    "required_check_conclusion": "SUCCESS",
+    "required_pending_checks": 0,
+    "required_failing_checks": 0,
+    "required_review_request": "verifrax-systems",
+    "required_stack_order": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "expected_chain": [
+    {
+      "number": 32,
+      "base": "main",
+      "head": "invocorder/npm-power-plane",
+      "title": "Bind npm power plane into INVOCORDER capability surface",
+      "boundary": "npm power plane"
+    },
+    {
+      "number": 33,
+      "base": "invocorder/npm-power-plane",
+      "head": "invocorder/local-workspace-perimeter",
+      "title": "Bind local workspace perimeter into INVOCORDER",
+      "boundary": "local workspace perimeter"
+    },
+    {
+      "number": 34,
+      "base": "invocorder/local-workspace-perimeter",
+      "head": "invocorder/local-topology-ledger",
+      "title": "Bind local topology ledger into INVOCORDER",
+      "boundary": "local topology ledger"
+    },
+    {
+      "number": 35,
+      "base": "invocorder/local-topology-ledger",
+      "head": "invocorder/stacked-pr-ledger",
+      "title": "Bind stacked PR ledger into INVOCORDER",
+      "boundary": "stacked PR ledger"
+    }
+  ],
+  "excluded_surfaces": [
+    "node_modules",
+    "dist",
+    ".git",
+    ".invocorder",
+    "*.tgz",
+    "*.tar.gz",
+    "*.mp4"
+  ],
+  "non_claims": {
+    "stack_terminality_is_truth": false,
+    "successful_checks_are_truth": false,
+    "review_request_is_approval": false,
+    "open_pull_request_is_merge": false,
+    "terminality_ledger_is_system_completion": false
+  }
+}
