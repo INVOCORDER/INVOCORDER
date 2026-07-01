@@ -225,3 +225,48 @@ The closure consumes the v1.9.0 external capability capsule digest release asset
 The closure gives consumers one bounded public object for the external capability control chain while preserving public-release-asset-only replay, no-private-source replay, no-local-working-tree replay, and the non-claim boundary.
 
 It does not claim truth, authorization, safety, admissibility, or external reality.
+
+<!-- INVOCORDER_NPM_POWER_PLANE_START -->
+## NPM power plane — installable capability surface
+
+INVOCORDER now binds its npm power plane as an explicit installable surface.
+
+The native package remains `@invocorder/recorder`. It is not installed as a recursive self-dependency. The external packages are installed as runtime dependencies and are exposed through a typed power-plane registry, verifier, and CLI status command.
+
+Command:
+
+```bash
+invocorder power-plane
+```
+
+Verifier:
+
+```bash
+node scripts/verify-npm-power-plane.mjs
+```
+
+Bound external packages:
+
+- `@verifrax/verifrax`
+- `@verifrax/verifrax-verify`
+- `@verifrax/verifrax-spec`
+- `@verifrax/verifrax-profiles`
+- `@verifrax/auctoriseal`
+- `@verifrax/corpiform`
+- `@verifrax/cicullis`
+- `@verifrax/sigillarium`
+- `@verifrax/archicustos`
+- `@verifrax/attestorium`
+- `@verifrax/guillotine`
+- `@verifrax/irrevocull`
+- `@verifrax/kairoclasp`
+- `@verifrax/limenward`
+- `@verifrax/originseal`
+- `@verifrax/validexor`
+- `@verifrax/verifrax-api`
+- `@verifrax/root`
+- `@kaaffilm/mk10-pro`
+- `@antimatterium/antimatterium`
+
+This power plane proves package binding and local runtime resolution only. It does not prove truth, authorization, safety, admissibility, recognition, recourse, system completion, or external reality.
+<!-- INVOCORDER_NPM_POWER_PLANE_END -->

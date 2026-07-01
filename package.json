@@ -17,14 +17,17 @@
     "VERSION",
     "bin",
     "SECURITY.md",
-    "PUBLISH_DECISION.md"
+    "PUBLISH_DECISION.md",
+    "POWER_PLANE"
   ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js || true",
-    "release:check": "npm run build && npm test",
+    "release:check": "npm run build && npm test && npm run power:verify",
     "prepublish:gate": "node scripts/prepublish-gate.mjs",
-    "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs"
+    "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs",
+    "power:verify": "node scripts/verify-npm-power-plane.mjs",
+    "power:status": "node dist/src/cli/invocorder.js power-plane"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
@@ -33,5 +36,27 @@
   "private": false,
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@antimatterium/antimatterium": "^0.2.2",
+    "@kaaffilm/mk10-pro": "^1.0.3",
+    "@verifrax/archicustos": "^0.1.1",
+    "@verifrax/attestorium": "^0.1.1",
+    "@verifrax/auctoriseal": "^0.1.5",
+    "@verifrax/cicullis": "^0.1.3",
+    "@verifrax/corpiform": "^0.1.7",
+    "@verifrax/guillotine": "^0.1.1",
+    "@verifrax/irrevocull": "^0.1.1",
+    "@verifrax/kairoclasp": "^0.1.1",
+    "@verifrax/limenward": "^0.1.1",
+    "@verifrax/originseal": "^0.1.1",
+    "@verifrax/root": "^0.0.2",
+    "@verifrax/sigillarium": "^0.1.4",
+    "@verifrax/validexor": "^0.1.1",
+    "@verifrax/verifrax": "^0.1.4",
+    "@verifrax/verifrax-api": "^0.0.4",
+    "@verifrax/verifrax-profiles": "^0.1.1",
+    "@verifrax/verifrax-spec": "^0.1.1",
+    "@verifrax/verifrax-verify": "^0.1.6"
   }
 }
