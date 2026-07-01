@@ -1,0 +1,89 @@
+{
+  "schema": "invocorder.stack_release_candidate.standard.v1",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "stack_root": "main",
+  "stack_tip_before_this_branch": "invocorder/stack-green-ledger",
+  "release_candidate_scope": {
+    "package_name": "@invocorder/recorder",
+    "package_version": "2.0.0",
+    "branch_only": true,
+    "merge_not_performed": true,
+    "publish_not_performed": true
+  },
+  "required_pull_requests": [
+    {
+      "number": 32,
+      "title": "Bind npm power plane into INVOCORDER capability surface",
+      "base": "main",
+      "head": "invocorder/npm-power-plane",
+      "boundary": "npm power plane"
+    },
+    {
+      "number": 33,
+      "title": "Bind local workspace perimeter into INVOCORDER",
+      "base": "invocorder/npm-power-plane",
+      "head": "invocorder/local-workspace-perimeter",
+      "boundary": "local workspace perimeter"
+    },
+    {
+      "number": 34,
+      "title": "Bind local topology ledger into INVOCORDER",
+      "base": "invocorder/local-workspace-perimeter",
+      "head": "invocorder/local-topology-ledger",
+      "boundary": "local topology ledger"
+    },
+    {
+      "number": 35,
+      "title": "Bind stacked PR ledger into INVOCORDER",
+      "base": "invocorder/local-topology-ledger",
+      "head": "invocorder/stacked-pr-ledger",
+      "boundary": "stacked PR ledger"
+    },
+    {
+      "number": 36,
+      "title": "Bind stack terminality ledger into INVOCORDER",
+      "base": "invocorder/stacked-pr-ledger",
+      "head": "invocorder/stack-terminality-ledger",
+      "boundary": "stack terminality ledger"
+    },
+    {
+      "number": 37,
+      "title": "Bind stack merge readiness ledger into INVOCORDER",
+      "base": "invocorder/stack-terminality-ledger",
+      "head": "invocorder/stack-merge-readiness",
+      "boundary": "stack merge readiness ledger"
+    },
+    {
+      "number": 38,
+      "title": "Bind stack green ledger into INVOCORDER",
+      "base": "invocorder/stack-merge-readiness",
+      "head": "invocorder/stack-green-ledger",
+      "boundary": "stack green ledger"
+    }
+  ],
+  "required_observations": {
+    "pull_request_state": "OPEN",
+    "required_reviewer_request": "verifrax-systems",
+    "checks_pending": 0,
+    "checks_failing": 0,
+    "all_observed_checks_successful": true,
+    "stack_order_must_match_base_head_chain": true
+  },
+  "excluded_from_release_candidate_authority": [
+    "node_modules",
+    "dist as source authority",
+    ".invocorder runtime sessions",
+    "generated media",
+    "npm dry run as publication",
+    "green checks as truth",
+    "review request as approval"
+  ],
+  "non_claims": {
+    "release_candidate_is_release": false,
+    "release_candidate_is_truth": false,
+    "release_candidate_is_approval": false,
+    "release_candidate_is_merge": false,
+    "release_candidate_is_publish": false,
+    "release_candidate_is_system_completion": false
+  }
+}

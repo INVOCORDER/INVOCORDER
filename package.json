@@ -24,12 +24,13 @@
     "STACKED_PR_LEDGER",
     "STACK_TERMINALITY",
     "STACK_MERGE_READINESS",
-    "STACK_GREEN_LEDGER"
+    "STACK_GREEN_LEDGER",
+    "STACK_RELEASE_CANDIDATE"
   ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js || true",
-    "release:check": "npm run build && npm test && npm run power:verify && npm run workspace:perimeter && npm run topology:verify && npm run stack:merge-readiness && npm run stack:green-ledger",
+    "release:check": "npm run build && npm test && npm run power:verify && npm run workspace:perimeter && npm run topology:verify && npm run stack:merge-readiness && npm run stack:green-ledger && npm run stack:release-candidate",
     "prepublish:gate": "node scripts/prepublish-gate.mjs",
     "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs",
     "power:verify": "node scripts/verify-npm-power-plane.mjs",
@@ -40,7 +41,8 @@
     "stack:pr-ledger": "node scripts/verify-stacked-pr-ledger.mjs",
     "stack:terminality": "node scripts/verify-stack-terminality.mjs",
     "stack:merge-readiness": "node scripts/verify-stack-merge-readiness.mjs",
-    "stack:green-ledger": "node scripts/verify-stack-green-ledger.mjs"
+    "stack:green-ledger": "node scripts/verify-stack-green-ledger.mjs",
+    "stack:release-candidate": "node scripts/verify-stack-release-candidate.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
