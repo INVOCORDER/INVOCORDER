@@ -299,3 +299,17 @@ invocorder workspace-perimeter --workspace-root .. --require-local
 The default verifier mode is CI-safe and does not require sibling repositories. The local-required mode is for operator validation from the full workspace root.
 
 <!-- INVOCORDER_LOCAL_WORKSPACE_PERIMETER_END -->
+
+<!-- INVOCORDER_LOCAL_TOPOLOGY_LEDGER_START -->
+## Local topology ledger
+
+INVOCORDER can inspect the surrounding local workspace topology without treating that topology as truth, source authority, completion, or an expansion of INVOCORDER's role.
+
+```bash
+invocorder local-topology --workspace-root ..
+npm run topology:verify
+```
+
+The ledger intentionally excludes `node_modules`, `dist`, generated package archives, local session output, and generated media from topology hashing.
+<!-- INVOCORDER_LOCAL_TOPOLOGY_LEDGER_END -->
+
