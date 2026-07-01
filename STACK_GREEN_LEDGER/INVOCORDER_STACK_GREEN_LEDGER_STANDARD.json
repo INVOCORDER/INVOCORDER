@@ -1,0 +1,68 @@
+{
+  "schema": "invocorder.stack_green_ledger.standard.v1",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "stack_root": "main",
+  "stack_tip_before_this_branch": "invocorder/stack-merge-readiness",
+  "required_pull_requests": [
+    {
+      "number": 32,
+      "title": "Bind npm power plane into INVOCORDER capability surface",
+      "base": "main",
+      "head": "invocorder/npm-power-plane",
+      "boundary": "npm power plane"
+    },
+    {
+      "number": 33,
+      "title": "Bind local workspace perimeter into INVOCORDER",
+      "base": "invocorder/npm-power-plane",
+      "head": "invocorder/local-workspace-perimeter",
+      "boundary": "local workspace perimeter"
+    },
+    {
+      "number": 34,
+      "title": "Bind local topology ledger into INVOCORDER",
+      "base": "invocorder/local-workspace-perimeter",
+      "head": "invocorder/local-topology-ledger",
+      "boundary": "local topology ledger"
+    },
+    {
+      "number": 35,
+      "title": "Bind stacked PR ledger into INVOCORDER",
+      "base": "invocorder/local-topology-ledger",
+      "head": "invocorder/stacked-pr-ledger",
+      "boundary": "stacked PR ledger"
+    },
+    {
+      "number": 36,
+      "title": "Bind stack terminality ledger into INVOCORDER",
+      "base": "invocorder/stacked-pr-ledger",
+      "head": "invocorder/stack-terminality-ledger",
+      "boundary": "stack terminality ledger"
+    },
+    {
+      "number": 37,
+      "title": "Bind stack merge readiness ledger into INVOCORDER",
+      "base": "invocorder/stack-terminality-ledger",
+      "head": "invocorder/stack-merge-readiness",
+      "boundary": "stack merge readiness ledger"
+    }
+  ],
+  "verification_requirements": {
+    "all_pull_requests_open": true,
+    "all_expected_bases_match": true,
+    "all_expected_heads_match": true,
+    "all_expected_titles_match": true,
+    "all_checks_completed_successfully": true,
+    "zero_pending_checks": true,
+    "zero_failing_checks": true,
+    "reviewer_request_recorded_without_approval_claim": true
+  },
+  "non_claims": {
+    "stack_green_status_is_truth": false,
+    "green_checks_are_truth": false,
+    "reviewer_request_is_approval": false,
+    "open_pull_request_is_merge": false,
+    "merge_readiness_is_merge": false,
+    "stack_green_ledger_is_system_completion": false
+  }
+}

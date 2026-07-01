@@ -1,0 +1,166 @@
+{
+  "schema": "invocorder.stack_green_ledger.receipt.v1",
+  "status": "STACK_GREEN_LEDGER_VERIFIED",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "generated_at": "2026-07-01T16:41:27.163Z",
+  "standard_hash": "664a140a1ce0ee5753137355634a95babe49fc076aa980bcbb3e1beb61199069",
+  "stack_root": "main",
+  "stack_tip_before_this_branch": "invocorder/stack-merge-readiness",
+  "observed_stack": [
+    {
+      "expected": {
+        "number": 32,
+        "title": "Bind npm power plane into INVOCORDER capability surface",
+        "base": "main",
+        "head": "invocorder/npm-power-plane",
+        "boundary": "npm power plane"
+      },
+      "observed": {
+        "number": 32,
+        "title": "Bind npm power plane into INVOCORDER capability surface",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/32",
+        "state": "OPEN",
+        "base": "main",
+        "head": "invocorder/npm-power-plane",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 25,
+        "checks_successful": 25,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 33,
+        "title": "Bind local workspace perimeter into INVOCORDER",
+        "base": "invocorder/npm-power-plane",
+        "head": "invocorder/local-workspace-perimeter",
+        "boundary": "local workspace perimeter"
+      },
+      "observed": {
+        "number": 33,
+        "title": "Bind local workspace perimeter into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/33",
+        "state": "OPEN",
+        "base": "invocorder/npm-power-plane",
+        "head": "invocorder/local-workspace-perimeter",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 34,
+        "title": "Bind local topology ledger into INVOCORDER",
+        "base": "invocorder/local-workspace-perimeter",
+        "head": "invocorder/local-topology-ledger",
+        "boundary": "local topology ledger"
+      },
+      "observed": {
+        "number": 34,
+        "title": "Bind local topology ledger into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/34",
+        "state": "OPEN",
+        "base": "invocorder/local-workspace-perimeter",
+        "head": "invocorder/local-topology-ledger",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 35,
+        "title": "Bind stacked PR ledger into INVOCORDER",
+        "base": "invocorder/local-topology-ledger",
+        "head": "invocorder/stacked-pr-ledger",
+        "boundary": "stacked PR ledger"
+      },
+      "observed": {
+        "number": 35,
+        "title": "Bind stacked PR ledger into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/35",
+        "state": "OPEN",
+        "base": "invocorder/local-topology-ledger",
+        "head": "invocorder/stacked-pr-ledger",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 36,
+        "title": "Bind stack terminality ledger into INVOCORDER",
+        "base": "invocorder/stacked-pr-ledger",
+        "head": "invocorder/stack-terminality-ledger",
+        "boundary": "stack terminality ledger"
+      },
+      "observed": {
+        "number": 36,
+        "title": "Bind stack terminality ledger into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/36",
+        "state": "OPEN",
+        "base": "invocorder/stacked-pr-ledger",
+        "head": "invocorder/stack-terminality-ledger",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 37,
+        "title": "Bind stack merge readiness ledger into INVOCORDER",
+        "base": "invocorder/stack-terminality-ledger",
+        "head": "invocorder/stack-merge-readiness",
+        "boundary": "stack merge readiness ledger"
+      },
+      "observed": {
+        "number": 37,
+        "title": "Bind stack merge readiness ledger into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/37",
+        "state": "OPEN",
+        "base": "invocorder/stack-terminality-ledger",
+        "head": "invocorder/stack-merge-readiness",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    }
+  ],
+  "green_pull_request_count": 6,
+  "non_claims": {
+    "stack_green_status_is_truth": false,
+    "green_checks_are_truth": false,
+    "reviewer_request_is_approval": false,
+    "open_pull_request_is_merge": false,
+    "merge_readiness_is_merge": false,
+    "stack_green_ledger_is_system_completion": false
+  },
+  "failures_count": 0,
+  "failures": []
+}
