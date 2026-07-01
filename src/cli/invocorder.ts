@@ -5,6 +5,7 @@ import { recordMcpStdioFile } from "../mcp/record-mcp-stdio-file.js";
 import { verifyBundleFile } from "../bundle/verify-bundle-file.js";
 import { signBundleFile, signBundleFileWithKey, verifySignedBundleEnvelope } from "../signing/sign-bundle-file.js";
 import { createSigningKeyFile } from "../signing/keys/key-store.js";
+import { inspectNpmPowerPlane } from "../power/npm-power-plane.js";
 
 const args = process.argv.slice(2);
 
@@ -48,6 +49,12 @@ async function main(): Promise<void> {
     process.exit(result.valid ? 0 : 1);
   }
 
+  if (args[0] === "power-plane") {
+    const result = inspectNpmPowerPlane();
+    console.log(JSON.stringify(result, null, 2));
+    return;
+  }
+
   console.error("Usage:");
   console.error("  invocorder run -- <command> [args...]");
   console.error("  invocorder mcp-stdio-file <jsonl-file>");
@@ -55,6 +62,7 @@ async function main(): Promise<void> {
   console.error("  invocorder generate-signing-key <private-key.pem>");
   console.error("  invocorder sign-bundle <replay-bundle.json> [--key <private-key.pem>]");
   console.error("  invocorder verify-signed-bundle <signed-bundle-envelope.json>");
+  console.error("  invocorder power-plane");
   process.exit(2);
 }
 

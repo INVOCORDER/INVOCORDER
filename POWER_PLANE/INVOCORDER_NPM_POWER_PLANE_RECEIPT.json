@@ -1,0 +1,169 @@
+{
+  "schema": "invocorder.npm_power_plane.receipt.v1",
+  "receipt_id": "INVOCORDER_NPM_POWER_PLANE_RECEIPT",
+  "status": "PASS",
+  "generated_at_utc": "2026-07-01T13:29:01.203Z",
+  "package_name": "@invocorder/recorder",
+  "package_version": "2.0.0",
+  "standard_sha256": "6335e6fa7f405f82c3d6f39ced877b9349bf8ec5c565c207059900ddfc63d8e5",
+  "package_lock_sha256": "ed7c25508b0ab5f28f904319febc889536d87cdcc25ce767d2d5c42a8a0cba2e",
+  "total_bound_packages": 21,
+  "native_packages": 1,
+  "external_runtime_dependencies": 20,
+  "installed_dependency_specs": [
+    {
+      "name": "@verifrax/verifrax",
+      "package_json_spec": "^0.1.4",
+      "lock_root_spec": "^0.1.4",
+      "role_class": "CORE_PROTOCOL_PACKAGE",
+      "claim_boundary": "not law, not accepted state, not terminal recognition, not recourse"
+    },
+    {
+      "name": "@verifrax/verifrax-verify",
+      "package_json_spec": "^0.1.6",
+      "lock_root_spec": "^0.1.6",
+      "role_class": "PUBLIC_VERIFIER_PACKAGE",
+      "claim_boundary": "verifies where admitted; does not publish proof or recognize truth"
+    },
+    {
+      "name": "@verifrax/verifrax-spec",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "DERIVED_SPEC_PACKAGE",
+      "claim_boundary": "derived spec; not upstream law or accepted state"
+    },
+    {
+      "name": "@verifrax/verifrax-profiles",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PROFILE_PACKAGE",
+      "claim_boundary": "constrains interpretation; does not rewrite law or specification"
+    },
+    {
+      "name": "@verifrax/auctoriseal",
+      "package_json_spec": "^0.1.5",
+      "lock_root_spec": "^0.1.5",
+      "role_class": "AUTHORITY_PACKAGE",
+      "claim_boundary": "authority support; not execution, verification, recognition, or recourse"
+    },
+    {
+      "name": "@verifrax/corpiform",
+      "package_json_spec": "^0.1.7",
+      "lock_root_spec": "^0.1.7",
+      "role_class": "EXECUTION_PACKAGE",
+      "claim_boundary": "records what ran; does not prove what verified"
+    },
+    {
+      "name": "@verifrax/cicullis",
+      "package_json_spec": "^0.1.3",
+      "lock_root_spec": "^0.1.3",
+      "role_class": "ENFORCEMENT_PACKAGE",
+      "claim_boundary": "enforcement support; not constitutional truth"
+    },
+    {
+      "name": "@verifrax/sigillarium",
+      "package_json_spec": "^0.1.4",
+      "lock_root_spec": "^0.1.4",
+      "role_class": "ARCHIVE_REFERENCE_PACKAGE",
+      "claim_boundary": "archive/reference support; not current truth by preservation"
+    },
+    {
+      "name": "@verifrax/archicustos",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "primitive support; not full archive authority"
+    },
+    {
+      "name": "@verifrax/attestorium",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "attestation primitive; not verification result or recognition"
+    },
+    {
+      "name": "@verifrax/guillotine",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "cutoff primitive; not terminal recognition or recourse by itself"
+    },
+    {
+      "name": "@verifrax/irrevocull",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "judgment primitive; not recognition-of-record"
+    },
+    {
+      "name": "@verifrax/kairoclasp",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "temporal primitive; not accepted epoch by itself"
+    },
+    {
+      "name": "@verifrax/limenward",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "boundary primitive; not accepted admission by itself"
+    },
+    {
+      "name": "@verifrax/originseal",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "origin primitive; not complete authority or verification result"
+    },
+    {
+      "name": "@verifrax/validexor",
+      "package_json_spec": "^0.1.1",
+      "lock_root_spec": "^0.1.1",
+      "role_class": "PRIMITIVE_PACKAGE",
+      "claim_boundary": "verification primitive; not full verification chamber authority"
+    },
+    {
+      "name": "@verifrax/verifrax-api",
+      "package_json_spec": "^0.0.4",
+      "lock_root_spec": "^0.0.4",
+      "role_class": "MACHINE_INTERFACE_IMPLEMENTATION_PACKAGE",
+      "claim_boundary": "machine interface; not accepted state or protocol sovereignty"
+    },
+    {
+      "name": "@verifrax/root",
+      "package_json_spec": "^0.0.2",
+      "lock_root_spec": "^0.0.2",
+      "role_class": "ROOT_IMPLEMENTATION_PACKAGE",
+      "claim_boundary": "root implementation; not constitutional root or system completion"
+    },
+    {
+      "name": "@kaaffilm/mk10-pro",
+      "package_json_spec": "^1.0.3",
+      "lock_root_spec": "^1.0.3",
+      "role_class": "EXTERNAL_CREATIVE_ISSUANCE_PACKAGE",
+      "claim_boundary": "external package support; not INVOCORDER truth, authorization, safety, or admissibility"
+    },
+    {
+      "name": "@antimatterium/antimatterium",
+      "package_json_spec": "^0.2.2",
+      "lock_root_spec": "^0.2.2",
+      "role_class": "EXTERNAL_MACHINE_ACTION_DOMAIN_PACKAGE",
+      "claim_boundary": "external action-domain package; not production readiness, starship readiness, or physical production instruction"
+    }
+  ],
+  "native_boundary": {
+    "name": "@invocorder/recorder",
+    "recursive_self_dependency": false
+  },
+  "non_claims": {
+    "package_installation_decides_truth": false,
+    "package_installation_issues_authority": false,
+    "package_installation_executes_governed_work": false,
+    "package_installation_verifies_final_truth": false,
+    "package_installation_recognizes_terminal_truth": false,
+    "package_installation_assigns_recourse": false,
+    "package_installation_proves_external_reality": false,
+    "package_installation_proves_system_completion": false
+  }
+}

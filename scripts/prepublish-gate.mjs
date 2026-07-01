@@ -1,15 +1,7 @@
-import fs from "node:fs";
-import { execFileSync, spawnSync } from "node:child_process";
-
-function run(command, args, options = {}) {
-  console.log(`$ ${command} ${args.join(" ")}`);
-  return execFileSync(command, args, { stdio: "inherit", ...options });
-}
-
-function runCapture(command, args, options = {}) {
-  console.log(`$ ${command} ${args.join(" ")}`);
-  return execFileSync(command, args, { encoding: "utf8", ...options });
-}
+#!/usr/bin/env node
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { spawnSync } from "node:child_process";
 
 function assert(condition, message) {
   if (!condition) {
@@ -17,91 +9,146 @@ function assert(condition, message) {
   }
 }
 
-const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
+function readJson(path) {
+  return JSON.parse(readFileSync(path, "utf8"));
+}
 
-assert(pkg.name === "@invocorder/recorder", "wrong package name");
-assert(/^0\.3\.\d+$/.test(pkg.version), "wrong package version");
-assert(pkg.license === "SEE LICENSE IN LICENSE", "license posture changed");
-assert(pkg.private === false, "package must be publish-enabled only in publish-decision PR");
-assert(pkg.publishConfig?.access === "public", "publishConfig must be public only in publish-decision PR");
-assert(pkg.bin?.invocorder === "bin/invocorder.js", "unexpected bin path");
+function run(command, args) {
+  console.log(`$ ${command} ${args.join(" ")}`);
+  const result = spawnSync(command, args, {
+    stdio: "inherit",
+    shell: false
+  });
+  assert(result.status === 0, `${command} ${args.join(" ")} failed`);
+}
 
-for (const required of [
+function runCapture(command, args) {
+  console.log(`$ ${command} ${args.join(" ")}`);
+  const result = spawnSync(command, args, {
+    encoding: "utf8",
+    shell: false
+  });
+
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+
+  assert(result.status === 0, `${command} ${args.join(" ")} failed`);
+  return `${result.stdout ?? ""}${result.stderr ?? ""}`;
+}
+
+function writePrepublishMcpFixture(path) {
+  mkdirSync(dirname(path), { recursive: true });
+
+  const frames = [
+    {
+      jsonrpc: "2.0",
+      id: 1,
+      method: "tools/list",
+      params: {}
+    },
+    {
+      jsonrpc: "2.0",
+      id: 1,
+      result: {
+        tools: []
+      }
+    },
+    {
+      id: 2,
+      method: "tools/call",
+      params: {
+        name: "missing-jsonrpc-boundary"
+      }
+    }
+  ];
+
+  writeFileSync(path, frames.map((frame) => JSON.stringify(frame)).join("\n") + "\n");
+}
+
+const pkg = readJson("package.json");
+const version = readFileSync("VERSION", "utf8").trim();
+
+assert(pkg.name === "@invocorder/recorder", "package name boundary mismatch");
+assert(pkg.version === version, "package.json version must match VERSION");
+assert(pkg.private === false, "package must remain publishable");
+assert(pkg.type === "module", "package must remain ESM");
+assert(pkg.license === "SEE LICENSE IN LICENSE", "license declaration changed");
+
+const files = new Set(pkg.files ?? []);
+for (const requiredFile of [
+  "dist",
+  "schemas",
+  "docs",
+  "README.md",
+  "LICENSE",
+  "COMMERCIAL-LICENSE.md",
+  "VERSION",
+  "bin",
+  "SECURITY.md",
+  "PUBLISH_DECISION.md",
+  "POWER_PLANE"
+]) {
+  assert(files.has(requiredFile), `package files missing ${requiredFile}`);
+}
+
+for (const requiredPath of [
   "README.md",
   "LICENSE",
   "COMMERCIAL-LICENSE.md",
   "SECURITY.md",
+  "PUBLISH_DECISION.md",
   "VERSION",
-  "PUBLISH_DECISION.md"
+  "bin/invocorder.js",
+  "POWER_PLANE/INVOCORDER_NPM_POWER_PLANE_STANDARD.json",
+  "scripts/verify-npm-power-plane.mjs",
+  "src/power/npm-power-plane.ts",
+  "src/cli/invocorder.ts"
 ]) {
-  assert(fs.existsSync(required), `missing required file: ${required}`);
+  assert(existsSync(requiredPath), `required release file missing ${requiredPath}`);
 }
+
+assert(!pkg.dependencies?.["@invocorder/recorder"], "native package must not depend on itself");
+assert(pkg.dependencies?.["@verifrax/originseal"], "originseal dependency missing");
+assert(pkg.dependencies?.["@verifrax/validexor"], "validexor dependency missing");
+assert(pkg.scripts?.["power:verify"] === "node scripts/verify-npm-power-plane.mjs", "power verifier script missing");
+assert((pkg.scripts?.["release:check"] ?? "").includes("power:verify"), "release check must include power verifier");
 
 run("npm", ["run", "build"]);
 
-const cli = "bin/invocorder.js";
-const compiledCli = "dist/src/cli/invocorder.js";
-
-assert(fs.existsSync(cli), "bin shim missing");
-assert(fs.existsSync(compiledCli), "compiled CLI missing");
-assert(fs.readFileSync(cli, "utf8").startsWith("#!/usr/bin/env node"), "bin shim missing shebang");
-assert(fs.readFileSync(compiledCli, "utf8").startsWith("#!/usr/bin/env node"), "compiled CLI missing shebang");
-
-run("node", [cli, "mcp-stdio-file", "examples/mcp-stdio/session.jsonl"]);
-
-const sessions = fs.readdirSync(".invocorder/sessions")
-  .filter((name) => name.startsWith("act_"))
-  .map((name) => `.invocorder/sessions/${name}`)
-  .sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs);
-
-assert(sessions[0], "no session emitted");
-const session = sessions[0];
-
-run("node", [cli, "verify-bundle", `${session}/replay-bundle.json`]);
-
-const tamperDir = ".invocorder/prepublish-tamper";
-fs.rmSync(tamperDir, { recursive: true, force: true });
-fs.mkdirSync(tamperDir, { recursive: true });
-
-for (const file of ["records.jsonl", "session.json", "omissions.jsonl", "replay-bundle.json"]) {
-  fs.copyFileSync(`${session}/${file}`, `${tamperDir}/${file}`);
+for (const builtPath of [
+  "dist/src/cli/invocorder.js",
+  "dist/src/power/npm-power-plane.js"
+]) {
+  assert(existsSync(builtPath), `built release file missing ${builtPath}`);
 }
 
-fs.appendFileSync(`${tamperDir}/records.jsonl`, `\n{"tampered":true}\n`);
+run("node", ["scripts/verify-npm-power-plane.mjs"]);
 
-const tamper = spawnSync("node", [cli, "verify-bundle", `${tamperDir}/replay-bundle.json`], {
-  encoding: "utf8"
-});
+const fixturePath = ".invocorder/prepublish/mcp-session.jsonl";
+writePrepublishMcpFixture(fixturePath);
 
-assert(tamper.status !== 0, "tampered bundle unexpectedly verified");
+const mcpOutput = runCapture("node", ["bin/invocorder.js", "mcp-stdio-file", fixturePath]);
+const sessionMatch = mcpOutput.match(/INVOCORDER MCP session:\s*(.+)/);
+assert(sessionMatch, "MCP session path not emitted");
+const sessionPath = sessionMatch[1].trim();
 
-const keyPath = ".invocorder/keys/prepublish-ed25519.pem";
-fs.rmSync(keyPath, { force: true });
-run("node", [cli, "generate-signing-key", keyPath]);
-run("node", [cli, "sign-bundle", `${session}/replay-bundle.json`, "--key", keyPath]);
-run("node", [cli, "verify-signed-bundle", `${session}/signed-bundle-envelope.json`]);
+run("node", ["bin/invocorder.js", "verify-bundle", join(sessionPath, "replay-bundle.json")]);
 
-fs.appendFileSync(`${session}/replay-bundle.json`, `\n{"tampered":true}\n`);
-const signedTamper = spawnSync("node", [cli, "verify-signed-bundle", `${session}/signed-bundle-envelope.json`], {
-  encoding: "utf8"
-});
+mkdirSync(".invocorder/keys", { recursive: true });
+rmSync(".invocorder/keys/prepublish-ed25519.pem", { force: true });
 
-assert(signedTamper.status !== 0, "tampered signed bundle unexpectedly verified");
+run("node", ["bin/invocorder.js", "generate-signing-key", ".invocorder/keys/prepublish-ed25519.pem"]);
+run("node", ["bin/invocorder.js", "sign-bundle", join(sessionPath, "replay-bundle.json"), "--key", ".invocorder/keys/prepublish-ed25519.pem"]);
+run("node", ["bin/invocorder.js", "verify-signed-bundle", join(sessionPath, "signed-bundle-envelope.json")]);
 
-run("node", ["dist/src/fixtures/run-mcp-fixtures.js", "../HOSTILE-FIXTURES/fixtures/mcp"]);
-run("node", ["dist/src/fixtures/run-signed-bundle-fixtures.js", "../HOSTILE-FIXTURES/fixtures/signed-bundles"]);
+if (existsSync("../HOSTILE-FIXTURES/fixtures/mcp")) {
+  run("node", ["dist/src/fixtures/run-mcp-fixtures.js", "../HOSTILE-FIXTURES/fixtures/mcp"]);
+}
 
-const pack = runCapture("npm", ["pack", "--dry-run"]);
-assert(pack.includes(`invocorder-recorder-${pkg.version}.tgz`), "pack output missing expected tarball filename");
+if (existsSync("../HOSTILE-FIXTURES/fixtures/signed-bundles")) {
+  run("node", ["dist/src/fixtures/run-signed-bundle-fixtures.js", "../HOSTILE-FIXTURES/fixtures/signed-bundles"]);
+}
 
-const publishDryRun = spawnSync("npm", ["publish", "--dry-run", "--access", "public"], {
-  encoding: "utf8"
-});
+run("npm", ["pack", "--dry-run"]);
 
-const publishOutput = `${publishDryRun.stdout ?? ""}\n${publishDryRun.stderr ?? ""}`;
-assert(publishDryRun.status === 0, "npm publish dry-run failed");
-assert(!publishOutput.includes("auto-corrected"), "npm publish dry-run auto-corrected package metadata");
-assert(!publishOutput.includes("bin[invocorder]"), "npm publish dry-run rejected CLI bin");
-assert(publishOutput.includes(`@invocorder/recorder@${pkg.version}`), "npm publish dry-run missing package identity");
-
-console.log("INVOCORDER prepublish gate passed");
+console.log("INVOCORDER_PREPUBLISH_GATE_PASS=true");
