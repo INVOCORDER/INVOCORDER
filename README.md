@@ -333,3 +333,24 @@ npm run stack:pr-ledger
 ```
 
 <!-- INVOCORDER_STACKED_PR_LEDGER_END -->
+
+
+<!-- INVOCORDER_STACK_TERMINALITY_START -->
+## Stack terminality ledger
+
+INVOCORDER carries a bounded stack terminality ledger for the current PR chain:
+
+- PR 32: npm power plane.
+- PR 33: local workspace perimeter.
+- PR 34: local topology ledger.
+- PR 35: stacked PR ledger.
+
+The ledger records open state, stack linkage, terminal successful checks, and review-request presence. It does not claim truth, approval, merge finality, source authority, or completion.
+
+Verify locally:
+
+```bash
+npm run stack:terminality
+```
+
+<!-- INVOCORDER_STACK_TERMINALITY_END -->
