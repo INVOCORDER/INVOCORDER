@@ -1,0 +1,92 @@
+{
+  "schema": "invocorder.stacked_pr_ledger.receipt.v1",
+  "status": "STACKED_PR_LEDGER_VERIFIED",
+  "owner_repo": "INVOCORDER/INVOCORDER",
+  "generated_at": "2026-07-01T14:39:16.803Z",
+  "standard_hash": "d17f00e6a3bc5bda85dd88d0c40ce75bc6ab31d7165829f60f9eb6107ad50ec4",
+  "stack_root": "main",
+  "current_tip": "invocorder/local-topology-ledger",
+  "stacked_pull_requests": [
+    {
+      "expected": {
+        "number": 32,
+        "title": "Bind npm power plane into INVOCORDER capability surface",
+        "base": "main",
+        "head": "invocorder/npm-power-plane",
+        "role": "npm package power plane boundary"
+      },
+      "live": {
+        "number": 32,
+        "title": "Bind npm power plane into INVOCORDER capability surface",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/32",
+        "state": "OPEN",
+        "base": "main",
+        "head": "invocorder/npm-power-plane",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 25,
+        "checks_successful": 25,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 33,
+        "title": "Bind local workspace perimeter into INVOCORDER",
+        "base": "invocorder/npm-power-plane",
+        "head": "invocorder/local-workspace-perimeter",
+        "role": "local workspace perimeter boundary"
+      },
+      "live": {
+        "number": 33,
+        "title": "Bind local workspace perimeter into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/33",
+        "state": "OPEN",
+        "base": "invocorder/npm-power-plane",
+        "head": "invocorder/local-workspace-perimeter",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    },
+    {
+      "expected": {
+        "number": 34,
+        "title": "Bind local topology ledger into INVOCORDER",
+        "base": "invocorder/local-workspace-perimeter",
+        "head": "invocorder/local-topology-ledger",
+        "role": "local topology ledger boundary"
+      },
+      "live": {
+        "number": 34,
+        "title": "Bind local topology ledger into INVOCORDER",
+        "url": "https://github.com/INVOCORDER/INVOCORDER/pull/34",
+        "state": "OPEN",
+        "base": "invocorder/local-workspace-perimeter",
+        "head": "invocorder/local-topology-ledger",
+        "review_requests": [
+          "verifrax-systems"
+        ],
+        "checks_total": 19,
+        "checks_successful": 19,
+        "checks_pending": 0,
+        "checks_failing": 0
+      }
+    }
+  ],
+  "non_claims": {
+    "stacked_pr_presence_is_truth": false,
+    "green_checks_are_truth": false,
+    "reviewer_request_is_approval": false,
+    "merged_status_is_system_completion": false,
+    "local_topology_is_source_authority": false
+  },
+  "failures_count": 0,
+  "failures": []
+}
