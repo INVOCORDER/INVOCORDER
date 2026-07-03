@@ -393,3 +393,11 @@ INVOCORDER records a bounded publication-readiness ledger over the open green st
 The ledger observes package name, package version, package file surfaces, required ledger files, PR 32 through PR 39, reviewer-request presence, and terminal-green checks.
 
 This is not publication, release, approval, merge, accepted truth, safety, authorization, or system completion.
+
+### Hard product release gate
+
+INVOCORDER now includes a hard product-surface release gate.
+
+`npm run release:check` is product-local. It does not depend on sibling workspace trees, local generated media, `node_modules`, or ignored build drift as authority. The gate requires strict tests, verifies the committed product surface, machine-parses `npm pack --dry-run --json`, and rejects forbidden package payloads such as workspace media, tarballs, local sessions, or dependency trees.
+
+The hard product gate is not publication, truth, safety, authorization, approval, merge, or system completion.
