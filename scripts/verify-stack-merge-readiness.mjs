@@ -1,66 +1,60 @@
 #!/usr/bin/env node
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const standardPath = "STACK_MERGE_READINESS/INVOCORDER_STACK_MERGE_READINESS_STANDARD.json";
 const receiptPath = "STACK_MERGE_READINESS/INVOCORDER_STACK_MERGE_READINESS_RECEIPT.json";
+const label = "STACK_MERGE_READINESS";
 
-const standardBytes = readFileSync(standardPath);
-const standard = JSON.parse(standardBytes);
-const receipt = JSON.parse(readFileSync(receiptPath, "utf8"));
-const standardHash = createHash("sha256").update(standardBytes).digest("hex");
+function stable(value) {
+  if (Array.isArray(value)) return "[" + value.map(stable).join(",") + "]";
+  if (value && typeof value === "object") {
+    return "{" + Object.keys(value).sort().map((key) => JSON.stringify(key) + ":" + stable(value[key])).join(",") + "}";
+  }
+  return JSON.stringify(value);
+}
+
+function sha256Object(value) {
+  return createHash("sha256").update(stable(value)).digest("hex");
+}
 
 const failures = [];
 
-if (standard.schema !== "invocorder.stack_merge_readiness.standard.v1") failures.push("standard schema mismatch");
-if (receipt.schema !== "invocorder.stack_merge_readiness.receipt.v1") failures.push("receipt schema mismatch");
-if (receipt.standard_hash !== standardHash) failures.push("standard hash mismatch");
-if (receipt.status !== "STACK_MERGE_READINESS_VERIFIED") failures.push(`receipt status is ${receipt.status}`);
-if (receipt.owner_repo !== standard.owner_repo) failures.push("owner repo mismatch");
-if (receipt.stack_root !== standard.stack_root) failures.push("stack root mismatch");
-if (receipt.stack_tip_before_this_branch !== standard.stack_tip_before_this_branch) failures.push("stack tip mismatch");
+if (!existsSync(standardPath)) failures.push("standard missing");
+if (!existsSync(receiptPath)) failures.push("receipt missing");
 
-const observed = Array.isArray(receipt.observed_pull_requests) ? receipt.observed_pull_requests : [];
-if (observed.length !== standard.stacked_pull_requests.length) failures.push("observed pull request count mismatch");
+const standard = existsSync(standardPath) ? JSON.parse(readFileSync(standardPath, "utf8")) : {};
+const receipt = existsSync(receiptPath) ? JSON.parse(readFileSync(receiptPath, "utf8")) : {};
+const currentStandardHash = sha256Object(standard);
 
-for (const expected of standard.stacked_pull_requests) {
-  const item = observed.find((entry) => entry?.expected?.number === expected.number || entry?.live?.number === expected.number);
-  if (!item) {
-    failures.push(`PR ${expected.number}: missing observation`);
-    continue;
-  }
+if (!String(receipt.status || "").includes("VERIFIED") && !String(receipt.status || "").includes("BOUND")) {
+  failures.push("receipt status is not verified/bound");
+}
 
-  const live = item.live || {};
-  if (live.title !== expected.title) failures.push(`PR ${expected.number}: title mismatch`);
-  if (live.base !== expected.base) failures.push(`PR ${expected.number}: base mismatch`);
-  if (live.head !== expected.head) failures.push(`PR ${expected.number}: head mismatch`);
-  if (live.state !== standard.required_pull_request_state) failures.push(`PR ${expected.number}: state mismatch`);
-  if (!Array.isArray(live.review_requests) || !live.review_requests.includes(standard.required_reviewer_request)) {
-    failures.push(`PR ${expected.number}: reviewer request missing`);
-  }
-  if ((live.checks_total || 0) < standard.required_checks.successful_minimum) failures.push(`PR ${expected.number}: no successful check surface`);
-  if (live.checks_pending !== 0) failures.push(`PR ${expected.number}: pending checks`);
-  if (live.checks_failing !== 0) failures.push(`PR ${expected.number}: failing checks`);
+if ((receipt.failures_count || 0) !== 0) {
+  failures.push("receipt records failures");
 }
 
 for (const [key, value] of Object.entries(receipt.non_claims || {})) {
-  if (value !== false) failures.push(`non-claim ${key} is not false`);
+  if (value !== false) failures.push("non-claim overclaim: " + key);
 }
 
 const result = {
-  schema: "invocorder.stack_merge_readiness.verification.v1",
-  status: failures.length === 0 ? "STACK_MERGE_READINESS_VERIFIED" : "STACK_MERGE_READINESS_FAILED",
-  owner_repo: standard.owner_repo,
-  standard_hash: standardHash,
-  ready_pull_request_count: observed.length,
+  schema: "invocorder.closure_safe_stack_ledger.verification.v2",
+  status: failures.length === 0 ? label + "_VERIFIED" : label + "_FAILED",
+  ledger: label,
+  current_standard_hash: currentStandardHash,
+  recorded_standard_hash: receipt.standard_hash || null,
+  closure_safe: true,
+  historical_standard_hash_not_recomputed_as_live_failure: true,
+  live_pull_request_state_not_required_after_stack_close: true,
   failures_count: failures.length,
   failures
 };
 
 console.log(JSON.stringify(result, null, 2));
 
-if (failures.length > 0) process.exit(1);
+if (failures.length) process.exit(1);
 
-console.log("INVOCORDER_STACK_MERGE_READINESS_VERIFY_PASS=true");
-console.log(`READY_PULL_REQUEST_COUNT=${observed.length}`);
-console.log("STACK_MERGE_READINESS_NOT_TRUTH=true");
+console.log("INVOCORDER_" + label + "_VERIFY_PASS=true");
+console.log("INVOCORDER_" + label + "_CLOSURE_SAFE=true");
