@@ -373,3 +373,13 @@ INVOCORDER publishes a stack green ledger for the currently open stacked pull-re
 The ledger records that PR 32 through PR 37 are open, ordered, reviewer-requested, and observed with successful checks at the time of receipt generation.
 
 This does not claim truth, approval, merge, authorization, safety, or system completion. It is a bounded merge-readiness evidence surface only.
+
+
+<!-- INVOCORDER_STACK_RELEASE_CANDIDATE_BOUNDARY -->
+## Stack release-candidate ledger
+
+INVOCORDER records a bounded stack release-candidate ledger for the open green PR chain.
+
+The ledger observes PR 32 through PR 38 as open, ordered, reviewer-requested, and terminal-green at receipt time.
+
+This is not release, approval, merge, publication, accepted truth, safety, authorization, or system completion.
