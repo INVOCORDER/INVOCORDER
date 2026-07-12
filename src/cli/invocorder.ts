@@ -7,6 +7,10 @@ import { fileURLToPath } from "node:url";
 import { compileReplayBundle } from "../bundle/compile-replay-bundle.js";
 import { verifyBundleFile } from "../bundle/verify-bundle-file.js";
 import { recordMcpStdioFile } from "../mcp/record-mcp-stdio-file.js";
+import {
+  recordBoundaryJsonlFile,
+  type BoundaryKind
+} from "../capture/record-boundary-jsonl-file.js";
 import { inspectLocalWorkspacePerimeter } from "../perimeter/local-workspace-perimeter.js";
 import { inspectNpmPowerPlane } from "../power/npm-power-plane.js";
 import { runCommand } from "../process/run-command.js";

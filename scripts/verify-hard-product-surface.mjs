@@ -113,6 +113,31 @@ failures.push(`required committed product file missing: ${file}`);
 }
 }
 
+const runtimeModules = [
+  "src/effects/scan-file-effects.ts",
+  "src/effects/snapshot-env.ts",
+  "src/process/capture-exit.ts",
+  "src/process/capture-stdio.ts",
+  "src/redaction/load-redaction-policy.ts",
+  "src/redaction/redact-record.ts"
+];
+
+for (const runtimeModule of runtimeModules) {
+  const source = fs.readFileSync(
+    runtimeModule,
+    "utf8"
+  ).trim();
+
+  if (
+    source === "export {};" ||
+    source.length < 100
+  ) {
+    failures.push(
+      `INVOCORDER_RUNTIME_MODULE_STUB: ${runtimeModule}`
+    );
+  }
+}
+
 const packJson = JSON.parse(
 run(
 "npm",
