@@ -253,3 +253,86 @@ test("CLI run emits valid session with file effects", () => {
 
   assert.equal(integrity.valid, true);
 });
+
+
+test("CLI records generic boundary JSONL", () => {
+  const root = mkdtempSync(
+    join(tmpdir(), "invocorder-jsonl-")
+  );
+
+  const inputPath = join(
+    root,
+    "browser-events.jsonl"
+  );
+
+  writeFileSync(
+    inputPath,
+    JSON.stringify({
+      direction: "effect",
+      type: "navigation",
+      url: "https://example.invalid"
+    }) + "\n"
+  );
+
+  const cli = resolve(
+    process.cwd(),
+    "bin/invocorder.js"
+  );
+
+  const child = spawnSync(
+    process.execPath,
+    [
+      cli,
+      "record-jsonl",
+      "browser",
+      inputPath,
+      "browser-event"
+    ],
+    {
+      cwd: root,
+      encoding: "utf8",
+      env: process.env
+    }
+  );
+
+  assert.equal(
+    child.status,
+    0,
+    child.stdout + child.stderr
+  );
+
+  const result = JSON.parse(child.stdout);
+
+  assert.equal(
+    result.status,
+    "INVOCORDER_BOUNDARY_JSONL_CAPTURE_VALID"
+  );
+
+  assert.equal(result.valid, true);
+
+  const records = readFileSync(
+    join(
+      root,
+      result.session_dir,
+      "records.jsonl"
+    ),
+    "utf8"
+  )
+    .trim()
+    .split("\n")
+    .map((line) => JSON.parse(line));
+
+  assert.equal(records.length, 1);
+  assert.equal(
+    records[0].boundary.kind,
+    "browser"
+  );
+  assert.equal(
+    records[0].boundary.name,
+    "browser-event"
+  );
+  assert.equal(
+    records[0].boundary.direction,
+    "effect"
+  );
+});
