@@ -1,0 +1,444 @@
+{
+  "featured_repositories": [
+    {
+      "full_name": "INVOCORDER/INVOCORDER",
+      "role": "native recorder and public control-chain repository"
+    },
+    {
+      "full_name": "qxvi/BOUNDARYCAM",
+      "role": "public boundary-camera surface in the wider ecosystem"
+    }
+  ],
+  "github_owners": [
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "midiakiasat",
+      "public_repositories": [
+        "midiakiasat/awesome-actions",
+        "midiakiasat/GX430T"
+      ],
+      "public_repository_count": 2,
+      "type": "User",
+      "url": "https://github.com/midiakiasat"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "CINEMATICUM",
+      "public_repositories": [
+        "CINEMATICUM/CINEMATICUM"
+      ],
+      "public_repository_count": 1,
+      "type": "Organization",
+      "url": "https://github.com/CINEMATICUM"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "INVOCORDER",
+      "public_repositories": [
+        "INVOCORDER/.github",
+        "INVOCORDER/CAPTURE-CONTRACT",
+        "INVOCORDER/EVIDENCE-SCHEMAS",
+        "INVOCORDER/HOSTILE-FIXTURES",
+        "INVOCORDER/INTEGRATIONS",
+        "INVOCORDER/INVOCORDER"
+      ],
+      "public_repository_count": 6,
+      "type": "Organization",
+      "url": "https://github.com/INVOCORDER"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "kaaffilm",
+      "public_repositories": [
+        "kaaffilm/.github",
+        "kaaffilm/CINEMATICUM",
+        "kaaffilm/MK10-PRO"
+      ],
+      "public_repository_count": 3,
+      "type": "Organization",
+      "url": "https://github.com/kaaffilm"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qvra",
+      "public_repositories": [
+        "qvra/.github",
+        "qvra/bench",
+        "qvra/core",
+        "qvra/index",
+        "qvra/kit",
+        "qvra/lab",
+        "qvra/launch",
+        "qvra/meta",
+        "qvra/pulse",
+        "qvra/qvra",
+        "qvra/run",
+        "qvra/show",
+        "qvra/site"
+      ],
+      "public_repository_count": 13,
+      "type": "Organization",
+      "url": "https://github.com/qvra"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qvro",
+      "public_repositories": [],
+      "public_repository_count": 0,
+      "type": "Organization",
+      "url": "https://github.com/qvro"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qvru",
+      "public_repositories": [],
+      "public_repository_count": 0,
+      "type": "Organization",
+      "url": "https://github.com/qvru"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qxra",
+      "public_repositories": [],
+      "public_repository_count": 0,
+      "type": "Organization",
+      "url": "https://github.com/qxra"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qxvi",
+      "public_repositories": [
+        "qxvi/.github",
+        "qxvi/BOUNDARYCAM"
+      ],
+      "public_repository_count": 2,
+      "type": "Organization",
+      "url": "https://github.com/qxvi"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qxvo",
+      "public_repositories": [
+        "qxvo/MAILSIEVE"
+      ],
+      "public_repository_count": 1,
+      "type": "Organization",
+      "url": "https://github.com/qxvo"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qzro",
+      "public_repositories": [
+        "qzro/ADJUTORIX"
+      ],
+      "public_repository_count": 1,
+      "type": "Organization",
+      "url": "https://github.com/qzro"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "qzru",
+      "public_repositories": [],
+      "public_repository_count": 0,
+      "type": "Organization",
+      "url": "https://github.com/qzru"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "TRUTHFRAMER",
+      "public_repositories": [
+        "TRUTHFRAMER/.github",
+        "TRUTHFRAMER/truthframer-platform"
+      ],
+      "public_repository_count": 2,
+      "type": "Organization",
+      "url": "https://github.com/TRUTHFRAMER"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "VATFix",
+      "public_repositories": [
+        "VATFix/CONSOLE",
+        "VATFix/LEGAL",
+        "VATFix/OPS",
+        "VATFix/REGISTRY",
+        "VATFix/REPLAY",
+        "VATFix/SECTORS",
+        "VATFix/SECURITY",
+        "VATFix/TELEMETRY",
+        "VATFix/VATFIX",
+        "VATFix/vatfix-action",
+        "VATFix/vatfix-attestations",
+        "VATFix/vatfix-audit-log-spec",
+        "VATFix/vatfix-evidence-model",
+        "VATFix/vatfix-fallback-adapter",
+        "VATFix/vatfix-intrastat",
+        "VATFix/vatfix-invoice",
+        "VATFix/VATFix-Master",
+        "VATFix/vatfix-oss",
+        "VATFix/vatfix-postman",
+        "VATFix/vatfix-rules-eu",
+        "VATFix/vatfix-sdk-js",
+        "VATFix/vatfix-sdk-python",
+        "VATFix/vatfix-sepa",
+        "VATFix/vatfix-vies-adapter",
+        "VATFix/vatfix-xml",
+        "VATFix/vatfix-zapier",
+        "VATFix/vatfix.eu"
+      ],
+      "public_repository_count": 27,
+      "type": "Organization",
+      "url": "https://github.com/VATFix"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "Verifrax",
+      "public_repositories": [
+        "Verifrax/.github",
+        "Verifrax/ADMISSORIUM",
+        "Verifrax/ANAGNORIUM",
+        "Verifrax/apply",
+        "Verifrax/archicustos",
+        "Verifrax/ARCHITECTURE",
+        "Verifrax/attestorium",
+        "Verifrax/AUCTORISEAL",
+        "Verifrax/cicullis",
+        "Verifrax/CONSONORIUM",
+        "Verifrax/CORPIFORM",
+        "Verifrax/guillotine",
+        "Verifrax/irrevocull",
+        "Verifrax/kairoclasp",
+        "Verifrax/limenward",
+        "Verifrax/ORBISTIUM",
+        "Verifrax/originseal",
+        "Verifrax/proof",
+        "Verifrax/REGRESSORIUM",
+        "Verifrax/SIGILLARIUM",
+        "Verifrax/SPEEDKIT",
+        "Verifrax/SYNTAGMARIUM",
+        "Verifrax/TACHYRIUM",
+        "Verifrax/validexor",
+        "Verifrax/VERIFRAX",
+        "Verifrax/VERIFRAX-API",
+        "Verifrax/VERIFRAX-CONTROL-VERIFY",
+        "Verifrax/VERIFRAX-DOCS",
+        "Verifrax/verifrax-marketplace-smoke",
+        "Verifrax/VERIFRAX-PROFILES",
+        "Verifrax/VERIFRAX-PY",
+        "Verifrax/VERIFRAX-SAMPLES",
+        "Verifrax/VERIFRAX-SPEC",
+        "Verifrax/VERIFRAX-STATUS",
+        "Verifrax/VERIFRAX-SURFACE",
+        "Verifrax/VERIFRAX-verify",
+        "Verifrax/VERIFRAX-WWW"
+      ],
+      "public_repository_count": 37,
+      "type": "Organization",
+      "url": "https://github.com/Verifrax"
+    },
+    {
+      "claim_boundary": "Public repository discoverability does not prove implementation completeness, operational readiness, authority, or final truth.",
+      "owner": "ANTIMATTERIUM",
+      "public_repositories": [
+        "ANTIMATTERIUM/.github",
+        "ANTIMATTERIUM/ANTIMATTERIUM",
+        "ANTIMATTERIUM/CONTROL",
+        "ANTIMATTERIUM/WWW"
+      ],
+      "public_repository_count": 4,
+      "type": "Organization",
+      "url": "https://github.com/ANTIMATTERIUM"
+    }
+  ],
+  "native_product": {
+    "package": "@invocorder/recorder",
+    "repository": "INVOCORDER/INVOCORDER",
+    "role": "machine-action evidence recorder and readable ecosystem entry point"
+  },
+  "non_claims": {
+    "demo_execution_proves_safety": false,
+    "ecosystem_map_completes_whole_stack": false,
+    "github_visibility_proves_admissibility": false,
+    "npm_availability_proves_truth": false,
+    "package_installation_proves_authorization": false,
+    "repository_inventory_includes_private_names": false
+  },
+  "npm_packages": [
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/originseal",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/originseal",
+      "role": "origin and provenance primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/archicustos",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/archicustos",
+      "role": "custody and archival primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/kairoclasp",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/kairoclasp",
+      "role": "temporal boundary primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/limenward",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/limenward",
+      "role": "threshold and admission primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/validexor",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/validexor",
+      "role": "validation primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/attestorium",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/attestorium",
+      "role": "attestation primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/irrevocull",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/irrevocull",
+      "role": "irreversible refusal and finality primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/guillotine",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/guillotine",
+      "role": "terminal cutoff primitive"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/auctoriseal",
+      "native": false,
+      "observed_version": "0.1.5",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/auctoriseal",
+      "role": "authority-scope support"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/corpiform",
+      "native": false,
+      "observed_version": "0.1.7",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/corpiform",
+      "role": "execution and receipt mechanics"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/cicullis",
+      "native": false,
+      "observed_version": "0.1.3",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/cicullis",
+      "role": "CI, merge, and enforcement support"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/verifrax-verify",
+      "native": false,
+      "observed_version": "0.1.6",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/verifrax-verify",
+      "role": "public verifier package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/verifrax-profiles",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/verifrax-profiles",
+      "role": "profile constraint package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/verifrax-spec",
+      "native": false,
+      "observed_version": "0.1.1",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/verifrax-spec",
+      "role": "formal specification package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/verifrax",
+      "native": false,
+      "observed_version": "0.1.4",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/verifrax",
+      "role": "core protocol package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/sigillarium",
+      "native": false,
+      "observed_version": "0.1.4",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/sigillarium",
+      "role": "seal and archive reference package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/verifrax-api",
+      "native": false,
+      "observed_version": "0.0.4",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/verifrax-api",
+      "role": "machine API interface package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@verifrax/root",
+      "native": false,
+      "observed_version": "0.0.2",
+      "registry_url": "https://www.npmjs.com/package/@verifrax/root",
+      "role": "root implementation package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@kaaffilm/mk10-pro",
+      "native": false,
+      "observed_version": "1.0.3",
+      "registry_url": "https://www.npmjs.com/package/@kaaffilm/mk10-pro",
+      "role": "creative and cinematic issuance package"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@invocorder/recorder",
+      "native": true,
+      "observed_version": "2.0.0",
+      "registry_url": "https://www.npmjs.com/package/@invocorder/recorder",
+      "role": "native machine-action evidence recorder"
+    },
+    {
+      "claim_boundary": "Package availability is an integration fact only; it does not prove truth, safety, authorization, admissibility, external reality, or whole-stack completion.",
+      "name": "@antimatterium/antimatterium",
+      "native": false,
+      "observed_version": "0.2.2",
+      "registry_url": "https://www.npmjs.com/package/@antimatterium/antimatterium",
+      "role": "bounded machine-action domain package"
+    }
+  ],
+  "schema": "invocorder.live_ecosystem_power_map.v1",
+  "simple_model": [
+    "Something acts across a machine boundary.",
+    "INVOCORDER records the boundary facts.",
+    "INVOCORDER emits a hash-chained replay bundle.",
+    "Other systems may later assess authority, safety, truth, or admissibility."
+  ],
+  "status": "INVOCORDER_LIVE_ECOSYSTEM_POWER_MAP_BOUND"
+}

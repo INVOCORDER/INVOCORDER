@@ -26,12 +26,14 @@
     "STACK_MERGE_READINESS",
     "STACK_GREEN_LEDGER",
     "STACK_RELEASE_CANDIDATE",
-    "STACK_PUBLICATION_READINESS"
+    "STACK_PUBLICATION_READINESS",
+    "examples/readable-demo",
+    "scripts/verify-live-ecosystem-map.mjs"
   ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js",
-    "release:check": "npm run build && npm test && npm run hard:surface && npm run power:verify && npm run stack:merge-readiness && npm run stack:green-ledger && npm run stack:release-candidate && npm run stack:publication-readiness",
+    "release:check": "npm run build && npm test && npm run hard:surface && npm run power:verify && npm run power:ecosystem:verify && npm run power:ecosystem && npm run stack:merge-readiness && npm run stack:green-ledger && npm run stack:release-candidate && npm run stack:publication-readiness",
     "prepublish:gate": "node scripts/prepublish-gate.mjs",
     "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs",
     "power:verify": "node scripts/verify-npm-power-plane.mjs",
@@ -45,7 +47,13 @@
     "stack:green-ledger": "node scripts/verify-stack-green-ledger.mjs",
     "stack:release-candidate": "node scripts/verify-stack-release-candidate.mjs",
     "stack:publication-readiness": "node scripts/verify-stack-publication-readiness.mjs",
-    "hard:surface": "node scripts/verify-hard-product-surface.mjs"
+    "hard:surface": "node scripts/verify-hard-product-surface.mjs",
+    "demo": "node bin/invocorder.js demo",
+    "demo:readable": "node bin/invocorder.js demo",
+    "power:ecosystem": "node bin/invocorder.js power-map",
+    "power:ecosystem:all": "node bin/invocorder.js power-map --all",
+    "power:ecosystem:verify": "node scripts/verify-live-ecosystem-map.mjs",
+    "power:ecosystem:live": "node scripts/verify-live-ecosystem-map.mjs --live"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",

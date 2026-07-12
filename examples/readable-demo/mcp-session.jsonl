@@ -1,0 +1,4 @@
+{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"explain-invocorder","arguments":{"question":"What does INVOCORDER do?"}}}
+{"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"INVOCORDER records machine-action boundary facts into hash-chained replayable evidence bundles."}]}}
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"show-live-power","arguments":{"native":"@invocorder/recorder","external_examples":["@verifrax/verifrax","@kaaffilm/mk10-pro","@antimatterium/antimatterium"]}}}
+{"jsonrpc":"2.0","id":2,"result":{"content":[{"type":"text","text":"The ecosystem is mapped for recording and discovery without claiming whole-stack completion."}]}}

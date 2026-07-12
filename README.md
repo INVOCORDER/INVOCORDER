@@ -13,6 +13,40 @@ It does not decide whether an action was true.
 
 It records the boundary facts before anyone argues about what they mean.
 
+<!-- INVOCORDER_READABLE_ENTRY_START -->
+## Start here — readable product entry
+
+Install and run the demonstration:
+
+```bash
+npm install @invocorder/recorder
+npx invocorder demo
+```
+
+Inspect the ecosystem power map:
+
+```bash
+npx invocorder power-map
+npx invocorder power-map --all
+```
+
+The readable entry binds the native recorder, the live npm package plane,
+the named GitHub owners, and a public-only repository inventory.
+
+Private repository names are excluded from the committed public inventory.
+
+INVOCORDER records machine-action boundary facts. It does not decide truth,
+safety, authorization, admissibility, external reality, or whole-stack
+completion.
+
+Read:
+
+- `docs/START_HERE.md`
+- `docs/LIVE_POWER_MAP.md`
+- `POWER_PLANE/INVOCORDER_LIVE_ECOSYSTEM_MAP.json`
+- `POWER_PLANE/INVOCORDER_PUBLIC_ECOSYSTEM_INVENTORY_RECEIPT.json`
+<!-- INVOCORDER_READABLE_ENTRY_END -->
+
 ## v0.4.0 — Public Org Perimeter Ledger
 
 INVOCORDER now publishes a machine-readable public org perimeter ledger.
