@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { tmpdir } from "node:os";
 import { spawnSync } from "node:child_process";
 
 function assert(condition, message) {
@@ -63,6 +64,26 @@ function writePrepublishMcpFixture(path) {
   ];
 
   writeFileSync(path, frames.map((frame) => JSON.stringify(frame)).join("\n") + "\n");
+}
+
+function resolveHostileFixtureRoot() {
+  if (existsSync("../HOSTILE-FIXTURES/fixtures")) {
+    return "../HOSTILE-FIXTURES/fixtures";
+  }
+
+  const cloneRoot = mkdtempSync(
+    join(tmpdir(), "invocorder-hostile-fixtures-")
+  );
+
+  run("git", [
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/INVOCORDER/HOSTILE-FIXTURES.git",
+    cloneRoot
+  ]);
+
+  return join(cloneRoot, "fixtures");
 }
 
 const pkg = readJson("package.json");
@@ -141,13 +162,18 @@ run("node", ["bin/invocorder.js", "generate-signing-key", ".invocorder/keys/prep
 run("node", ["bin/invocorder.js", "sign-bundle", join(sessionPath, "replay-bundle.json"), "--key", ".invocorder/keys/prepublish-ed25519.pem"]);
 run("node", ["bin/invocorder.js", "verify-signed-bundle", join(sessionPath, "signed-bundle-envelope.json")]);
 
-if (existsSync("../HOSTILE-FIXTURES/fixtures/mcp")) {
-  run("node", ["dist/src/fixtures/run-mcp-fixtures.js", "../HOSTILE-FIXTURES/fixtures/mcp"]);
-}
+const hostileFixtureRoot =
+  resolveHostileFixtureRoot();
 
-if (existsSync("../HOSTILE-FIXTURES/fixtures/signed-bundles")) {
-  run("node", ["dist/src/fixtures/run-signed-bundle-fixtures.js", "../HOSTILE-FIXTURES/fixtures/signed-bundles"]);
-}
+run("node", [
+  "dist/src/fixtures/run-mcp-fixtures.js",
+  join(hostileFixtureRoot, "mcp")
+]);
+
+run("node", [
+  "dist/src/fixtures/run-signed-bundle-fixtures.js",
+  join(hostileFixtureRoot, "signed-bundles")
+]);
 
 run("npm", ["pack", "--dry-run"]);
 

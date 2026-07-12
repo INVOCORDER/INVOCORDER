@@ -41,6 +41,7 @@ export function createBoundaryRecord(input: {
   payload: string | Buffer;
   previous_record_hash: string | null;
   omissions?: unknown[];
+  effects?: unknown[];
 }): MachineActionRecord {
   const payloadBuffer = Buffer.isBuffer(input.payload) ? input.payload : Buffer.from(input.payload);
 
@@ -67,7 +68,7 @@ export function createBoundaryRecord(input: {
       media_type: "text/plain",
       redacted: false
     },
-    effects: [],
+    effects: input.effects ?? [],
     omissions: input.omissions ?? [],
     previous_record_hash: input.previous_record_hash,
     record_hash: ""
