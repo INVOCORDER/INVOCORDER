@@ -118,6 +118,9 @@ console.error("");
 console.error("Recording and verification:");
 console.error("  invocorder run -- <command> [args...]");
 console.error("  invocorder mcp-stdio-file <jsonl-file>");
+console.error(
+  "  invocorder record-jsonl <kind> <jsonl-file> [name]"
+);
 console.error("  invocorder verify-bundle <replay-bundle.json>");
 console.error("  invocorder generate-signing-key <private-key.pem>");
 console.error(
@@ -310,6 +313,41 @@ return;
 
 if (args[0] === "mcp-stdio-file" && args[1]) {
 await recordMcpStdioFile(args[1]);
+return;
+}
+
+if (args[0] === "record-jsonl") {
+const kind = args[1];
+const inputPath = args[2];
+
+if (!kind || !inputPath) {
+  throw new Error(
+    "usage: invocorder record-jsonl <kind> <jsonl-file> [name]"
+  );
+}
+
+const result = await recordBoundaryJsonlFile(
+  inputPath,
+  kind as BoundaryKind,
+  args[3] ?? `${kind}-jsonl-frame`
+);
+
+console.log(
+  JSON.stringify(
+    {
+      schema:
+        "invocorder.boundary_jsonl_capture.result.v1",
+      status: result.valid
+        ? "INVOCORDER_BOUNDARY_JSONL_CAPTURE_VALID"
+        : "INVOCORDER_BOUNDARY_JSONL_CAPTURE_INVALID",
+      ...result
+    },
+    null,
+    2
+  )
+);
+
+process.exitCode = result.valid ? 0 : 1;
 return;
 }
 

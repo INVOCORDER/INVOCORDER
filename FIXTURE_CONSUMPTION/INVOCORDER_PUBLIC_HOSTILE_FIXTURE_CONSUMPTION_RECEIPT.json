@@ -8,8 +8,8 @@
   "source_repository": "INVOCORDER/HOSTILE-FIXTURES",
   "source_repository_private": false,
   "source_default_branch": "main",
-  "source_default_branch_head_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
-  "source_commit_url": "https://github.com/INVOCORDER/HOSTILE-FIXTURES/commit/b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+  "source_default_branch_head_sha": "fc8e2c37d6dce58b42e3ad1463fd130df2fe34c3",
+  "source_commit_url": "https://github.com/INVOCORDER/HOSTILE-FIXTURES/commit/fc8e2c37d6dce58b42e3ad1463fd130df2fe34c3",
   "standard_path": "FIXTURE_CONSUMPTION/PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_STANDARD.json",
   "standard_sha256_canonical_json": "89aefb2bf4b0d2f5088a58461defa2a425f3881ce653cc69be4ed7a57da0c622",
   "consumed_file_count": 90,
@@ -640,9 +640,9 @@
     {
       "path": "VERSION",
       "family": "source",
-      "git_blob_sha": "e6837e2d20bb8049dbc9a4a0e2d3e95397dcfa68",
-      "size_bytes": 35,
-      "sha256": "37f2548f61073f73a31693a93e18e90a9d4cf26f4fc0f38d47357f1fe1a257f9"
+      "git_blob_sha": "1d0ba9ea182b0f7354f3daf12120744ec5e0c2f8",
+      "size_bytes": 6,
+      "sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79"
     }
   ],
   "consumed_fixture_families": [

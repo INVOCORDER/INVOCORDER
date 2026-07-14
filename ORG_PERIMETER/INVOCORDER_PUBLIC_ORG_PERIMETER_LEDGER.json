@@ -5,7 +5,7 @@
   "package_name": "@invocorder/recorder",
   "package_version": "0.4.0",
   "generated_from_public_github": true,
-  "generated_at_utc": "2026-06-03T20:23:53.409Z",
+  "generated_at_utc": "2026-07-14T18:47:01.955Z",
   "components": [
     {
       "repository_full_name": "INVOCORDER/INVOCORDER",
@@ -13,7 +13,7 @@
       "visibility": "public",
       "archived": false,
       "default_branch": "main",
-      "default_branch_head_sha": "20aae00245e434a1301f3cca73862a3441322600",
+      "default_branch_head_sha": "bb30def88947d59c053c76adfac3c121cfe04fe6",
       "html_url": "https://github.com/INVOCORDER/INVOCORDER",
       "required_paths": [
         {
@@ -64,7 +64,7 @@
       "visibility": "public",
       "archived": false,
       "default_branch": "main",
-      "default_branch_head_sha": "55b7388bed6db530522faf9b91ef4fdeb7ef2b8b",
+      "default_branch_head_sha": "f6ee97f804b47425c2b6938311bfc1d1e9c85f24",
       "html_url": "https://github.com/INVOCORDER/CAPTURE-CONTRACT",
       "required_paths": [
         {
@@ -107,7 +107,7 @@
       "visibility": "public",
       "archived": false,
       "default_branch": "main",
-      "default_branch_head_sha": "66faa11f779007723880540f57ce2f49a0cc6809",
+      "default_branch_head_sha": "f5f1838aeebfaba0777390afd8ffc592f40e1f81",
       "html_url": "https://github.com/INVOCORDER/EVIDENCE-SCHEMAS",
       "required_paths": [
         {
@@ -150,7 +150,7 @@
       "visibility": "public",
       "archived": false,
       "default_branch": "main",
-      "default_branch_head_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+      "default_branch_head_sha": "fc8e2c37d6dce58b42e3ad1463fd130df2fe34c3",
       "html_url": "https://github.com/INVOCORDER/HOSTILE-FIXTURES",
       "required_paths": [
         {
@@ -255,5 +255,5 @@
   "proves_safety": false,
   "proves_admissibility": false,
   "proves_external_reality": false,
-  "ledger_sha256_canonical_json": "fac5275fe63ad919ae2a419540c645cff1ca108785613bd11de9fa797e47b0fd"
+  "ledger_sha256_canonical_json": "eeca8e789d9c2967e47ba83bc02e9f44e9974734e7834df27f3762f9f2b1ed5f"
 }

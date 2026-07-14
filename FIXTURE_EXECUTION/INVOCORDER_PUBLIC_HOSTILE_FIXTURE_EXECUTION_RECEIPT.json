@@ -7,10 +7,10 @@
   "standard_path": "FIXTURE_EXECUTION/PUBLIC_HOSTILE_FIXTURE_EXECUTION_STANDARD.json",
   "standard_sha256_canonical_json": "242eabe58d0747714a571e1c4e2576cfe05935c45193ce47bf525de460df6c28",
   "source_consumption_receipt_path": "FIXTURE_CONSUMPTION/INVOCORDER_PUBLIC_HOSTILE_FIXTURE_CONSUMPTION_RECEIPT.json",
-  "source_consumption_receipt_sha256_canonical_json": "24119fc1790b386b5ec39bb1a8256133005fb6a6f18d1fca94402fa551448605",
+  "source_consumption_receipt_sha256_canonical_json": "7cb0cc7f566a3ba16e7522a7fc916ce695c695ff5393f590f64bf4815bd4fd6f",
   "source_repository": "INVOCORDER/HOSTILE-FIXTURES",
-  "source_default_branch_head_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
-  "public_fixture_checkout_sha": "b412dda8098f6d1d0cd8198394dd756ddcb3278d",
+  "source_default_branch_head_sha": "fc8e2c37d6dce58b42e3ad1463fd130df2fe34c3",
+  "public_fixture_checkout_sha": "fc8e2c37d6dce58b42e3ad1463fd130df2fe34c3",
   "mcp_fixture_case_count": 10,
   "signed_bundle_fixture_case_count": 4,
   "mcp_results": [
@@ -22,7 +22,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_61e8d478-aa48-43d1-9d81-90cfeb6bf862",
+      "session": ".invocorder/sessions/act_50bf2a7f-8138-4598-8d5b-bbe2dd736a3b",
       "passed": true
     },
     {
@@ -33,7 +33,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_9be822a6-d883-483a-a1a0-398ec1d03f56",
+      "session": ".invocorder/sessions/act_694811df-a3ea-4975-a509-8b78147b2341",
       "passed": true
     },
     {
@@ -44,7 +44,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_d1749c0c-b51c-4386-9390-65c00930892c",
+      "session": ".invocorder/sessions/act_94263b15-2193-4c43-8d36-6c6fc187df55",
       "passed": true
     },
     {
@@ -55,7 +55,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_abddf254-1c2b-4354-9e0f-1fcea96500e1",
+      "session": ".invocorder/sessions/act_2af72251-170b-40ac-a927-ee4c7d2a97f1",
       "passed": true
     },
     {
@@ -66,7 +66,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_8ac950b2-3114-4374-869c-88bdb3336f89",
+      "session": ".invocorder/sessions/act_4c68a662-bd2f-4edb-995f-60b482900a23",
       "passed": true
     },
     {
@@ -77,7 +77,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_356153f6-c08f-48df-ac03-a8f5c83f0fe1",
+      "session": ".invocorder/sessions/act_29228ed5-dbaf-4d7f-a269-b997af6f8518",
       "passed": true
     },
     {
@@ -88,7 +88,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_b7d64b76-4e4c-4af9-bea0-f0884eb2f678",
+      "session": ".invocorder/sessions/act_8d665d95-1ede-4924-a16e-e5143a7cb8b3",
       "passed": true
     },
     {
@@ -99,7 +99,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_1168f73d-cd9b-4f0e-9be0-c1dee3e4aaac",
+      "session": ".invocorder/sessions/act_f8660064-6607-42f0-aa87-6acb41ec3f2b",
       "passed": true
     },
     {
@@ -110,7 +110,7 @@
       "clean_input_valid": true,
       "expected_errors": [],
       "actual_errors": [],
-      "session": ".invocorder/sessions/act_1361a4ca-82ed-478f-a161-bc60b813bd9b",
+      "session": ".invocorder/sessions/act_4cf6b16b-e8a1-4c39-87cf-acb6897984f0",
       "passed": true
     },
     {
@@ -128,7 +128,7 @@
         "previous hash mismatch at sequence 2",
         "record hash mismatch at sequence 2"
       ],
-      "session": ".invocorder/sessions/act_270a63c2-7888-478d-ab26-43713c349847",
+      "session": ".invocorder/sessions/act_bc61d9e3-b9ca-4c84-80b1-4b21c75d963f",
       "passed": true
     }
   ],
