@@ -19,6 +19,12 @@ export function compileReplayBundle(sessionDir: string, sessionId: string): unkn
   const first = records[0]?.record_hash ?? null;
   const last = records.at(-1)?.record_hash ?? null;
 
+  const omissionsPath = join(sessionDir, "omissions.jsonl");
+
+  if (!existsSync(omissionsPath)) {
+    writeFileSync(omissionsPath, "");
+  }
+
   const bundle = {
     object_type: "INVOCORDER_MACHINE_ACTION_EVIDENCE_BUNDLE",
     schema_version: readRecorderVersion(),

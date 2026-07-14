@@ -310,6 +310,53 @@ test("CLI records generic boundary JSONL", () => {
 
   assert.equal(result.valid, true);
 
+  // ZERO_OMISSION_EXTERNAL_VERIFICATION
+  const omissionArtifactPath = join(
+    root,
+    result.session_dir,
+    "omissions.jsonl"
+  );
+
+  assert.equal(
+    readFileSync(
+      omissionArtifactPath,
+      "utf8"
+    ),
+    ""
+  );
+
+  const externalVerification = spawnSync(
+    process.execPath,
+    [
+      cli,
+      "verify-bundle",
+      join(
+        root,
+        result.session_dir,
+        "replay-bundle.json"
+      )
+    ],
+    {
+      cwd: root,
+      encoding: "utf8",
+      env: process.env
+    }
+  );
+
+  assert.equal(
+    externalVerification.status,
+    0,
+    externalVerification.stdout +
+      externalVerification.stderr
+  );
+
+  assert.equal(
+    JSON.parse(
+      externalVerification.stdout
+    ).valid,
+    true
+  );
+
   const records = readFileSync(
     join(
       root,
