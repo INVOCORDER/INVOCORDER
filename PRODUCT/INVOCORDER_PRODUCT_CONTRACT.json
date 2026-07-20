@@ -1,0 +1,63 @@
+{
+  "object_type": "INVOCORDER_PRODUCT_CONTRACT",
+  "schema_version": "2.1.0",
+  "product_name": "INVOCORDER",
+  "package": "@invocorder/recorder",
+  "tagline": "Record any command. Get a tamper-evident replay bundle and a readable local report.",
+  "primary_job": "Record machine-action boundary facts before interpretation, approval, or dispute.",
+  "primary_command": "invocorder capture -- <command> [args...]",
+  "three_second_start": "invocorder quickstart",
+  "experience_principles": [
+    "understandable before architecture",
+    "one command before configuration",
+    "human report and machine JSON",
+    "local-first and account-free",
+    "evidence before interpretation",
+    "omissions are explicit",
+    "integrity is independently checkable",
+    "existing advanced surfaces remain available"
+  ],
+  "human_commands": {
+    "quickstart": "invocorder quickstart",
+    "capture": "invocorder capture -- npm test",
+    "show": "invocorder show latest",
+    "report": "invocorder report latest",
+    "verify": "invocorder verify latest",
+    "doctor": "invocorder doctor",
+    "explain": "invocorder explain"
+  },
+  "recorded_facts": [
+    "redacted command and arguments",
+    "bounded stdout",
+    "bounded stderr",
+    "exit code and signal",
+    "file creations",
+    "file modifications",
+    "file deletions",
+    "hashed environment facts",
+    "redaction records",
+    "omission records",
+    "hash-chain continuity"
+  ],
+  "default_outputs": [
+    "session.json",
+    "records.jsonl",
+    "omissions.jsonl",
+    "replay-bundle.json",
+    "bundle-integrity-result.json",
+    "invocorder-report.html"
+  ],
+  "zero_requirements": {
+    "account_required": false,
+    "hosted_service_required": false,
+    "source_code_change_required": false,
+    "manual_bundle_construction_required": false
+  },
+  "non_claims": {
+    "proves_truth": false,
+    "proves_safety": false,
+    "proves_authorization": false,
+    "proves_admissibility": false,
+    "proves_external_reality": false
+  }
+}

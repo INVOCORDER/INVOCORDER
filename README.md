@@ -1,51 +1,101 @@
 # INVOCORDER
 
-INVOCORDER is the machine-action evidence substrate.
-
-It records what crossed the boundary when an AI agent, model-driven process, MCP client, tool runner, workflow agent, browser agent, desktop agent, or autonomous system touches the world.
-
-INVOCORDER emits hash-chained Machine Action Records and replayable Evidence Bundles.
-
-It does not decide whether an action was safe.
-It does not decide whether an action was authorized.
-It does not decide whether an action was admissible.
-It does not decide whether an action was true.
-
-It records the boundary facts before anyone argues about what they mean.
-
-<!-- INVOCORDER_READABLE_ENTRY_START -->
-## Start here — readable product entry
-
-Install and run the demonstration:
+## Record any command. Get a tamper-evident replay bundle and a readable local report.
 
 ```bash
-npm install @invocorder/recorder
-npx invocorder demo
+npx --yes @invocorder/recorder@2.1.0 capture -- npm test
 ```
 
-Inspect the ecosystem power map:
+**No account. No hosted service. No source-code changes.**
+
+INVOCORDER runs the command normally and records the machine-action boundary around it:
+
+- what was requested
+- what stdout and stderr crossed the boundary
+- how the process exited
+- what files changed
+- what was redacted
+- what could not be captured
+- whether the replay bundle remains integrity-valid
+
+The result is machine-readable and immediately understandable by a human.
+
+## Three-second start
 
 ```bash
-npx invocorder power-map
-npx invocorder power-map --all
+npx --yes @invocorder/recorder@2.1.0 quickstart
 ```
 
-The readable entry binds the native recorder, the live npm package plane,
-the named GitHub owners, and a public-only repository inventory.
+Then:
 
-Private repository names are excluded from the committed public inventory.
+```bash
+npx --yes @invocorder/recorder@2.1.0 show latest
+npx --yes @invocorder/recorder@2.1.0 verify latest
+```
 
-INVOCORDER records machine-action boundary facts. It does not decide truth,
-safety, authorization, admissibility, external reality, or whole-stack
-completion.
+## Default product journey
+
+```text
+command
+  -> machine-action boundary records
+  -> explicit redactions and omissions
+  -> hash-chained replay bundle
+  -> integrity verification
+  -> readable local evidence report
+```
+
+## Human product commands
+
+| Need                    | Command                          |
+| ----------------------- | -------------------------------- |
+| Understand INVOCORDER   | `invocorder explain`             |
+| Check readiness         | `invocorder doctor`              |
+| Try it immediately      | `invocorder quickstart`          |
+| Record a real command   | `invocorder capture -- npm test` |
+| Read the latest session | `invocorder show latest`         |
+| Create the HTML report  | `invocorder report latest`       |
+| Verify the bundle       | `invocorder verify latest`       |
+
+## Outputs
+
+```text
+.invocorder/sessions/<session-id>/
+|-- session.json
+|-- records.jsonl
+|-- omissions.jsonl
+|-- replay-bundle.json
+|-- bundle-integrity-result.json
+`-- invocorder-report.html
+```
+
+## Advanced surfaces
+
+INVOCORDER also supports:
+
+- generic JSONL boundary capture
+- MCP stdio capture
+- signed evidence bundles
+- persistent Ed25519 keys
+- hostile fixture execution
+- workspace and topology inspection
+- public control-chain replay
+- runnable adapters
 
 Read:
 
-- `docs/START_HERE.md`
-- `docs/LIVE_POWER_MAP.md`
-- `POWER_PLANE/INVOCORDER_LIVE_ECOSYSTEM_MAP.json`
-- `POWER_PLANE/INVOCORDER_PUBLIC_ECOSYSTEM_INVENTORY_RECEIPT.json`
-<!-- INVOCORDER_READABLE_ENTRY_END -->
+- `docs/QUICKSTART.md`
+- `docs/PRODUCT.md`
+- `docs/REPORTS.md`
+- `PRODUCT/INVOCORDER_PRODUCT_CONTRACT.json`
+
+## Boundary
+
+INVOCORDER records machine-action boundary facts and may establish replay-bundle integrity.
+
+It does not decide truth, safety, authorization, admissibility, legitimacy, or external reality.
+
+<details>
+<summary>Advanced architecture, public control, and release history</summary>
 
 ## v0.4.0 — Public Org Perimeter Ledger
 
@@ -435,3 +485,5 @@ INVOCORDER now includes a hard product-surface release gate.
 `npm run release:check` is product-local. It does not depend on sibling workspace trees, local generated media, `node_modules`, or ignored build drift as authority. The gate requires strict tests, verifies the committed product surface, machine-parses `npm pack --dry-run --json`, and rejects forbidden package payloads such as workspace media, tarballs, local sessions, or dependency trees.
 
 The hard product gate is not publication, truth, safety, authorization, approval, merge, or system completion.
+
+</details>
