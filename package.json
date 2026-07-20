@@ -1,6 +1,6 @@
 {
   "name": "@invocorder/recorder",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Machine-action evidence substrate: hash-chained boundary records and replayable evidence bundles.",
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
@@ -28,12 +28,14 @@
     "STACK_RELEASE_CANDIDATE",
     "STACK_PUBLICATION_READINESS",
     "examples/readable-demo",
-    "scripts/verify-live-ecosystem-map.mjs"
+    "scripts/verify-live-ecosystem-map.mjs",
+    "PRODUCT",
+    "examples/three-second-start"
   ],
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js",
-    "release:check": "npm run build && npm test && npm run runtime:verify && npm run hard:surface && npm run power:verify && npm run power:ecosystem:verify && npm run power:ecosystem && npm run stack:merge-readiness && npm run stack:green-ledger && npm run stack:release-candidate && npm run stack:publication-readiness",
+    "release:check": "npm run build && npm test && npm run runtime:verify && npm run product:verify && npm run hard:surface && npm run power:verify && npm run power:ecosystem:verify && npm run power:ecosystem && npm run stack:merge-readiness && npm run stack:green-ledger && npm run stack:release-candidate && npm run stack:publication-readiness",
     "prepublish:gate": "node scripts/prepublish-gate.mjs",
     "verify:antimatterium": "node scripts/verify-antimatterium-profile.mjs",
     "power:verify": "node scripts/verify-npm-power-plane.mjs",
@@ -54,7 +56,10 @@
     "power:ecosystem:all": "node bin/invocorder.js power-map --all",
     "power:ecosystem:verify": "node scripts/verify-live-ecosystem-map.mjs",
     "power:ecosystem:live": "node scripts/verify-live-ecosystem-map.mjs --live",
-    "runtime:verify": "npm run build && node --test dist/tests/runtime-capture.test.js"
+    "runtime:verify": "npm run build && node --test dist/tests/runtime-capture.test.js",
+    "quickstart": "node bin/invocorder.js quickstart",
+    "doctor": "node bin/invocorder.js doctor",
+    "product:verify": "node scripts/verify-product-experience.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.6.2",
