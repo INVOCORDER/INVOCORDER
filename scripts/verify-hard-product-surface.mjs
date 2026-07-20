@@ -21,7 +21,7 @@ if (pkg.name !== "@invocorder/recorder") {
 failures.push("package name mismatch");
 }
 
-if (pkg.version !== "2.0.0") {
+if (pkg.version !== "2.1.0") {
 failures.push("package version mismatch");
 }
 

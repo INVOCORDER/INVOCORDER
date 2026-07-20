@@ -18,7 +18,7 @@ test("package test script is strict and release gate is product-local", () => {
 const pkg = readJson("package.json");
 
 assert.equal(pkg.name, "@invocorder/recorder");
-assert.equal(pkg.version, "2.0.0");
+assert.equal(pkg.version, "2.1.0");
 assert.equal(pkg.private, false);
 
 assert.ok(pkg.scripts.test);
